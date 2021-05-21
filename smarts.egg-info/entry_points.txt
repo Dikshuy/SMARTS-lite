@@ -1,0 +1,3 @@
+[console_scripts]
+scl = cli.cli:scl
+
