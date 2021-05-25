@@ -16,10 +16,7 @@ AGENT_ID = "Agent-007"
 
 class ChaseViaPointsAgent(Agent):
     def act(self, obs: Observation):
-        if (
-            len(obs.via_data.near_via_points) < 1
-            or obs.ego_vehicle_state.edge_id != obs.via_data.near_via_points[0].edge_id
-        ):
+        if (len(obs.via_data.near_via_points) < 1 or obs.ego_vehicle_state.edge_id != obs.via_data.near_via_points[0].edge_id):
             return (obs.waypoint_paths[0][0].speed_limit, 0)
 
         nearest = obs.via_data.near_via_points[0]
@@ -33,8 +30,8 @@ class ChaseViaPointsAgent(Agent):
 
 class PPO(Agent):
     def act(self, obs):
-        return policy.PPOPolicy.act
-        # return '5'
+        # return policy.PPOPolicy.act
+        return '5'
 
 def main(scenarios, sim_name, headless, num_episodes, seed, max_episode_steps=None):
     agent_spec = AgentSpec(
