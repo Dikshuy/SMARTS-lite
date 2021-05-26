@@ -14,40 +14,40 @@ logging.basicConfig(level=logging.INFO)
 AGENT_ID = "Agent-007"
 
 
-class ChaseViaPointsAgent(Agent):
-    def act(self, obs: Observation):
-        print("******************************")
-        print(len(obs.via_data.near_via_points))
-        print("******************************")
-        if (len(obs.via_data.near_via_points) < 1 or obs.ego_vehicle_state.edge_id != obs.via_data.near_via_points[0].edge_id):
-            return (obs.waypoint_paths[0][0].speed_limit, 0)
+# class ChaseViaPointsAgent(Agent):
+#     def act(self, obs: Observation):
+#         print("******************************")
+#         print(len(obs.via_data.near_via_points))
+#         print("******************************")
+#         if (len(obs.via_data.near_via_points) < 1 or obs.ego_vehicle_state.edge_id != obs.via_data.near_via_points[0].edge_id):
+#             return (obs.waypoint_paths[0][0].speed_limit, 0)
 
-        nearest = obs.via_data.near_via_points[0]
-        print(nearest)
-        if nearest.lane_index == obs.ego_vehicle_state.lane_index:
-            return (nearest.required_speed, 0)
+#         nearest = obs.via_data.near_via_points[0]
+#         print(nearest)
+#         if nearest.lane_index == obs.ego_vehicle_state.lane_index:
+#             return (nearest.required_speed, 0)
 
-        return (
-            nearest.required_speed,
-            1 if nearest.lane_index > obs.ego_vehicle_state.lane_index else -1,
-        )
+#         return (
+#             nearest.required_speed,
+#             1 if nearest.lane_index > obs.ego_vehicle_state.lane_index else -1,
+#         )
     # pass
 
 class PPO(Agent):
-    # def act(self, obs: Observation):
+    def act(self, obs: Observation):
         # print(len(obs.via_data.near_via_points))
-        # return (5,0)
-    pass
+        return (5,0,0)
+    # pass
 
 
 def main(scenarios, sim_name, headless, num_episodes, seed, max_episode_steps=None):
     agent_spec = AgentSpec(
         interface=AgentInterface.from_type(
-            AgentType.LanerWithSpeed, max_episode_steps=max_episode_steps
-            # AgentType.Loner, max_episode_steps=max_episode_steps
+            # AgentType.LanerWithSpeed, max_episode_steps=max_episode_steps
+            AgentType.Loner, max_episode_steps=max_episode_steps
         ),
-        agent_builder=ChaseViaPointsAgent,
-        # agent_builder=PPO,
+        # agent_builder=ChaseViaPointsAgent,
+        agent_builder=PPO,
     )
 
     env = gym.make(
