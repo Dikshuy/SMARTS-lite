@@ -1,53 +1,64 @@
+import inspect
 import logging
+from smarts.core.controllers import ActionSpaceType
 
 import gym
 
 from examples import default_argument_parser
 from smarts.core.agent import Agent, AgentSpec
-from smarts.core.agent_interface import AgentInterface, AgentType
+from smarts.core.agent_interface import AgentInterface, AgentType, NeighborhoodVehicles, Waypoints
 from smarts.core.sensors import Observation
 from smarts.core.utils.episodes import episodes
-from ultra.ultra.baselines.ppo.ppo import policy
+from ultra.baselines.adapter import BaselineAdapter
+from ultra.baselines.ppo.ppo.policy import PPOPolicy
+from ultra.baselines.common.yaml_loader import load_yaml
 
 logging.basicConfig(level=logging.INFO)
 
 AGENT_ID = "Agent-007"
 
 
-# class ChaseViaPointsAgent(Agent):
-#     def act(self, obs: Observation):
-#         print("******************************")
-#         print(len(obs.via_data.near_via_points))
-#         print("******************************")
-#         if (len(obs.via_data.near_via_points) < 1 or obs.ego_vehicle_state.edge_id != obs.via_data.near_via_points[0].edge_id):
-#             return (obs.waypoint_paths[0][0].speed_limit, 0)
-
-#         nearest = obs.via_data.near_via_points[0]
-#         print(nearest)
-#         if nearest.lane_index == obs.ego_vehicle_state.lane_index:
-#             return (nearest.required_speed, 0)
-
-#         return (
-#             nearest.required_speed,
-#             1 if nearest.lane_index > obs.ego_vehicle_state.lane_index else -1,
-#         )
-    # pass
-
-class PPO(Agent):
+class ChaseViaPointsAgent(Agent):
     def act(self, obs: Observation):
-        # print(len(obs.via_data.near_via_points))
-        return (5,0,0)
-    # pass
+        if (
+            len(obs.via_data.near_via_points) < 1
+            or obs.ego_vehicle_state.edge_id != obs.via_data.near_via_points[0].edge_id
+        ):
+            return (obs.waypoint_paths[0][0].speed_limit, 0)
+
+        nearest = obs.via_data.near_via_points[0]
+        if nearest.lane_index == obs.ego_vehicle_state.lane_index:
+            return (nearest.required_speed, 0)
+
+        return (
+            nearest.required_speed,
+            1 if nearest.lane_index > obs.ego_vehicle_state.lane_index else -1,
+        )
 
 
 def main(scenarios, sim_name, headless, num_episodes, seed, max_episode_steps=None):
+    # agent_spec = AgentSpec(
+    #     interface=AgentInterface.from_type(
+    #         AgentType.LanerWithSpeed, max_episode_steps=max_episode_steps
+    #     ),
+    #     agent_builder=ChaseViaPointsAgent,
+    # )
+
+    # For the PPO agent in ULTRA.
+    adapter = BaselineAdapter()
+    policy_dir = "/".join(inspect.getfile(PPOPolicy).split("/")[:-1])
+    policy_params = load_yaml(f"{policy_dir}/params.yaml")
     agent_spec = AgentSpec(
-        interface=AgentInterface.from_type(
-            # AgentType.LanerWithSpeed, max_episode_steps=max_episode_steps
-            AgentType.Loner, max_episode_steps=max_episode_steps
+        interface=AgentInterface(
+            waypoints=Waypoints(lookahead=20),
+            neighborhood_vehicles=NeighborhoodVehicles(radius=200),
+            action=ActionSpaceType.Continuous,
+            max_episode_steps=max_episode_steps,
         ),
-        # agent_builder=ChaseViaPointsAgent,
-        agent_builder=PPO,
+        agent_builder=PPOPolicy,
+        agent_params={"policy_params": policy_params},
+        observation_adapter=adapter.observation_adapter,
+        reward_adapter=adapter.reward_adapter,
     )
 
     env = gym.make(
