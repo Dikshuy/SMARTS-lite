@@ -74,11 +74,13 @@ def main(scenarios, sim_name, headless, num_episodes, seed, max_episode_steps=No
 
     for episode in episodes(n=num_episodes):
         observations = env.reset()
+        print(observations)
         episode.record_scenario(env.scenario_log)
 
         dones = {"__all__": False}
         while not dones["__all__"]:
             agent_obs = observations[AGENT_ID]
+
             agent_action = agent.act(agent_obs)
             next_observations, rewards, dones, infos = env.step({AGENT_ID: agent_action})
             # print(infos)
