@@ -98,8 +98,8 @@ class BaselineAgentSpec(AgentSpec):
             adapter = BaselineAdapter(agent_name)
             spec = AgentSpec(
                 interface=AgentInterface(
-                    waypoints=Waypoints(lookahead=10),   # minimizing the visibility of the lookahead way points (20 -> 10)
-                    neighborhood_vehicles=NeighborhoodVehicles(100),   # decreasing the radius of observability of the vehicle (200 -> 100)
+                    waypoints=Waypoints(lookahead=20),
+                    neighborhood_vehicles=NeighborhoodVehicles(200),
                     action=action_type,
                     rgb=False,
                     max_episode_steps=max_episode_steps,
