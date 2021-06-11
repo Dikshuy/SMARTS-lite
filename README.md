@@ -273,6 +273,18 @@ docker push huaweinoah/smarts:$VERSION
 
 ### Troubleshooting
 
+```bash
+ps -ef | grep ray && ps -ef | grep smarts && ps -ef | grep ultra
+pkill -f -9 smarts && pkill -f -9 ray
+
+python ultra/train.py --task 1 --level easy --policy ppo --eval-rate 5 --eval-episodes 2 --episodes 20
+
+start of command: nohup python -u 
+end of command: > sample.txt &
+
+tail -f sample.txt
+```
+
 #### General
 In many cases additinal run logs are located at '~/.smarts'. These can sometimes be helpful.
 
