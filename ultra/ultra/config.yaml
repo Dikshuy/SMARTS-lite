@@ -48,5 +48,8 @@ tasks:
       test:  "scenarios/task2/test_hi-lo*"
   task0-3agents: 
     no-traffic: 
-      train: "scenarios/task0-3agents/train_no-traffic*"  # The relative path to the training scenarios.
-      test:  "scenarios/task0-3agents/test_no-traffic*"  # The relative path to the testing scenarios.
+      train: "scenarios/task0-3agents/train_no-traffic*"  
+      test:  "scenarios/task0-3agents/test_no-traffic*" 
+    easy:
+      train: "scenarios/task0-3agents/train_easy*"
+      test:  "scenarios/task0-3agents/test_easy*" 
