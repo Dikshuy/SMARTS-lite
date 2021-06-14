@@ -1,0 +1,25 @@
+levels:
+  no-traffic:  # This is the level name.
+    train:
+      total: 10  # There will be 10 training scenarios.
+      ego_missions:  # The number of missions determines the number of agents.
+      - start: south-SN  # Turn left going from South to West.
+        end:   west-EW
+      - start: west-WE   # Turn left going from West to North.
+        end:   north-SN
+      - start: north-NS  # Turn left going from North to East.
+        end:   east-WE
+      intersection_types:
+        2lane_c:
+          percent: 1.0  # 100% of these scenarios will be 2 lane, t-intersections.
+          specs: [[50kmh,no-traffic,0.34],[70kmh,no-traffic,0.33],[100kmh,no-traffic,0.33]]
+    test:
+      total: 2  # There will be 2 testing scenarios.
+      ego_missions:  # Testing scenarios currenly only support one agent.
+      - start: south-SN  # Turn left going from South to West.
+        end:   west-EW
+      intersection_types:
+        2lane_c:
+          percent: 1.0  # 100% of these scenarios will be 2 lane, c-intersections.
+          specs: [[50kmh,low-density,0.34],[70kmh,low-density,0.33],[100kmh,low-density,0.33]]
+
