@@ -54,8 +54,8 @@ levels:
         # left turn from south to west
       - start: south-SN
         end:   west-EW
-        # start_offset: [77, 83]
-        # end_offset:   [40, 40]
+        start_offset: [77, 83]
+        end_offset:   [40, 40]
       intersection_types:
         2lane_t:
            percent: 1 # 0.2
