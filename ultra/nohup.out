@@ -1,0 +1,3 @@
+WARNING:tornado.access:404 GET /favicon.ico (::1) 2.27ms
+WARNING:tornado.access:404 GET /favicon.ico (127.0.0.1) 0.48ms
+WARNING:tornado.access:404 GET /favicon.ico (::1) 0.82ms
