@@ -284,6 +284,9 @@ end of command: > sample.txt &
 
 tail -f sample.txt
 ```
+### Note
+You can shut down this Envision process by running `pkill -f -9 ultra` (notice that `ps -ef | grep ultra` will output the Envision process that you started with the command `./ultra/env/envision_base.sh`). But if you kill this Envision process, you will have to rerun `./ultra/env/envision_base.sh` if you want to be able to visualize the training through Envision again.
+
 
 #### General
 In many cases additinal run logs are located at '~/.smarts'. These can sometimes be helpful.
