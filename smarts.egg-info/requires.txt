@@ -22,14 +22,14 @@ pynput
 sh
 shapely
 supervisor
-ray[rllib]==1.0.1.post1
+ray[rllib]==0.8.7
 yattag
 cloudpickle<1.4.0
 tornado
 websocket-client
 matplotlib
 scikit-image
-grpcio==1.37.0
+grpcio==1.38.0
 PyYAML
 twisted
 ijson
@@ -52,7 +52,7 @@ pytest-notebook
 pytest-xdist
 
 [train]
-tensorflow==2.2.1
+tensorflow_gpu==2.3.0
 scipy==1.4.1
-torch==1.4.0
-torchvision==0.5.0
+torch==1.7.1
+torchvision==0.8.2

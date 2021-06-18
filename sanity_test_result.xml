@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="dikshant-pc" name="pytest" skipped="0" tests="8" time="54.352" timestamp="2021-06-17T01:55:49.952653"><testcase classname="smarts.core.tests.test_python_version" name="test_python_version" time="0.009" /><testcase classname="smarts.core.tests.test_dynamics_backend" name="test_set_pose" time="0.717" /><testcase classname="smarts.core.tests.test_sumo_version" name="test_sumo_version" time="1.091"><failure message="def test_sumo_version():&#10;        from smarts.core.utils import networking&#10;        from smarts.core.utils.sumo import SUMO_PATH, traci&#10;    &#10;        load_params = [&#10;            &quot;--start&quot;,&#10;            &quot;--quit-on-end&quot;,&#10;            &quot;--net-file=scenarios/loop/map.net.xml&quot;,&#10;            &quot;--no-step-log&quot;,&#10;            &quot;--no-warnings=1&quot;,&#10;        ]&#10;    &#10;        sumo_port = networking.find_free_port()&#10;        sumo_cmd = [&#10;            os.path.join(SUMO_PATH, &quot;bin&quot;, &quot;sumo&quot;),&#10;            &quot;--remote-port=%s&quot; % sumo_port,&#10;            *load_params,&#10;        ]&#10;    &#10;        sumo_proc = subprocess.Popen(&#10;            sumo_cmd,&#10;            stdin=subprocess.PIPE,&#10;            stdout=subprocess.PIPE,&#10;            stderr=subprocess.PIPE,&#10;        )&#10;    &#10;        traci_conn = traci.connect(&#10;&gt;           sumo_port, numRetries=10, proc=sumo_proc, waitBetweenRetries=0.1&#10;        )&#10;&#10;smarts/core/tests/test_sumo_version.py:58: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;port = 35347, numRetries = 10, host = 'localhost'&#10;proc = &lt;subprocess.Popen object at 0x7f7ccff73cd0&gt;, waitBetweenRetries = 0.1&#10;&#10;    def connect(port=8813, numRetries=tc.DEFAULT_NUM_RETRIES, host=&quot;localhost&quot;, proc=None, waitBetweenRetries=1):&#10;        &quot;&quot;&quot;&#10;        Establish a connection to a TraCI-Server and return the&#10;        connection object. The connection is not saved in the pool and not&#10;        accessible via traci.switch. It should be safe to use different&#10;        connections established by this method in different threads.&#10;        &quot;&quot;&quot;&#10;        for retry in range(1, numRetries + 2):&#10;            try:&#10;                conn = Connection(host, port, proc)&#10;                if _connectHook is not None:&#10;                    _connectHook(conn)&#10;                return conn&#10;            except socket.error as e:&#10;                if proc is not None and proc.poll() is not None:&#10;                    raise TraCIException(&quot;TraCI server already finished&quot;)&#10;                if retry &gt; 1:&#10;                    print(&quot;Could not connect to TraCI server at %s:%s&quot; % (host, port), e)&#10;                if retry &lt; numRetries + 1:&#10;                    print(&quot; Retrying in %s seconds&quot; % waitBetweenRetries)&#10;                    time.sleep(waitBetweenRetries)&#10;&gt;       raise FatalTraCIError(&quot;Could not connect in %s tries&quot; % (numRetries + 1))&#10;E       traci.exceptions.FatalTraCIError: Could not connect in 11 tries&#10;&#10;/usr/share/sumo/tools/traci/main.py:128: FatalTraCIError">def test_sumo_version():
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="2" failures="4" hostname="gra-login3" name="pytest" skipped="0" tests="8" time="36.215" timestamp="2021-06-17T15:38:30.022192"><testcase classname="smarts.core.tests.test_python_version" name="test_python_version" time="0.002" /><testcase classname="smarts.core.tests.test_dynamics_backend" name="test_set_pose" time="0.054" /><testcase classname="smarts.core.tests.test_sumo_version" name="test_sumo_version" time="0.016"><failure message="def test_sumo_version():&#10;        from smarts.core.utils import networking&#10;        from smarts.core.utils.sumo import SUMO_PATH, traci&#10;    &#10;        load_params = [&#10;            &quot;--start&quot;,&#10;            &quot;--quit-on-end&quot;,&#10;            &quot;--net-file=scenarios/loop/map.net.xml&quot;,&#10;            &quot;--no-step-log&quot;,&#10;            &quot;--no-warnings=1&quot;,&#10;        ]&#10;    &#10;        sumo_port = networking.find_free_port()&#10;        sumo_cmd = [&#10;            os.path.join(SUMO_PATH, &quot;bin&quot;, &quot;sumo&quot;),&#10;            &quot;--remote-port=%s&quot; % sumo_port,&#10;            *load_params,&#10;        ]&#10;    &#10;        sumo_proc = subprocess.Popen(&#10;            sumo_cmd,&#10;            stdin=subprocess.PIPE,&#10;            stdout=subprocess.PIPE,&#10;&gt;           stderr=subprocess.PIPE,&#10;        )&#10;&#10;smarts/core/tests/test_sumo_version.py:54: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/subprocess.py:800: in __init__&#10;    restore_signals, start_new_session)&#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;subprocess.Popen object at 0x2b1a97bcca10&gt;&#10;args = ['/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo', '--remote-port=42435', '--start', '--quit-on-end', '--net-file=scenarios/loop/map.net.xml', '--no-step-log', ...]&#10;executable = b'/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo'&#10;preexec_fn = None, close_fds = True, pass_fds = (), cwd = None, env = None&#10;startupinfo = None, creationflags = 0, shell = False, p2cread = 16&#10;p2cwrite = 17, c2pread = 18, c2pwrite = 19, errread = 20, errwrite = 21&#10;restore_signals = True, start_new_session = False&#10;&#10;    def _execute_child(self, args, executable, preexec_fn, close_fds,&#10;                       pass_fds, cwd, env,&#10;                       startupinfo, creationflags, shell,&#10;                       p2cread, p2cwrite,&#10;                       c2pread, c2pwrite,&#10;                       errread, errwrite,&#10;                       restore_signals, start_new_session):&#10;        &quot;&quot;&quot;Execute program (POSIX version)&quot;&quot;&quot;&#10;    &#10;        if isinstance(args, (str, bytes)):&#10;            args = [args]&#10;        else:&#10;            args = list(args)&#10;    &#10;        if shell:&#10;            # On Android the default shell is at '/system/bin/sh'.&#10;            unix_shell = ('/system/bin/sh' if&#10;                      hasattr(sys, 'getandroidapilevel') else '/bin/sh')&#10;            args = [unix_shell, &quot;-c&quot;] + args&#10;            if executable:&#10;                args[0] = executable&#10;    &#10;        if executable is None:&#10;            executable = args[0]&#10;        orig_executable = executable&#10;    &#10;        # For transferring possible exec failure from child to parent.&#10;        # Data format: &quot;exception name:hex errno:description&quot;&#10;        # Pickle is not used; it is complex and involves memory allocation.&#10;        errpipe_read, errpipe_write = os.pipe()&#10;        # errpipe_write must not be in the standard io 0, 1, or 2 fd range.&#10;        low_fds_to_close = []&#10;        while errpipe_write &lt; 3:&#10;            low_fds_to_close.append(errpipe_write)&#10;            errpipe_write = os.dup(errpipe_write)&#10;        for low_fd in low_fds_to_close:&#10;            os.close(low_fd)&#10;        try:&#10;            try:&#10;                # We must avoid complex work that could involve&#10;                # malloc or free in the child process to avoid&#10;                # potential deadlocks, thus we do all this here.&#10;                # and pass it to fork_exec()&#10;    &#10;                if env is not None:&#10;                    env_list = []&#10;                    for k, v in env.items():&#10;                        k = os.fsencode(k)&#10;                        if b'=' in k:&#10;                            raise ValueError(&quot;illegal environment variable name&quot;)&#10;                        env_list.append(k + b'=' + os.fsencode(v))&#10;                else:&#10;                    env_list = None  # Use execv instead of execve.&#10;                executable = os.fsencode(executable)&#10;                if os.path.dirname(executable):&#10;                    executable_list = (executable,)&#10;                else:&#10;                    # This matches the behavior of os._execvpe().&#10;                    executable_list = tuple(&#10;                        os.path.join(os.fsencode(dir), executable)&#10;                        for dir in os.get_exec_path(env))&#10;                fds_to_keep = set(pass_fds)&#10;                fds_to_keep.add(errpipe_write)&#10;                self.pid = _posixsubprocess.fork_exec(&#10;                        args, executable_list,&#10;                        close_fds, tuple(sorted(map(int, fds_to_keep))),&#10;                        cwd, env_list,&#10;                        p2cread, p2cwrite, c2pread, c2pwrite,&#10;                        errread, errwrite,&#10;                        errpipe_read, errpipe_write,&#10;                        restore_signals, start_new_session, preexec_fn)&#10;                self._child_created = True&#10;            finally:&#10;                # be sure the FD is closed no matter what&#10;                os.close(errpipe_write)&#10;    &#10;            # self._devnull is not always defined.&#10;            devnull_fd = getattr(self, '_devnull', None)&#10;            if p2cread != -1 and p2cwrite != -1 and p2cread != devnull_fd:&#10;                os.close(p2cread)&#10;            if c2pwrite != -1 and c2pread != -1 and c2pwrite != devnull_fd:&#10;                os.close(c2pwrite)&#10;            if errwrite != -1 and errread != -1 and errwrite != devnull_fd:&#10;                os.close(errwrite)&#10;            if devnull_fd is not None:&#10;                os.close(devnull_fd)&#10;            # Prevent a double close of these fds from __init__ on error.&#10;            self._closed_child_pipe_fds = True&#10;    &#10;            # Wait for exec to fail or succeed; possibly raising an&#10;            # exception (limited in size)&#10;            errpipe_data = bytearray()&#10;            while True:&#10;                part = os.read(errpipe_read, 50000)&#10;                errpipe_data += part&#10;                if not part or len(errpipe_data) &gt; 50000:&#10;                    break&#10;        finally:&#10;            # be sure the FD is closed no matter what&#10;            os.close(errpipe_read)&#10;    &#10;        if errpipe_data:&#10;            try:&#10;                pid, sts = os.waitpid(self.pid, 0)&#10;                if pid == self.pid:&#10;                    self._handle_exitstatus(sts)&#10;                else:&#10;                    self.returncode = sys.maxsize&#10;            except ChildProcessError:&#10;                pass&#10;    &#10;            try:&#10;                exception_name, hex_errno, err_msg = (&#10;                        errpipe_data.split(b':', 2))&#10;                # The encoding here should match the encoding&#10;                # written in by the subprocess implementations&#10;                # like _posixsubprocess&#10;                err_msg = err_msg.decode()&#10;            except ValueError:&#10;                exception_name = b'SubprocessError'&#10;                hex_errno = b'0'&#10;                err_msg = 'Bad exception data from child: {!r}'.format(&#10;                              bytes(errpipe_data))&#10;            child_exception_type = getattr(&#10;                    builtins, exception_name.decode('ascii'),&#10;                    SubprocessError)&#10;            if issubclass(child_exception_type, OSError) and hex_errno:&#10;                errno_num = int(hex_errno, 16)&#10;                child_exec_never_called = (err_msg == &quot;noexec&quot;)&#10;                if child_exec_never_called:&#10;                    err_msg = &quot;&quot;&#10;                    # The error must be from chdir(cwd).&#10;                    err_filename = cwd&#10;                else:&#10;                    err_filename = orig_executable&#10;                if errno_num != 0:&#10;                    err_msg = os.strerror(errno_num)&#10;                    if errno_num == errno.ENOENT:&#10;                        err_msg += ': ' + repr(err_filename)&#10;&gt;               raise child_exception_type(errno_num, err_msg, err_filename)&#10;E               FileNotFoundError: [Errno 2] No such file or directory: '/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo': '/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo'&#10;&#10;/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/subprocess.py:1551: FileNotFoundError">def test_sumo_version():
         from smarts.core.utils import networking
         from smarts.core.utils.sumo import SUMO_PATH, traci
     
@@ -21,41 +21,809 @@
             sumo_cmd,
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-        )
-    
-        traci_conn = traci.connect(
-&gt;           sumo_port, numRetries=10, proc=sumo_proc, waitBetweenRetries=0.1
+&gt;           stderr=subprocess.PIPE,
         )
 
-smarts/core/tests/test_sumo_version.py:58: 
+smarts/core/tests/test_sumo_version.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/subprocess.py:800: in __init__
+    restore_signals, start_new_session)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-port = 35347, numRetries = 10, host = 'localhost'
-proc = &lt;subprocess.Popen object at 0x7f7ccff73cd0&gt;, waitBetweenRetries = 0.1
+self = &lt;subprocess.Popen object at 0x2b1a97bcca10&gt;
+args = ['/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo', '--remote-port=42435', '--start', '--quit-on-end', '--net-file=scenarios/loop/map.net.xml', '--no-step-log', ...]
+executable = b'/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo'
+preexec_fn = None, close_fds = True, pass_fds = (), cwd = None, env = None
+startupinfo = None, creationflags = 0, shell = False, p2cread = 16
+p2cwrite = 17, c2pread = 18, c2pwrite = 19, errread = 20, errwrite = 21
+restore_signals = True, start_new_session = False
 
-    def connect(port=8813, numRetries=tc.DEFAULT_NUM_RETRIES, host="localhost", proc=None, waitBetweenRetries=1):
-        """
-        Establish a connection to a TraCI-Server and return the
-        connection object. The connection is not saved in the pool and not
-        accessible via traci.switch. It should be safe to use different
-        connections established by this method in different threads.
-        """
-        for retry in range(1, numRetries + 2):
+    def _execute_child(self, args, executable, preexec_fn, close_fds,
+                       pass_fds, cwd, env,
+                       startupinfo, creationflags, shell,
+                       p2cread, p2cwrite,
+                       c2pread, c2pwrite,
+                       errread, errwrite,
+                       restore_signals, start_new_session):
+        """Execute program (POSIX version)"""
+    
+        if isinstance(args, (str, bytes)):
+            args = [args]
+        else:
+            args = list(args)
+    
+        if shell:
+            # On Android the default shell is at '/system/bin/sh'.
+            unix_shell = ('/system/bin/sh' if
+                      hasattr(sys, 'getandroidapilevel') else '/bin/sh')
+            args = [unix_shell, "-c"] + args
+            if executable:
+                args[0] = executable
+    
+        if executable is None:
+            executable = args[0]
+        orig_executable = executable
+    
+        # For transferring possible exec failure from child to parent.
+        # Data format: "exception name:hex errno:description"
+        # Pickle is not used; it is complex and involves memory allocation.
+        errpipe_read, errpipe_write = os.pipe()
+        # errpipe_write must not be in the standard io 0, 1, or 2 fd range.
+        low_fds_to_close = []
+        while errpipe_write &lt; 3:
+            low_fds_to_close.append(errpipe_write)
+            errpipe_write = os.dup(errpipe_write)
+        for low_fd in low_fds_to_close:
+            os.close(low_fd)
+        try:
             try:
-                conn = Connection(host, port, proc)
-                if _connectHook is not None:
-                    _connectHook(conn)
-                return conn
-            except socket.error as e:
-                if proc is not None and proc.poll() is not None:
-                    raise TraCIException("TraCI server already finished")
-                if retry &gt; 1:
-                    print("Could not connect to TraCI server at %s:%s" % (host, port), e)
-                if retry &lt; numRetries + 1:
-                    print(" Retrying in %s seconds" % waitBetweenRetries)
-                    time.sleep(waitBetweenRetries)
-&gt;       raise FatalTraCIError("Could not connect in %s tries" % (numRetries + 1))
-E       traci.exceptions.FatalTraCIError: Could not connect in 11 tries
+                # We must avoid complex work that could involve
+                # malloc or free in the child process to avoid
+                # potential deadlocks, thus we do all this here.
+                # and pass it to fork_exec()
+    
+                if env is not None:
+                    env_list = []
+                    for k, v in env.items():
+                        k = os.fsencode(k)
+                        if b'=' in k:
+                            raise ValueError("illegal environment variable name")
+                        env_list.append(k + b'=' + os.fsencode(v))
+                else:
+                    env_list = None  # Use execv instead of execve.
+                executable = os.fsencode(executable)
+                if os.path.dirname(executable):
+                    executable_list = (executable,)
+                else:
+                    # This matches the behavior of os._execvpe().
+                    executable_list = tuple(
+                        os.path.join(os.fsencode(dir), executable)
+                        for dir in os.get_exec_path(env))
+                fds_to_keep = set(pass_fds)
+                fds_to_keep.add(errpipe_write)
+                self.pid = _posixsubprocess.fork_exec(
+                        args, executable_list,
+                        close_fds, tuple(sorted(map(int, fds_to_keep))),
+                        cwd, env_list,
+                        p2cread, p2cwrite, c2pread, c2pwrite,
+                        errread, errwrite,
+                        errpipe_read, errpipe_write,
+                        restore_signals, start_new_session, preexec_fn)
+                self._child_created = True
+            finally:
+                # be sure the FD is closed no matter what
+                os.close(errpipe_write)
+    
+            # self._devnull is not always defined.
+            devnull_fd = getattr(self, '_devnull', None)
+            if p2cread != -1 and p2cwrite != -1 and p2cread != devnull_fd:
+                os.close(p2cread)
+            if c2pwrite != -1 and c2pread != -1 and c2pwrite != devnull_fd:
+                os.close(c2pwrite)
+            if errwrite != -1 and errread != -1 and errwrite != devnull_fd:
+                os.close(errwrite)
+            if devnull_fd is not None:
+                os.close(devnull_fd)
+            # Prevent a double close of these fds from __init__ on error.
+            self._closed_child_pipe_fds = True
+    
+            # Wait for exec to fail or succeed; possibly raising an
+            # exception (limited in size)
+            errpipe_data = bytearray()
+            while True:
+                part = os.read(errpipe_read, 50000)
+                errpipe_data += part
+                if not part or len(errpipe_data) &gt; 50000:
+                    break
+        finally:
+            # be sure the FD is closed no matter what
+            os.close(errpipe_read)
+    
+        if errpipe_data:
+            try:
+                pid, sts = os.waitpid(self.pid, 0)
+                if pid == self.pid:
+                    self._handle_exitstatus(sts)
+                else:
+                    self.returncode = sys.maxsize
+            except ChildProcessError:
+                pass
+    
+            try:
+                exception_name, hex_errno, err_msg = (
+                        errpipe_data.split(b':', 2))
+                # The encoding here should match the encoding
+                # written in by the subprocess implementations
+                # like _posixsubprocess
+                err_msg = err_msg.decode()
+            except ValueError:
+                exception_name = b'SubprocessError'
+                hex_errno = b'0'
+                err_msg = 'Bad exception data from child: {!r}'.format(
+                              bytes(errpipe_data))
+            child_exception_type = getattr(
+                    builtins, exception_name.decode('ascii'),
+                    SubprocessError)
+            if issubclass(child_exception_type, OSError) and hex_errno:
+                errno_num = int(hex_errno, 16)
+                child_exec_never_called = (err_msg == "noexec")
+                if child_exec_never_called:
+                    err_msg = ""
+                    # The error must be from chdir(cwd).
+                    err_filename = cwd
+                else:
+                    err_filename = orig_executable
+                if errno_num != 0:
+                    err_msg = os.strerror(errno_num)
+                    if errno_num == errno.ENOENT:
+                        err_msg += ': ' + repr(err_filename)
+&gt;               raise child_exception_type(errno_num, err_msg, err_filename)
+E               FileNotFoundError: [Errno 2] No such file or directory: '/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo': '/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/sumo/1.7.0/bin/sumo'
 
-/usr/share/sumo/tools/traci/main.py:128: FatalTraCIError</failure></testcase><testcase classname="smarts.core.tests.test_sensors" name="test_waypoints_sensor" time="0.311" /><testcase classname="smarts.core.tests.test_smarts" name="test_smarts_doesnt_leak_tasks_after_reset" time="6.092" /><testcase classname="smarts.env.tests.test_social_agent" name="test_social_agents" time="14.171" /><testcase classname="tests.test_examples" name="test_examples[multi_agent]" time="18.598" /><testcase classname="tests.test_examples" name="test_multi_instance_example" time="10.931" /></testsuite></testsuites>
+/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/subprocess.py:1551: FileNotFoundError</failure></testcase><testcase classname="smarts.core.tests.test_sensors" name="test_waypoints_sensor" time="0.096"><error message="failed on setup with &quot;@pytest.fixture&#10;    def scenarios():&#10;        with temp_scenario(name=&quot;straight&quot;, map=&quot;maps/6lane.net.xml&quot;) as scenario_root:&#10;            ego_missions = [&#10;                t.Mission(&#10;                    t.Route(&#10;                        begin=(&quot;edge-west-WE&quot;, 0, 10),&#10;                        end=(&quot;edge-east-WE&quot;, 0, &quot;max&quot;),&#10;                    )&#10;                ),&#10;            ]&#10;            gen_scenario(&#10;                t.Scenario(ego_missions=ego_missions),&#10;&gt;               output_dir=scenario_root,&#10;            )&#10;&#10;smarts/core/tests/test_sensors.py:76: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;smarts/sstudio/genscenario.py:90: in gen_scenario&#10;    overwrite=overwrite,&#10;smarts/sstudio/genscenario.py:230: in gen_missions&#10;    overwrite=overwrite,&#10;smarts/sstudio/genscenario.py:325: in _gen_missions&#10;    generator = TrafficGenerator(scenario)&#10;smarts/sstudio/generators.py:125: in __init__&#10;    self._duarouter = sh.Command(sumolib.checkBinary(&quot;duarouter&quot;))&#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;Command ''&gt;, path = 'duarouter', search_paths = None&#10;&#10;    def __init__(self, path, search_paths=None):&#10;        found = which(path, search_paths)&#10;    &#10;        self._path = encode_to_py3bytes_or_py2str(&quot;&quot;)&#10;    &#10;        # is the command baked (aka, partially applied)?&#10;        self._partial = False&#10;        self._partial_baked_args = []&#10;        self._partial_call_args = {}&#10;    &#10;        # bugfix for functools.wraps.  issue #121&#10;        self.__name__ = str(self)&#10;    &#10;        if not found:&#10;&gt;           raise CommandNotFound(path)&#10;E           sh.CommandNotFound: duarouter&#10;&#10;/home/dikshant/VENV/lib/python3.7/site-packages/sh.py:1342: CommandNotFound&quot;">@pytest.fixture
+    def scenarios():
+        with temp_scenario(name="straight", map="maps/6lane.net.xml") as scenario_root:
+            ego_missions = [
+                t.Mission(
+                    t.Route(
+                        begin=("edge-west-WE", 0, 10),
+                        end=("edge-east-WE", 0, "max"),
+                    )
+                ),
+            ]
+            gen_scenario(
+                t.Scenario(ego_missions=ego_missions),
+&gt;               output_dir=scenario_root,
+            )
+
+smarts/core/tests/test_sensors.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+smarts/sstudio/genscenario.py:90: in gen_scenario
+    overwrite=overwrite,
+smarts/sstudio/genscenario.py:230: in gen_missions
+    overwrite=overwrite,
+smarts/sstudio/genscenario.py:325: in _gen_missions
+    generator = TrafficGenerator(scenario)
+smarts/sstudio/generators.py:125: in __init__
+    self._duarouter = sh.Command(sumolib.checkBinary("duarouter"))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Command ''&gt;, path = 'duarouter', search_paths = None
+
+    def __init__(self, path, search_paths=None):
+        found = which(path, search_paths)
+    
+        self._path = encode_to_py3bytes_or_py2str("")
+    
+        # is the command baked (aka, partially applied)?
+        self._partial = False
+        self._partial_baked_args = []
+        self._partial_call_args = {}
+    
+        # bugfix for functools.wraps.  issue #121
+        self.__name__ = str(self)
+    
+        if not found:
+&gt;           raise CommandNotFound(path)
+E           sh.CommandNotFound: duarouter
+
+/home/dikshant/VENV/lib/python3.7/site-packages/sh.py:1342: CommandNotFound</error></testcase><testcase classname="tests.test_examples" name="test_examples[multi_agent]" time="5.370"><failure message="example = 'multi_agent'&#10;&#10;    @pytest.mark.parametrize(&#10;        &quot;example&quot;,&#10;        [&quot;egoless&quot;, &quot;single_agent&quot;, &quot;multi_agent&quot;],&#10;        # TODO: &quot;ego_open_agent&quot; and &quot;human_in_the_loop&quot; are causing aborts, fix later&#10;    )&#10;    def test_examples(example):&#10;        main = importlib.import_module(f&quot;examples.{example}&quot;).main&#10;        main(&#10;            scenarios=[&quot;scenarios/loop&quot;],&#10;            sim_name=None,&#10;            headless=True,&#10;            num_episodes=1,&#10;            seed=42,&#10;&gt;           max_episode_steps=100,&#10;        )&#10;&#10;tests/test_examples.py:19: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;examples/multi_agent.py:42: in main&#10;    observations = env.reset()&#10;smarts/env/hiway_env.py:191: in reset&#10;    env_observations = self._smarts.reset(scenario)&#10;smarts/core/smarts.py:290: in reset&#10;    self.setup(scenario)&#10;smarts/core/smarts.py:316: in setup&#10;    self._trap_manager = TrapManager(scenario)&#10;smarts/core/trap_manager.py:72: in __init__&#10;    self.init_traps(scenario.road_network, scenario.waypoints, scenario.missions)&#10;smarts/core/trap_manager.py:93: in init_traps&#10;    trap = self._mission2trap(road_network, mission)&#10;smarts/core/trap_manager.py:311: in _mission2trap&#10;    n_lane = road_network.nearest_lane(mission.start.position)&#10;smarts/core/sumo_road_network.py:436: in nearest_lane&#10;    point, radius, include_junctions, include_special&#10;smarts/core/sumo_road_network.py:410: in nearest_lanes&#10;    x, y, r=radius, includeJunctions=include_junctions, allowFallback=False&#10;/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:308: in getNeighboringLanes&#10;    self._rtreeLanes = self._initRTree(self._allLanes, includeJunctions)&#10;/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:265: in _initRTree&#10;    import rtree  # noqa&#10;/home/dikshant/VENV/lib/python3.7/site-packages/rtree/__init__.py:1: in &lt;module&gt;&#10;    from .index import Rtree&#10;/home/dikshant/VENV/lib/python3.7/site-packages/rtree/index.py:6: in &lt;module&gt;&#10;    from . import core&#10;/home/dikshant/VENV/lib/python3.7/site-packages/rtree/core.py:146: in &lt;module&gt;&#10;    rt.Error_GetLastErrorNum.restype = ctypes.c_int&#10;/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:377: in __getattr__&#10;    func = self.__getitem__(name)&#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;CDLL 'None', handle 2b5562b04130 at 0x2b55dc8f2f90&gt;&#10;name_or_ordinal = 'Error_GetLastErrorNum'&#10;&#10;    def __getitem__(self, name_or_ordinal):&#10;&gt;       func = self._FuncPtr((name_or_ordinal, self))&#10;E       AttributeError: /home/dikshant/VENV/bin/python -u -c import sys;exec(eval(sys.stdin.readline())): undefined symbol: Error_GetLastErrorNum&#10;&#10;/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:382: AttributeError">example = 'multi_agent'
+
+    @pytest.mark.parametrize(
+        "example",
+        ["egoless", "single_agent", "multi_agent"],
+        # TODO: "ego_open_agent" and "human_in_the_loop" are causing aborts, fix later
+    )
+    def test_examples(example):
+        main = importlib.import_module(f"examples.{example}").main
+        main(
+            scenarios=["scenarios/loop"],
+            sim_name=None,
+            headless=True,
+            num_episodes=1,
+            seed=42,
+&gt;           max_episode_steps=100,
+        )
+
+tests/test_examples.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+examples/multi_agent.py:42: in main
+    observations = env.reset()
+smarts/env/hiway_env.py:191: in reset
+    env_observations = self._smarts.reset(scenario)
+smarts/core/smarts.py:290: in reset
+    self.setup(scenario)
+smarts/core/smarts.py:316: in setup
+    self._trap_manager = TrapManager(scenario)
+smarts/core/trap_manager.py:72: in __init__
+    self.init_traps(scenario.road_network, scenario.waypoints, scenario.missions)
+smarts/core/trap_manager.py:93: in init_traps
+    trap = self._mission2trap(road_network, mission)
+smarts/core/trap_manager.py:311: in _mission2trap
+    n_lane = road_network.nearest_lane(mission.start.position)
+smarts/core/sumo_road_network.py:436: in nearest_lane
+    point, radius, include_junctions, include_special
+smarts/core/sumo_road_network.py:410: in nearest_lanes
+    x, y, r=radius, includeJunctions=include_junctions, allowFallback=False
+/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:308: in getNeighboringLanes
+    self._rtreeLanes = self._initRTree(self._allLanes, includeJunctions)
+/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:265: in _initRTree
+    import rtree  # noqa
+/home/dikshant/VENV/lib/python3.7/site-packages/rtree/__init__.py:1: in &lt;module&gt;
+    from .index import Rtree
+/home/dikshant/VENV/lib/python3.7/site-packages/rtree/index.py:6: in &lt;module&gt;
+    from . import core
+/home/dikshant/VENV/lib/python3.7/site-packages/rtree/core.py:146: in &lt;module&gt;
+    rt.Error_GetLastErrorNum.restype = ctypes.c_int
+/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:377: in __getattr__
+    func = self.__getitem__(name)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;CDLL 'None', handle 2b5562b04130 at 0x2b55dc8f2f90&gt;
+name_or_ordinal = 'Error_GetLastErrorNum'
+
+    def __getitem__(self, name_or_ordinal):
+&gt;       func = self._FuncPtr((name_or_ordinal, self))
+E       AttributeError: /home/dikshant/VENV/bin/python -u -c import sys;exec(eval(sys.stdin.readline())): undefined symbol: Error_GetLastErrorNum
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:382: AttributeError</failure></testcase><testcase classname="smarts.env.tests.test_social_agent" name="test_social_agents" time="14.342"><failure message="env = &lt;smarts.env.hiway_env.HiWayEnv object at 0x2b44f299d650&gt;&#10;agent_spec = AgentSpec(interface=AgentInterface(debug=False, done_criteria=DoneCriteria(collision=True, off_road=True, off_route=Tr...pec.&lt;lambda&gt; at 0x2b44940b0b90&gt;, info_adapter=&lt;function AgentSpec.&lt;lambda&gt; at 0x2b44940ab3b0&gt;, perform_self_test=False)&#10;&#10;    def test_social_agents(env, agent_spec):&#10;        for episode in episodes(n=MAX_EPISODES):&#10;            agent = agent_spec.build_agent()&#10;&gt;           observations = env.reset()&#10;&#10;smarts/env/tests/test_social_agent.py:61: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;smarts/env/hiway_env.py:191: in reset&#10;    env_observations = self._smarts.reset(scenario)&#10;smarts/core/smarts.py:290: in reset&#10;    self.setup(scenario)&#10;smarts/core/smarts.py:316: in setup&#10;    self._trap_manager = TrapManager(scenario)&#10;smarts/core/trap_manager.py:72: in __init__&#10;    self.init_traps(scenario.road_network, scenario.waypoints, scenario.missions)&#10;smarts/core/trap_manager.py:91: in init_traps&#10;    mission = mission_planner.plan(mission)&#10;smarts/core/mission_planner.py:104: in plan&#10;    include_special=False,&#10;smarts/core/sumo_road_network.py:436: in nearest_lane&#10;    point, radius, include_junctions, include_special&#10;smarts/core/sumo_road_network.py:410: in nearest_lanes&#10;    x, y, r=radius, includeJunctions=include_junctions, allowFallback=False&#10;/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:308: in getNeighboringLanes&#10;    self._rtreeLanes = self._initRTree(self._allLanes, includeJunctions)&#10;/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:265: in _initRTree&#10;    import rtree  # noqa&#10;/home/dikshant/VENV/lib/python3.7/site-packages/rtree/__init__.py:1: in &lt;module&gt;&#10;    from .index import Rtree&#10;/home/dikshant/VENV/lib/python3.7/site-packages/rtree/index.py:6: in &lt;module&gt;&#10;    from . import core&#10;/home/dikshant/VENV/lib/python3.7/site-packages/rtree/core.py:146: in &lt;module&gt;&#10;    rt.Error_GetLastErrorNum.restype = ctypes.c_int&#10;/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:377: in __getattr__&#10;    func = self.__getitem__(name)&#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;CDLL 'None', handle 2b44794d2130 at 0x2b44a1a12d50&gt;&#10;name_or_ordinal = 'Error_GetLastErrorNum'&#10;&#10;    def __getitem__(self, name_or_ordinal):&#10;&gt;       func = self._FuncPtr((name_or_ordinal, self))&#10;E       AttributeError: /home/dikshant/VENV/bin/python -u -c import sys;exec(eval(sys.stdin.readline())): undefined symbol: Error_GetLastErrorNum&#10;&#10;/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:382: AttributeError">env = &lt;smarts.env.hiway_env.HiWayEnv object at 0x2b44f299d650&gt;
+agent_spec = AgentSpec(interface=AgentInterface(debug=False, done_criteria=DoneCriteria(collision=True, off_road=True, off_route=Tr...pec.&lt;lambda&gt; at 0x2b44940b0b90&gt;, info_adapter=&lt;function AgentSpec.&lt;lambda&gt; at 0x2b44940ab3b0&gt;, perform_self_test=False)
+
+    def test_social_agents(env, agent_spec):
+        for episode in episodes(n=MAX_EPISODES):
+            agent = agent_spec.build_agent()
+&gt;           observations = env.reset()
+
+smarts/env/tests/test_social_agent.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+smarts/env/hiway_env.py:191: in reset
+    env_observations = self._smarts.reset(scenario)
+smarts/core/smarts.py:290: in reset
+    self.setup(scenario)
+smarts/core/smarts.py:316: in setup
+    self._trap_manager = TrapManager(scenario)
+smarts/core/trap_manager.py:72: in __init__
+    self.init_traps(scenario.road_network, scenario.waypoints, scenario.missions)
+smarts/core/trap_manager.py:91: in init_traps
+    mission = mission_planner.plan(mission)
+smarts/core/mission_planner.py:104: in plan
+    include_special=False,
+smarts/core/sumo_road_network.py:436: in nearest_lane
+    point, radius, include_junctions, include_special
+smarts/core/sumo_road_network.py:410: in nearest_lanes
+    x, y, r=radius, includeJunctions=include_junctions, allowFallback=False
+/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:308: in getNeighboringLanes
+    self._rtreeLanes = self._initRTree(self._allLanes, includeJunctions)
+/home/dikshant/VENV/lib/python3.7/site-packages/sumolib/net/__init__.py:265: in _initRTree
+    import rtree  # noqa
+/home/dikshant/VENV/lib/python3.7/site-packages/rtree/__init__.py:1: in &lt;module&gt;
+    from .index import Rtree
+/home/dikshant/VENV/lib/python3.7/site-packages/rtree/index.py:6: in &lt;module&gt;
+    from . import core
+/home/dikshant/VENV/lib/python3.7/site-packages/rtree/core.py:146: in &lt;module&gt;
+    rt.Error_GetLastErrorNum.restype = ctypes.c_int
+/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:377: in __getattr__
+    func = self.__getitem__(name)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;CDLL 'None', handle 2b44794d2130 at 0x2b44a1a12d50&gt;
+name_or_ordinal = 'Error_GetLastErrorNum'
+
+    def __getitem__(self, name_or_ordinal):
+&gt;       func = self._FuncPtr((name_or_ordinal, self))
+E       AttributeError: /home/dikshant/VENV/bin/python -u -c import sys;exec(eval(sys.stdin.readline())): undefined symbol: Error_GetLastErrorNum
+
+/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx2/Core/python/3.7.9/lib/python3.7/ctypes/__init__.py:382: AttributeError</failure></testcase><testcase classname="smarts.core.tests.test_smarts" name="test_smarts_doesnt_leak_tasks_after_reset" time="14.665"><failure message="self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;&#10;&#10;    def init(self):&#10;        self._render_lock = Lock()&#10;        try:&#10;            # There can be only 1 ShowBase instance at a time.&#10;&gt;           super().__init__(windowType=&quot;offscreen&quot;)&#10;&#10;smarts/core/renderer.py:95: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;&#10;fStartDirect = True, windowType = 'offscreen'&#10;&#10;    def __init__(self, fStartDirect=True, windowType=None):&#10;        &quot;&quot;&quot;Opens a window, sets up a 3-D and several 2-D scene graphs, and&#10;        everything else needed to render the scene graph to the window.&#10;    &#10;        To prevent a window from being opened, set windowType to the string&#10;        'none' (or 'offscreen' to create an offscreen buffer).  If this is not&#10;        specified, the default value is taken from the 'window-type'&#10;        configuration variable.&#10;    &#10;        This constructor will add various things to the Python builtins scope,&#10;        including this instance itself (under the name ``base``).&#10;        &quot;&quot;&quot;&#10;    &#10;        #: Set if the want-dev Config.prc variable is enabled.  By default, it&#10;        #: is set to True except when using Python with the -O flag.&#10;        self.__dev__ = self.config.GetBool('want-dev', __debug__)&#10;        builtins.__dev__ = self.__dev__&#10;    &#10;        logStackDump = (self.config.GetBool('log-stack-dump', False) or&#10;                        self.config.GetBool('client-log-stack-dump', False))&#10;        uploadStackDump = self.config.GetBool('upload-stack-dump', False)&#10;        if logStackDump or uploadStackDump:&#10;            ExceptionVarDump.install(logStackDump, uploadStackDump)&#10;    &#10;        if __debug__:&#10;            self.__autoGarbageLogging = self.__dev__ and self.config.GetBool('auto-garbage-logging', False)&#10;    &#10;        #: The directory containing the main Python file of this application.&#10;        self.mainDir = ExecutionEnvironment.getEnvironmentVariable(&quot;MAIN_DIR&quot;)&#10;        self.main_dir = self.mainDir&#10;    &#10;        #: This contains the global appRunner instance, as imported from&#10;        #: `.AppRunnerGlobal`.  This will be None if we are not running in the&#10;        #: runtime environment (ie. from a .p3d file).  Deprecated.&#10;        self.appRunner = AppRunnerGlobal.appRunner&#10;        self.app_runner = self.appRunner&#10;    &#10;        #debug running multiplier&#10;        self.debugRunningMultiplier = 4&#10;    &#10;        # [gjeon] to disable sticky keys&#10;        if self.config.GetBool('disable-sticky-keys', 0):&#10;            storeAccessibilityShortcutKeys()&#10;            allowAccessibilityShortcutKeys(False)&#10;    &#10;        self.printEnvDebugInfo()&#10;        vfs = VirtualFileSystem.getGlobalPtr()&#10;    &#10;        self.nextWindowIndex = 1&#10;        self.__directStarted = False&#10;        self.__deadInputs = 0&#10;    &#10;        # Store dconfig variables&#10;        self.sfxActive = self.config.GetBool('audio-sfx-active', 1)&#10;        self.musicActive = self.config.GetBool('audio-music-active', 1)&#10;        self.wantFog = self.config.GetBool('want-fog', 1)&#10;        self.wantRender2dp = self.config.GetBool('want-render2dp', 1)&#10;    &#10;        self.screenshotExtension = self.config.GetString('screenshot-extension', 'jpg')&#10;        self.musicManager = None&#10;        self.musicManagerIsValid = None&#10;        self.sfxManagerList = []&#10;        self.sfxManagerIsValidList = []&#10;    &#10;        self.wantStats = self.config.GetBool('want-pstats', 0)&#10;        self.wantTk = False&#10;        self.wantWx = False&#10;        self.wantDirect = False&#10;    &#10;        #: Fill this in with a function to invoke when the user &quot;exits&quot;&#10;        #: the program by closing the main window.&#10;        self.exitFunc = None&#10;    &#10;        #: Add final-exit callbacks to this list.  These will be called&#10;        #: when sys.exit() is called, after Panda has unloaded, and&#10;        #: just before Python is about to shut down.&#10;        self.finalExitCallbacks = []&#10;    &#10;        # Set up the TaskManager to reset the PStats clock back&#10;        # whenever we resume from a pause.  This callback function is&#10;        # a little hacky, but we can't call it directly from within&#10;        # the TaskManager because he doesn't know about PStats (and&#10;        # has to run before libpanda is even loaded).&#10;        taskMgr.resumeFunc = PStatClient.resumeAfterPause&#10;    &#10;        if self.__dev__:&#10;            self.__setupProfile()&#10;    &#10;        # If the aspect ratio is 0 or None, it means to infer the&#10;        # aspect ratio from the window size.&#10;        # If you need to know the actual aspect ratio call base.getAspectRatio()&#10;        self.__configAspectRatio = ConfigVariableDouble('aspect-ratio', 0).getValue()&#10;        # This variable is used to see if the aspect ratio has changed when&#10;        # we get a window-event.&#10;        self.__oldAspectRatio = None&#10;    &#10;        #: This is set to the value of the window-type config variable, but may&#10;        #: optionally be overridden in the Showbase constructor.  Should either&#10;        #: be 'onscreen' (the default), 'offscreen' or 'none'.&#10;        self.windowType = windowType&#10;        if self.windowType is None:&#10;            self.windowType = self.config.GetString('window-type', 'onscreen')&#10;        self.requireWindow = self.config.GetBool('require-window', 1)&#10;    &#10;        #: This is the main, or only window; see `winList` for a list of *all* windows.&#10;        self.win = None&#10;        self.frameRateMeter = None&#10;        self.sceneGraphAnalyzerMeter = None&#10;        #: A list of all windows opened via `openWindow()`.&#10;        self.winList = []&#10;        self.winControls = []&#10;        self.mainWinMinimized = 0&#10;        self.mainWinForeground = 0&#10;        #: Contains the :class:`~panda3d.core.GraphicsPipe` object created by&#10;        #: `makeDefaultPipe()`.&#10;        self.pipe = None&#10;        #: The full list of :class:`~panda3d.core.GraphicsPipe` objects,&#10;        #: including any auxiliary pipes.  Filled by `makeAllPipes()`.&#10;        self.pipeList = []&#10;        self.mouse2cam = None&#10;        self.buttonThrowers = None&#10;        self.mouseWatcher = None&#10;        #: The :class:`~panda3d.core.MouseWatcher` object, created by&#10;        #: `setupMouse()`.&#10;        self.mouseWatcherNode = None&#10;        self.pointerWatcherNodes = None&#10;        self.mouseInterface = None&#10;        self.drive = None&#10;        self.trackball = None&#10;        self.texmem = None&#10;        self.showVertices = None&#10;        self.deviceButtonThrowers = []&#10;    &#10;        #: This is a :class:`~panda3d.core.NodePath` pointing to the&#10;        #: :class:`~panda3d.core.Camera` object set up for the 3D scene.&#10;        #: Usually a child of `camera`.&#10;        self.cam = None&#10;        #: Same as `cam`, but for the 2D scene graph.&#10;        self.cam2d = None&#10;        #: Same as `cam2d`, but for the 2D overlay scene graph.&#10;        self.cam2dp = None&#10;    &#10;        #: This is the :class:`~panda3d.core.NodePath` that should be used to&#10;        #: manipulate the camera.  It points at the node to which the default&#10;        #: camera (`cam`, `camNode`) is attached.&#10;        self.camera = None&#10;        #: Same as `camera`, but for the 2D scene graph.  Parent of `cam2d`.&#10;        self.camera2d = None&#10;        #: Same as `camera2d`, but for the 2D overlay scene graph.  Parent of&#10;        #: `cam2dp`.&#10;        self.camera2dp = None&#10;    &#10;        #: A list of all cameras created with `makeCamera()`, including `cam`.&#10;        self.camList = []&#10;        #: Convenience accessor for base.cam.node(), containing a&#10;        #: :class:`~panda3d.core.Camera` object.&#10;        self.camNode = None&#10;        #: Convenience accessor for base.camNode.get_lens(), containing a&#10;        #: :class:`~panda3d.core.Lens` object.&#10;        self.camLens = None&#10;        self.camFrustumVis = None&#10;        self.direct = None&#10;        #: This is used to store the wx.Application object used when want-wx is&#10;        #: set or `startWx()` is called.&#10;        self.wxApp = None&#10;        self.wxAppCreated = False&#10;        self.tkRoot = None&#10;        self.tkRootCreated = False&#10;    &#10;        # This is used for syncing multiple PCs in a distributed cluster&#10;        try:&#10;            # Has the cluster sync variable been set externally?&#10;            self.clusterSyncFlag = clusterSyncFlag&#10;        except NameError:&#10;            # Has the clusterSyncFlag been set via a config variable&#10;            self.clusterSyncFlag = self.config.GetBool('cluster-sync', 0)&#10;    &#10;        # We've already created aspect2d in ShowBaseGlobal, for the&#10;        # benefit of creating DirectGui elements before ShowBase.&#10;        from . import ShowBaseGlobal&#10;        self.hidden = ShowBaseGlobal.hidden&#10;    &#10;        #: The global :class:`~panda3d.core.GraphicsEngine`, as returned by&#10;        #: GraphicsEngine.getGlobalPtr()&#10;        self.graphicsEngine = GraphicsEngine.getGlobalPtr()&#10;        self.graphics_engine = self.graphicsEngine&#10;        self.setupRender()&#10;        self.setupRender2d()&#10;        self.setupDataGraph()&#10;    &#10;        if self.wantRender2dp:&#10;            self.setupRender2dp()&#10;    &#10;        #: A placeholder for a :class:`~panda3d.core.CollisionTraverser`.  If&#10;        #: someone stores a CollisionTraverser pointer here, ShowBase will&#10;        #: traverse it automatically in the collisionLoop task, so you won't&#10;        #: need to call :meth:`~panda3d.core.CollisionTraverser.traverse()`&#10;        #: yourself every frame.&#10;        self.cTrav = 0&#10;        self.shadowTrav = 0&#10;        self.cTravStack = Stack()&#10;        # Ditto for an AppTraverser.&#10;        self.appTrav = 0&#10;    &#10;        # This is the DataGraph traverser, which we might as well&#10;        # create now.&#10;        self.dgTrav = DataGraphTraverser()&#10;    &#10;        # Maybe create a RecorderController to record and/or play back&#10;        # the user session.&#10;        self.recorder = None&#10;        playbackSession = self.config.GetString('playback-session', '')&#10;        recordSession = self.config.GetString('record-session', '')&#10;        if playbackSession:&#10;            self.recorder = RecorderController()&#10;            self.recorder.beginPlayback(Filename.fromOsSpecific(playbackSession))&#10;        elif recordSession:&#10;            self.recorder = RecorderController()&#10;            self.recorder.beginRecord(Filename.fromOsSpecific(recordSession))&#10;    &#10;        if self.recorder:&#10;            # If we're either playing back or recording, pass the&#10;            # random seed into the system so each session will have&#10;            # the same random seed.&#10;            import random #, whrandom&#10;    &#10;            seed = self.recorder.getRandomSeed()&#10;            random.seed(seed)&#10;            #whrandom.seed(seed &amp; 0xff, (seed &gt;&gt; 8) &amp; 0xff, (seed &gt;&gt; 16) &amp; 0xff)&#10;    &#10;        # For some reason, wx needs to be initialized before the graphics window&#10;        if sys.platform == &quot;darwin&quot;:&#10;            if self.config.GetBool(&quot;want-wx&quot;, 0):&#10;                wx = importlib.import_module('wx')&#10;                self.wxApp = wx.App()&#10;    &#10;            # Same goes for Tk, which uses a conflicting NSApplication&#10;            if self.config.GetBool(&quot;want-tk&quot;, 0):&#10;                Pmw = importlib.import_module('Pmw')&#10;                self.tkRoot = Pmw.initialise()&#10;    &#10;        # Open the default rendering window.&#10;        if self.windowType != 'none':&#10;            props = WindowProperties.getDefault()&#10;            if (self.config.GetBool('read-raw-mice', 0)):&#10;                props.setRawMice(1)&#10;&gt;           self.openDefaultWindow(startDirect = False, props=props)&#10;&#10;/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:339: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;&#10;args = ()&#10;kw = {'props': origin=(-2, -2) size=(800, 600) title=&quot;Panda&quot; !undecorated !fixed_size !fullscreen open !cursor_hidden absolute }&#10;startDirect = False&#10;&#10;    def openDefaultWindow(self, *args, **kw):&#10;        &quot;&quot;&quot;&#10;        Creates the main window for the first time, without being too&#10;        particular about the kind of graphics API that is chosen.&#10;        The suggested window type from the load-display config variable is&#10;        tried first; if that fails, the first window type that can be&#10;        successfully opened at all is accepted.&#10;    &#10;        This is intended to be called only once, at application startup.&#10;        It is normally called automatically unless window-type is configured&#10;        to 'none'.&#10;    &#10;        :returns: True on success, False on failure.&#10;        &quot;&quot;&quot;&#10;    &#10;        startDirect = kw.get('startDirect', True)&#10;        if 'startDirect' in kw:&#10;            del kw['startDirect']&#10;    &#10;&gt;       self.openMainWindow(*args, **kw)&#10;&#10;/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:1021: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;&#10;args = ()&#10;kw = {'props': origin=(-2, -2) size=(800, 600) title=&quot;Panda&quot; !undecorated !fixed_size !fullscreen open !cursor_hidden absolute }&#10;keepCamera = False, success = 1, oldWin = None, oldLens = None&#10;oldClearColorActive = None&#10;&#10;    def openMainWindow(self, *args, **kw):&#10;        &quot;&quot;&quot;&#10;        Creates the initial, main window for the application, and sets&#10;        up the mouse and render2d structures appropriately for it.  If&#10;        this method is called a second time, it will close the&#10;        previous main window and open a new one, preserving the lens&#10;        properties in base.camLens.&#10;    &#10;        :returns: True on success, or False on failure (in which case base.win&#10;                  may be either None, or the previous, closed window).&#10;        &quot;&quot;&quot;&#10;        keepCamera = kw.get('keepCamera', False)&#10;    &#10;        success = 1&#10;        oldWin = self.win&#10;        oldLens = self.camLens&#10;        oldClearColorActive = None&#10;        if self.win is not None:&#10;            # Close the previous window.&#10;            oldClearColorActive = self.win.getClearColorActive()&#10;            oldClearColor = VBase4(self.win.getClearColor())&#10;            oldClearDepthActive = self.win.getClearDepthActive()&#10;            oldClearDepth = self.win.getClearDepth()&#10;            oldClearStencilActive = self.win.getClearStencilActive()&#10;            oldClearStencil = self.win.getClearStencil()&#10;            self.closeWindow(self.win, keepCamera = keepCamera)&#10;    &#10;        # Open a new window.&#10;&gt;       self.openWindow(*args, **kw)&#10;&#10;/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:1056: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;&#10;props = origin=(-2, -2) size=(800, 600) title=&quot;Panda&quot; !undecorated !fixed_size !fullscreen open !cursor_hidden absolute &#10;fbprops = None, pipe = None, gsg = None, host = None, type = 'offscreen'&#10;name = None, size = None, aspectRatio = None, makeCamera = True&#10;keepCamera = False, scene = None, stereo = None, unexposedDraw = None&#10;callbackWindowDict = None, requireWindow = True&#10;&#10;    def openWindow(self, props = None, fbprops = None, pipe = None, gsg = None,&#10;                   host = None, type = None, name = None, size = None,&#10;                   aspectRatio = None, makeCamera = True, keepCamera = False,&#10;                   scene = None, stereo = None, unexposedDraw = None,&#10;                   callbackWindowDict = None, requireWindow = None):&#10;        &quot;&quot;&quot;&#10;        Creates a window and adds it to the list of windows that are&#10;        to be updated every frame.&#10;    &#10;        :param props: the :class:`~panda3d.core.WindowProperties` that&#10;                      describes the window.&#10;    &#10;        :param fbprops: the :class:`~panda3d.core.FrameBufferProperties`&#10;                        indicating the requested framebuffer properties.&#10;    &#10;        :param type: Either 'onscreen', 'offscreen', or 'none'.&#10;    &#10;        :param keepCamera: If True, the existing base.cam is set up to&#10;                           render into the new window.&#10;    &#10;        :param makeCamera: If True (and keepCamera is False), a new camera is&#10;                           set up to render into the new window.&#10;    &#10;        :param unexposedDraw: If not None, it specifies the initial value&#10;                              of :meth:`~panda3d.core.GraphicsWindow.setUnexposedDraw()`.&#10;    &#10;        :param callbackWindowDict: If not None, a&#10;                                   :class:`~panda3d.core.CallbackGraphicWindow`&#10;                                   is created instead, which allows the caller&#10;                                   to create the actual window with its own&#10;                                   OpenGL context, and direct Panda's rendering&#10;                                   into that window.&#10;    &#10;        :param requireWindow: If True, the function should raise an exception&#10;                              if the window fails to open correctly.&#10;    &#10;        :rtype: panda3d.core.GraphicsWindow&#10;        &quot;&quot;&quot;&#10;    &#10;        # Save this lambda here for convenience; we'll use it to call&#10;        # down to the underlying _doOpenWindow() with all of the above&#10;        # parameters.&#10;        func = lambda : self._doOpenWindow(&#10;            props = props, fbprops = fbprops, pipe = pipe, gsg = gsg,&#10;            host = host, type = type, name = name, size = size,&#10;            aspectRatio = aspectRatio, makeCamera = makeCamera,&#10;            keepCamera = keepCamera, scene = scene, stereo = stereo,&#10;            unexposedDraw = unexposedDraw,&#10;            callbackWindowDict = callbackWindowDict)&#10;    &#10;        if self.win:&#10;            # If we've already opened a window before, this is just a&#10;            # pass-through to _doOpenWindow().&#10;            win = func()&#10;            self.graphicsEngine.openWindows()&#10;            return win&#10;    &#10;        if type is None:&#10;            type = self.windowType&#10;        if requireWindow is None:&#10;            requireWindow = self.requireWindow&#10;    &#10;        win = func()&#10;    &#10;        # Give the window a chance to truly open.&#10;        self.graphicsEngine.openWindows()&#10;        if win is not None and not win.isValid():&#10;            self.notify.info(&quot;Window did not open, removing.&quot;)&#10;            self.closeWindow(win)&#10;            win = None&#10;    &#10;        if win is None and pipe is None:&#10;            # Try a little harder if the window wouldn't open.&#10;            self.makeAllPipes()&#10;            try:&#10;                self.pipeList.remove(self.pipe)&#10;            except ValueError:&#10;                pass&#10;            while self.win is None and self.pipeList:&#10;                self.pipe = self.pipeList[0]&#10;                self.notify.info(&quot;Trying pipe type %s (%s)&quot; % (&#10;                    self.pipe.getType(), self.pipe.getInterfaceName()))&#10;                win = func()&#10;    &#10;                self.graphicsEngine.openWindows()&#10;                if win is not None and not win.isValid():&#10;                    self.notify.info(&quot;Window did not open, removing.&quot;)&#10;                    self.closeWindow(win)&#10;                    win = None&#10;                if win is None:&#10;                    self.pipeList.remove(self.pipe)&#10;    &#10;        if win is None:&#10;            self.notify.warning(&quot;Unable to open '%s' window.&quot; % (type))&#10;            if requireWindow:&#10;                # Unless require-window is set to false, it is an&#10;                # error not to open a window.&#10;&gt;               raise Exception('Could not open window.')&#10;E               Exception: Could not open window.&#10;&#10;/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:801: Exception&#10;&#10;The above exception was the direct cause of the following exception:&#10;&#10;smarts = &lt;smarts.core.smarts.SMARTS object at 0x2b552d420190&gt;&#10;scenarios = &lt;itertools.cycle object at 0x2b55588c5050&gt;&#10;&#10;    def test_smarts_doesnt_leak_tasks_after_reset(smarts, scenarios):&#10;        &quot;&quot;&quot;We have had issues in the past where we would forget to clean up tasks between episodes&#10;        resulting in a gradual decay in performance, this test gives us a bit of a smoke screen&#10;        against this class of regressions.&#10;    &#10;        See #237 for details&#10;        &quot;&quot;&quot;&#10;        num_tasks_before_reset = len(&#10;&gt;           smarts.renderer._showbase_instance.taskMgr.mgr.getTasks()&#10;        )&#10;&#10;smarts/core/tests/test_smarts.py:78: &#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;smarts/core/smarts.py:439: in renderer&#10;    self._renderer = Renderer(self._sim_id)&#10;smarts/core/renderer.py:161: in __init__&#10;    self._showbase_instance = _ShowBaseInstance()&#10;smarts/core/renderer.py:85: in __new__&#10;    it.init()&#10;_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ &#10;&#10;self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;&#10;&#10;    def init(self):&#10;        self._render_lock = Lock()&#10;        try:&#10;            # There can be only 1 ShowBase instance at a time.&#10;            super().__init__(windowType=&quot;offscreen&quot;)&#10;    &#10;            gltf.patch_loader(self.loader)&#10;            self.setBackgroundColor(0, 0, 0, 1)&#10;    &#10;            # Displayed framerate is misleading since we are not using a realtime clock&#10;            self.setFrameRateMeter(False)&#10;    &#10;        except Exception as e:&#10;            # Known reasons for this failing:&#10;            raise RendererException(&#10;                f&quot;Error in initializing framework for opening graphical display and creating scene graph. &quot;&#10;                &quot;A typical reason is display not found. Try running with different configurations of &quot;&#10;                &quot;`export DISPLAY=` using `:0`, `:1`... . If this does not work please consult &quot;&#10;                &quot;the documentation.\nException was: {e}&quot;&#10;&gt;           ) from e&#10;E           smarts.core.renderer.RendererException: Error in initializing framework for opening graphical display and creating scene graph. A typical reason is display not found. Try running with different configurations of `export DISPLAY=` using `:0`, `:1`... . If this does not work please consult the documentation.&#10;E           Exception was: {e}&#10;&#10;smarts/core/renderer.py:110: RendererException">self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;
+
+    def init(self):
+        self._render_lock = Lock()
+        try:
+            # There can be only 1 ShowBase instance at a time.
+&gt;           super().__init__(windowType="offscreen")
+
+smarts/core/renderer.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;
+fStartDirect = True, windowType = 'offscreen'
+
+    def __init__(self, fStartDirect=True, windowType=None):
+        """Opens a window, sets up a 3-D and several 2-D scene graphs, and
+        everything else needed to render the scene graph to the window.
+    
+        To prevent a window from being opened, set windowType to the string
+        'none' (or 'offscreen' to create an offscreen buffer).  If this is not
+        specified, the default value is taken from the 'window-type'
+        configuration variable.
+    
+        This constructor will add various things to the Python builtins scope,
+        including this instance itself (under the name ``base``).
+        """
+    
+        #: Set if the want-dev Config.prc variable is enabled.  By default, it
+        #: is set to True except when using Python with the -O flag.
+        self.__dev__ = self.config.GetBool('want-dev', __debug__)
+        builtins.__dev__ = self.__dev__
+    
+        logStackDump = (self.config.GetBool('log-stack-dump', False) or
+                        self.config.GetBool('client-log-stack-dump', False))
+        uploadStackDump = self.config.GetBool('upload-stack-dump', False)
+        if logStackDump or uploadStackDump:
+            ExceptionVarDump.install(logStackDump, uploadStackDump)
+    
+        if __debug__:
+            self.__autoGarbageLogging = self.__dev__ and self.config.GetBool('auto-garbage-logging', False)
+    
+        #: The directory containing the main Python file of this application.
+        self.mainDir = ExecutionEnvironment.getEnvironmentVariable("MAIN_DIR")
+        self.main_dir = self.mainDir
+    
+        #: This contains the global appRunner instance, as imported from
+        #: `.AppRunnerGlobal`.  This will be None if we are not running in the
+        #: runtime environment (ie. from a .p3d file).  Deprecated.
+        self.appRunner = AppRunnerGlobal.appRunner
+        self.app_runner = self.appRunner
+    
+        #debug running multiplier
+        self.debugRunningMultiplier = 4
+    
+        # [gjeon] to disable sticky keys
+        if self.config.GetBool('disable-sticky-keys', 0):
+            storeAccessibilityShortcutKeys()
+            allowAccessibilityShortcutKeys(False)
+    
+        self.printEnvDebugInfo()
+        vfs = VirtualFileSystem.getGlobalPtr()
+    
+        self.nextWindowIndex = 1
+        self.__directStarted = False
+        self.__deadInputs = 0
+    
+        # Store dconfig variables
+        self.sfxActive = self.config.GetBool('audio-sfx-active', 1)
+        self.musicActive = self.config.GetBool('audio-music-active', 1)
+        self.wantFog = self.config.GetBool('want-fog', 1)
+        self.wantRender2dp = self.config.GetBool('want-render2dp', 1)
+    
+        self.screenshotExtension = self.config.GetString('screenshot-extension', 'jpg')
+        self.musicManager = None
+        self.musicManagerIsValid = None
+        self.sfxManagerList = []
+        self.sfxManagerIsValidList = []
+    
+        self.wantStats = self.config.GetBool('want-pstats', 0)
+        self.wantTk = False
+        self.wantWx = False
+        self.wantDirect = False
+    
+        #: Fill this in with a function to invoke when the user "exits"
+        #: the program by closing the main window.
+        self.exitFunc = None
+    
+        #: Add final-exit callbacks to this list.  These will be called
+        #: when sys.exit() is called, after Panda has unloaded, and
+        #: just before Python is about to shut down.
+        self.finalExitCallbacks = []
+    
+        # Set up the TaskManager to reset the PStats clock back
+        # whenever we resume from a pause.  This callback function is
+        # a little hacky, but we can't call it directly from within
+        # the TaskManager because he doesn't know about PStats (and
+        # has to run before libpanda is even loaded).
+        taskMgr.resumeFunc = PStatClient.resumeAfterPause
+    
+        if self.__dev__:
+            self.__setupProfile()
+    
+        # If the aspect ratio is 0 or None, it means to infer the
+        # aspect ratio from the window size.
+        # If you need to know the actual aspect ratio call base.getAspectRatio()
+        self.__configAspectRatio = ConfigVariableDouble('aspect-ratio', 0).getValue()
+        # This variable is used to see if the aspect ratio has changed when
+        # we get a window-event.
+        self.__oldAspectRatio = None
+    
+        #: This is set to the value of the window-type config variable, but may
+        #: optionally be overridden in the Showbase constructor.  Should either
+        #: be 'onscreen' (the default), 'offscreen' or 'none'.
+        self.windowType = windowType
+        if self.windowType is None:
+            self.windowType = self.config.GetString('window-type', 'onscreen')
+        self.requireWindow = self.config.GetBool('require-window', 1)
+    
+        #: This is the main, or only window; see `winList` for a list of *all* windows.
+        self.win = None
+        self.frameRateMeter = None
+        self.sceneGraphAnalyzerMeter = None
+        #: A list of all windows opened via `openWindow()`.
+        self.winList = []
+        self.winControls = []
+        self.mainWinMinimized = 0
+        self.mainWinForeground = 0
+        #: Contains the :class:`~panda3d.core.GraphicsPipe` object created by
+        #: `makeDefaultPipe()`.
+        self.pipe = None
+        #: The full list of :class:`~panda3d.core.GraphicsPipe` objects,
+        #: including any auxiliary pipes.  Filled by `makeAllPipes()`.
+        self.pipeList = []
+        self.mouse2cam = None
+        self.buttonThrowers = None
+        self.mouseWatcher = None
+        #: The :class:`~panda3d.core.MouseWatcher` object, created by
+        #: `setupMouse()`.
+        self.mouseWatcherNode = None
+        self.pointerWatcherNodes = None
+        self.mouseInterface = None
+        self.drive = None
+        self.trackball = None
+        self.texmem = None
+        self.showVertices = None
+        self.deviceButtonThrowers = []
+    
+        #: This is a :class:`~panda3d.core.NodePath` pointing to the
+        #: :class:`~panda3d.core.Camera` object set up for the 3D scene.
+        #: Usually a child of `camera`.
+        self.cam = None
+        #: Same as `cam`, but for the 2D scene graph.
+        self.cam2d = None
+        #: Same as `cam2d`, but for the 2D overlay scene graph.
+        self.cam2dp = None
+    
+        #: This is the :class:`~panda3d.core.NodePath` that should be used to
+        #: manipulate the camera.  It points at the node to which the default
+        #: camera (`cam`, `camNode`) is attached.
+        self.camera = None
+        #: Same as `camera`, but for the 2D scene graph.  Parent of `cam2d`.
+        self.camera2d = None
+        #: Same as `camera2d`, but for the 2D overlay scene graph.  Parent of
+        #: `cam2dp`.
+        self.camera2dp = None
+    
+        #: A list of all cameras created with `makeCamera()`, including `cam`.
+        self.camList = []
+        #: Convenience accessor for base.cam.node(), containing a
+        #: :class:`~panda3d.core.Camera` object.
+        self.camNode = None
+        #: Convenience accessor for base.camNode.get_lens(), containing a
+        #: :class:`~panda3d.core.Lens` object.
+        self.camLens = None
+        self.camFrustumVis = None
+        self.direct = None
+        #: This is used to store the wx.Application object used when want-wx is
+        #: set or `startWx()` is called.
+        self.wxApp = None
+        self.wxAppCreated = False
+        self.tkRoot = None
+        self.tkRootCreated = False
+    
+        # This is used for syncing multiple PCs in a distributed cluster
+        try:
+            # Has the cluster sync variable been set externally?
+            self.clusterSyncFlag = clusterSyncFlag
+        except NameError:
+            # Has the clusterSyncFlag been set via a config variable
+            self.clusterSyncFlag = self.config.GetBool('cluster-sync', 0)
+    
+        # We've already created aspect2d in ShowBaseGlobal, for the
+        # benefit of creating DirectGui elements before ShowBase.
+        from . import ShowBaseGlobal
+        self.hidden = ShowBaseGlobal.hidden
+    
+        #: The global :class:`~panda3d.core.GraphicsEngine`, as returned by
+        #: GraphicsEngine.getGlobalPtr()
+        self.graphicsEngine = GraphicsEngine.getGlobalPtr()
+        self.graphics_engine = self.graphicsEngine
+        self.setupRender()
+        self.setupRender2d()
+        self.setupDataGraph()
+    
+        if self.wantRender2dp:
+            self.setupRender2dp()
+    
+        #: A placeholder for a :class:`~panda3d.core.CollisionTraverser`.  If
+        #: someone stores a CollisionTraverser pointer here, ShowBase will
+        #: traverse it automatically in the collisionLoop task, so you won't
+        #: need to call :meth:`~panda3d.core.CollisionTraverser.traverse()`
+        #: yourself every frame.
+        self.cTrav = 0
+        self.shadowTrav = 0
+        self.cTravStack = Stack()
+        # Ditto for an AppTraverser.
+        self.appTrav = 0
+    
+        # This is the DataGraph traverser, which we might as well
+        # create now.
+        self.dgTrav = DataGraphTraverser()
+    
+        # Maybe create a RecorderController to record and/or play back
+        # the user session.
+        self.recorder = None
+        playbackSession = self.config.GetString('playback-session', '')
+        recordSession = self.config.GetString('record-session', '')
+        if playbackSession:
+            self.recorder = RecorderController()
+            self.recorder.beginPlayback(Filename.fromOsSpecific(playbackSession))
+        elif recordSession:
+            self.recorder = RecorderController()
+            self.recorder.beginRecord(Filename.fromOsSpecific(recordSession))
+    
+        if self.recorder:
+            # If we're either playing back or recording, pass the
+            # random seed into the system so each session will have
+            # the same random seed.
+            import random #, whrandom
+    
+            seed = self.recorder.getRandomSeed()
+            random.seed(seed)
+            #whrandom.seed(seed &amp; 0xff, (seed &gt;&gt; 8) &amp; 0xff, (seed &gt;&gt; 16) &amp; 0xff)
+    
+        # For some reason, wx needs to be initialized before the graphics window
+        if sys.platform == "darwin":
+            if self.config.GetBool("want-wx", 0):
+                wx = importlib.import_module('wx')
+                self.wxApp = wx.App()
+    
+            # Same goes for Tk, which uses a conflicting NSApplication
+            if self.config.GetBool("want-tk", 0):
+                Pmw = importlib.import_module('Pmw')
+                self.tkRoot = Pmw.initialise()
+    
+        # Open the default rendering window.
+        if self.windowType != 'none':
+            props = WindowProperties.getDefault()
+            if (self.config.GetBool('read-raw-mice', 0)):
+                props.setRawMice(1)
+&gt;           self.openDefaultWindow(startDirect = False, props=props)
+
+/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:339: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;
+args = ()
+kw = {'props': origin=(-2, -2) size=(800, 600) title="Panda" !undecorated !fixed_size !fullscreen open !cursor_hidden absolute }
+startDirect = False
+
+    def openDefaultWindow(self, *args, **kw):
+        """
+        Creates the main window for the first time, without being too
+        particular about the kind of graphics API that is chosen.
+        The suggested window type from the load-display config variable is
+        tried first; if that fails, the first window type that can be
+        successfully opened at all is accepted.
+    
+        This is intended to be called only once, at application startup.
+        It is normally called automatically unless window-type is configured
+        to 'none'.
+    
+        :returns: True on success, False on failure.
+        """
+    
+        startDirect = kw.get('startDirect', True)
+        if 'startDirect' in kw:
+            del kw['startDirect']
+    
+&gt;       self.openMainWindow(*args, **kw)
+
+/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:1021: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;
+args = ()
+kw = {'props': origin=(-2, -2) size=(800, 600) title="Panda" !undecorated !fixed_size !fullscreen open !cursor_hidden absolute }
+keepCamera = False, success = 1, oldWin = None, oldLens = None
+oldClearColorActive = None
+
+    def openMainWindow(self, *args, **kw):
+        """
+        Creates the initial, main window for the application, and sets
+        up the mouse and render2d structures appropriately for it.  If
+        this method is called a second time, it will close the
+        previous main window and open a new one, preserving the lens
+        properties in base.camLens.
+    
+        :returns: True on success, or False on failure (in which case base.win
+                  may be either None, or the previous, closed window).
+        """
+        keepCamera = kw.get('keepCamera', False)
+    
+        success = 1
+        oldWin = self.win
+        oldLens = self.camLens
+        oldClearColorActive = None
+        if self.win is not None:
+            # Close the previous window.
+            oldClearColorActive = self.win.getClearColorActive()
+            oldClearColor = VBase4(self.win.getClearColor())
+            oldClearDepthActive = self.win.getClearDepthActive()
+            oldClearDepth = self.win.getClearDepth()
+            oldClearStencilActive = self.win.getClearStencilActive()
+            oldClearStencil = self.win.getClearStencil()
+            self.closeWindow(self.win, keepCamera = keepCamera)
+    
+        # Open a new window.
+&gt;       self.openWindow(*args, **kw)
+
+/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:1056: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;
+props = origin=(-2, -2) size=(800, 600) title="Panda" !undecorated !fixed_size !fullscreen open !cursor_hidden absolute 
+fbprops = None, pipe = None, gsg = None, host = None, type = 'offscreen'
+name = None, size = None, aspectRatio = None, makeCamera = True
+keepCamera = False, scene = None, stereo = None, unexposedDraw = None
+callbackWindowDict = None, requireWindow = True
+
+    def openWindow(self, props = None, fbprops = None, pipe = None, gsg = None,
+                   host = None, type = None, name = None, size = None,
+                   aspectRatio = None, makeCamera = True, keepCamera = False,
+                   scene = None, stereo = None, unexposedDraw = None,
+                   callbackWindowDict = None, requireWindow = None):
+        """
+        Creates a window and adds it to the list of windows that are
+        to be updated every frame.
+    
+        :param props: the :class:`~panda3d.core.WindowProperties` that
+                      describes the window.
+    
+        :param fbprops: the :class:`~panda3d.core.FrameBufferProperties`
+                        indicating the requested framebuffer properties.
+    
+        :param type: Either 'onscreen', 'offscreen', or 'none'.
+    
+        :param keepCamera: If True, the existing base.cam is set up to
+                           render into the new window.
+    
+        :param makeCamera: If True (and keepCamera is False), a new camera is
+                           set up to render into the new window.
+    
+        :param unexposedDraw: If not None, it specifies the initial value
+                              of :meth:`~panda3d.core.GraphicsWindow.setUnexposedDraw()`.
+    
+        :param callbackWindowDict: If not None, a
+                                   :class:`~panda3d.core.CallbackGraphicWindow`
+                                   is created instead, which allows the caller
+                                   to create the actual window with its own
+                                   OpenGL context, and direct Panda's rendering
+                                   into that window.
+    
+        :param requireWindow: If True, the function should raise an exception
+                              if the window fails to open correctly.
+    
+        :rtype: panda3d.core.GraphicsWindow
+        """
+    
+        # Save this lambda here for convenience; we'll use it to call
+        # down to the underlying _doOpenWindow() with all of the above
+        # parameters.
+        func = lambda : self._doOpenWindow(
+            props = props, fbprops = fbprops, pipe = pipe, gsg = gsg,
+            host = host, type = type, name = name, size = size,
+            aspectRatio = aspectRatio, makeCamera = makeCamera,
+            keepCamera = keepCamera, scene = scene, stereo = stereo,
+            unexposedDraw = unexposedDraw,
+            callbackWindowDict = callbackWindowDict)
+    
+        if self.win:
+            # If we've already opened a window before, this is just a
+            # pass-through to _doOpenWindow().
+            win = func()
+            self.graphicsEngine.openWindows()
+            return win
+    
+        if type is None:
+            type = self.windowType
+        if requireWindow is None:
+            requireWindow = self.requireWindow
+    
+        win = func()
+    
+        # Give the window a chance to truly open.
+        self.graphicsEngine.openWindows()
+        if win is not None and not win.isValid():
+            self.notify.info("Window did not open, removing.")
+            self.closeWindow(win)
+            win = None
+    
+        if win is None and pipe is None:
+            # Try a little harder if the window wouldn't open.
+            self.makeAllPipes()
+            try:
+                self.pipeList.remove(self.pipe)
+            except ValueError:
+                pass
+            while self.win is None and self.pipeList:
+                self.pipe = self.pipeList[0]
+                self.notify.info("Trying pipe type %s (%s)" % (
+                    self.pipe.getType(), self.pipe.getInterfaceName()))
+                win = func()
+    
+                self.graphicsEngine.openWindows()
+                if win is not None and not win.isValid():
+                    self.notify.info("Window did not open, removing.")
+                    self.closeWindow(win)
+                    win = None
+                if win is None:
+                    self.pipeList.remove(self.pipe)
+    
+        if win is None:
+            self.notify.warning("Unable to open '%s' window." % (type))
+            if requireWindow:
+                # Unless require-window is set to false, it is an
+                # error not to open a window.
+&gt;               raise Exception('Could not open window.')
+E               Exception: Could not open window.
+
+/home/dikshant/VENV/lib/python3.7/site-packages/direct/showbase/ShowBase.py:801: Exception
+
+The above exception was the direct cause of the following exception:
+
+smarts = &lt;smarts.core.smarts.SMARTS object at 0x2b552d420190&gt;
+scenarios = &lt;itertools.cycle object at 0x2b55588c5050&gt;
+
+    def test_smarts_doesnt_leak_tasks_after_reset(smarts, scenarios):
+        """We have had issues in the past where we would forget to clean up tasks between episodes
+        resulting in a gradual decay in performance, this test gives us a bit of a smoke screen
+        against this class of regressions.
+    
+        See #237 for details
+        """
+        num_tasks_before_reset = len(
+&gt;           smarts.renderer._showbase_instance.taskMgr.mgr.getTasks()
+        )
+
+smarts/core/tests/test_smarts.py:78: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+smarts/core/smarts.py:439: in renderer
+    self._renderer = Renderer(self._sim_id)
+smarts/core/renderer.py:161: in __init__
+    self._showbase_instance = _ShowBaseInstance()
+smarts/core/renderer.py:85: in __new__
+    it.init()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;smarts.core.renderer._ShowBaseInstance object at 0x2b55588c76d0&gt;
+
+    def init(self):
+        self._render_lock = Lock()
+        try:
+            # There can be only 1 ShowBase instance at a time.
+            super().__init__(windowType="offscreen")
+    
+            gltf.patch_loader(self.loader)
+            self.setBackgroundColor(0, 0, 0, 1)
+    
+            # Displayed framerate is misleading since we are not using a realtime clock
+            self.setFrameRateMeter(False)
+    
+        except Exception as e:
+            # Known reasons for this failing:
+            raise RendererException(
+                f"Error in initializing framework for opening graphical display and creating scene graph. "
+                "A typical reason is display not found. Try running with different configurations of "
+                "`export DISPLAY=` using `:0`, `:1`... . If this does not work please consult "
+                "the documentation.\nException was: {e}"
+&gt;           ) from e
+E           smarts.core.renderer.RendererException: Error in initializing framework for opening graphical display and creating scene graph. A typical reason is display not found. Try running with different configurations of `export DISPLAY=` using `:0`, `:1`... . If this does not work please consult the documentation.
+E           Exception was: {e}
+
+smarts/core/renderer.py:110: RendererException</failure></testcase><testcase classname="tests.test_examples" name="test_multi_instance_example" time="0.000"><error message="failed on setup with &quot;:-1: running the test CRASHED with signal 6&quot;">:-1: running the test CRASHED with signal 6</error></testcase></testsuite></testsuites>
