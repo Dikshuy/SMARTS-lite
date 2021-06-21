@@ -1,0 +1,10 @@
+solved_reward: 0.0  # stop training if avg_reward > solved_reward
+gamma: 0.95  # discount factor
+eps_clip: 0.2  # clip parameter for PPO 
+update_timestep: 800  # update policy every n timesteps
+action_std: 0.5  # constant std for action distribution (Multivariate Normal)
+K_epochs: 8  # update policy for K epochs
+lr: 0.0003  # parameters for Adam optimizer
+actor_layer: [64, 64] # number of variables in hidden layer
+critic_layer: [64, 32] 
+is_discrete: 1 

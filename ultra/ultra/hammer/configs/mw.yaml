@@ -1,0 +1,8 @@
+gamma: 0.95  # discount factor
+eps_clip: 0.2  # clip parameter for PPO 
+update_timestep: 1000 # update policy every n timesteps
+K_epochs: 80  # update policy for K epochs
+lr: 0.0003  # parameters for Adam optimizer
+actor_layer: [64, 64] # number of variables in hidden layer
+critic_layer: [64, 32] 
+is_discrete: 0 
