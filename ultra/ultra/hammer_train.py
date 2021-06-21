@@ -112,9 +112,9 @@ def train(
 
         # Reset the environment and retrieve the initial observations.
         observations = env.reset()
-        print("********************************************")
-        print(list(observations.keys()))
-        print("********************************************")
+        # print("********************************************")
+        # print(list(observations.keys()))
+        # print("********************************************")
         dones = {"__all__": False}
         infos = None
         episode.reset()
@@ -159,7 +159,9 @@ def train(
                 agent_id: agents[agent_id].act(observation, explore=True)
                 for agent_id, observation in observations.items()
             }
-            next_observations, rewards, dones, infos = env.step(actions)
+            next_observations, rewards, dones, infos, x, y = env.step(actions)
+            print("x:", x)
+            print("y:", y)
 
             # Active agents are those that receive observations in this step and the next
             # step. Step each active agent (obtaining their network loss if applicable).

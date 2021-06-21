@@ -155,13 +155,21 @@ class UltraEnv(HiWayEnv):
             for agent_id, value in extras["scores"].items()
         }
 
+        ego_pos_x = []
+        ego_pos_y = []
+        
         for agent_id in observations:
             agent_spec = self._agent_specs[agent_id]
             observation = observations[agent_id]
             reward = rewards[agent_id]
             info = infos[agent_id]
             print("############################")
-            print(list(observation.ego_vehicle_state.position))
+            # print("agent_id:", agent_id)
+            temp = list(observation.ego_vehicle_state.position)
+            ego_pos_x.append(temp[0])
+            ego_pos_y.append(temp[1])
+            print(ego_pos_x)
+            print(ego_pos_y)
             print("############################")
             rewards[agent_id] = agent_spec.reward_adapter(observation, reward)
             observations[agent_id] = agent_spec.observation_adapter(observation)
@@ -174,7 +182,7 @@ class UltraEnv(HiWayEnv):
 
         agent_dones["__all__"] = self._dones_registered == len(self._agent_specs)
 
-        return observations, rewards, agent_dones, infos
+        return observations, rewards, agent_dones, infos, ego_pos_x, ego_pos_y
 
     def get_task(self, task_id, task_level):
         base_dir = os.path.join(os.path.dirname(__file__), "../")
