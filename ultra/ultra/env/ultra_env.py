@@ -149,7 +149,7 @@ class UltraEnv(HiWayEnv):
         }
 
         observations, rewards, agent_dones, extras = self._smarts.step(agent_actions)
-
+        
         infos = {
             agent_id: {"score": value, "env_obs": observations[agent_id]}
             for agent_id, value in extras["scores"].items()
@@ -160,10 +160,13 @@ class UltraEnv(HiWayEnv):
             observation = observations[agent_id]
             reward = rewards[agent_id]
             info = infos[agent_id]
-
+            print("############################")
+            print(list(observation.ego_vehicle_state.position))
+            print("############################")
             rewards[agent_id] = agent_spec.reward_adapter(observation, reward)
             observations[agent_id] = agent_spec.observation_adapter(observation)
             infos[agent_id] = agent_spec.info_adapter(observation, reward, info)
+            
             infos[agent_id]["logs"] = self.generate_logs(observation, reward)
 
         for done in agent_dones.values():
