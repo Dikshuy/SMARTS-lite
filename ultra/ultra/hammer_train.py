@@ -36,6 +36,7 @@ import gym
 import psutil
 import ray
 import torch
+import numpy as np
 
 from smarts.zoo.registry import make
 from ultra.evaluate import evaluation_check, collect_evaluations
@@ -112,9 +113,7 @@ def train(
 
         # Reset the environment and retrieve the initial observations.
         observations = env.reset()
-        # print("********************************************")
-        # print(list(observations.keys()))
-        # print("********************************************")
+        
         dones = {"__all__": False}
         infos = None
         episode.reset()
@@ -159,9 +158,15 @@ def train(
                 agent_id: agents[agent_id].act(observation, explore=True)
                 for agent_id, observation in observations.items()
             }
-            next_observations, rewards, dones, infos, x, y = env.step(actions)
-            print("x:", x)
-            print("y:", y)
+            next_observations, rewards, dones, infos, distance = env.step(actions)
+            
+            # print("!!!!!!!!!!!!!!!!!!!!!!!!!")
+            # print(distance)
+            # print("!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+            print("********************************************")
+            print(next_observations)
+            print("********************************************")
 
             # Active agents are those that receive observations in this step and the next
             # step. Step each active agent (obtaining their network loss if applicable).

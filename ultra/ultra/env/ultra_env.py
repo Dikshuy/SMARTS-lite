@@ -154,23 +154,21 @@ class UltraEnv(HiWayEnv):
             agent_id: {"score": value, "env_obs": observations[agent_id]}
             for agent_id, value in extras["scores"].items()
         }
-
-        ego_pos_x = []
-        ego_pos_y = []
         
+        ego_pos = []
+
         for agent_id in observations:
             agent_spec = self._agent_specs[agent_id]
             observation = observations[agent_id]
             reward = rewards[agent_id]
             info = infos[agent_id]
-            print("############################")
+
+            # print("############################")
             # print("agent_id:", agent_id)
-            temp = list(observation.ego_vehicle_state.position)
-            ego_pos_x.append(temp[0])
-            ego_pos_y.append(temp[1])
-            print(ego_pos_x)
-            print(ego_pos_y)
-            print("############################")
+            pos = list(observation.ego_vehicle_state.position) 
+            ego_pos.append(pos)
+            # print("############################")
+            
             rewards[agent_id] = agent_spec.reward_adapter(observation, reward)
             observations[agent_id] = agent_spec.observation_adapter(observation)
             infos[agent_id] = agent_spec.info_adapter(observation, reward, info)
@@ -182,7 +180,16 @@ class UltraEnv(HiWayEnv):
 
         agent_dones["__all__"] = self._dones_registered == len(self._agent_specs)
 
-        return observations, rewards, agent_dones, infos, ego_pos_x, ego_pos_y
+        dict = {}
+        for i in range(len(ego_pos)):
+            for j in range(len(ego_pos)):
+                check = []
+                if i!=j:
+                    temp = np.sqrt((ego_pos[i][0]-ego_pos[j][0])**2+(ego_pos[i][1]-ego_pos[j][1])**2)
+                    check.append(temp)
+                    dict.update({"distance between "+str(i)+" and "+str(j) : check})
+
+        return observations, rewards, agent_dones, infos, dict
 
     def get_task(self, task_id, task_level):
         base_dir = os.path.join(os.path.dirname(__file__), "../")
