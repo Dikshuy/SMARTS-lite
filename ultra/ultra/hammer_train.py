@@ -160,9 +160,9 @@ def train(
             }
             next_observations, rewards, dones, infos, distance = env.step(actions)
             
-            # print("!!!!!!!!!!!!!!!!!!!!!!!!!")
-            # print(distance)
-            # print("!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print(distance)
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!")
 
             print("********************************************")
             print(next_observations)

@@ -180,7 +180,7 @@ class UltraEnv(HiWayEnv):
 
         agent_dones["__all__"] = self._dones_registered == len(self._agent_specs)
 
-        dict = {}
+        distance = {}
         for i in range(len(ego_pos)):
             for j in range(len(ego_pos)):
                 check = []
@@ -189,7 +189,7 @@ class UltraEnv(HiWayEnv):
                     check.append(temp)
                     dict.update({"distance between "+str(i)+" and "+str(j) : check})
 
-        return observations, rewards, agent_dones, infos, dict
+        return observations, rewards, agent_dones, infos, distance
 
     def get_task(self, task_id, task_level):
         base_dir = os.path.join(os.path.dirname(__file__), "../")
