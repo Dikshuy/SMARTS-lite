@@ -163,9 +163,9 @@ def train(
             print("!!!!!!!!!!!!!!!!!!!!!!!!!")
             print(distance)
             print("!!!!!!!!!!!!!!!!!!!!!!!!!")
-
+            print(agent_ids)
             print("********************************************")
-            print(next_observations)
+            print(next_observations['002']['low_dim_states'])
             print("********************************************")
 
             # Active agents are those that receive observations in this step and the next

@@ -187,7 +187,7 @@ class UltraEnv(HiWayEnv):
                 if i!=j:
                     temp = np.sqrt((ego_pos[i][0]-ego_pos[j][0])**2+(ego_pos[i][1]-ego_pos[j][1])**2)
                     check.append(temp)
-                    dict.update({"distance between "+str(i)+" and "+str(j) : check})
+                    distance.update({"distance between "+str(i)+" and "+str(j) : check})
 
         return observations, rewards, agent_dones, infos, distance
 
