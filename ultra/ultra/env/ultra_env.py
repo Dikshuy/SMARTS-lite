@@ -122,6 +122,9 @@ class UltraEnv(HiWayEnv):
             t_c_social=1.0,
             ignore_vehicle_behind=True,
         )
+        print("///////////////////////////")
+        print(ego_state.position)
+        print("///////////////////////////")
 
         info = dict(
             position=ego_state.position,
@@ -155,7 +158,7 @@ class UltraEnv(HiWayEnv):
             for agent_id, value in extras["scores"].items()
         }
         
-        ego_pos = []
+        ego_pos = {}
 
         for agent_id in observations:
             agent_spec = self._agent_specs[agent_id]
@@ -166,7 +169,7 @@ class UltraEnv(HiWayEnv):
             # print("############################")
             # print("agent_id:", agent_id)
             pos = list(observation.ego_vehicle_state.position) 
-            ego_pos.append(pos)
+            ego_pos.update({agent_id: pos})
             # print("############################")
             
             rewards[agent_id] = agent_spec.reward_adapter(observation, reward)
@@ -180,14 +183,31 @@ class UltraEnv(HiWayEnv):
 
         agent_dones["__all__"] = self._dones_registered == len(self._agent_specs)
 
+        print(ego_pos)
+        
+        if len(ego_pos) > 1:
+            print("############################")   
+            for agent_id in observations:
+                # print(agent_id)
+                observations[agent_id]["low_dim_states"] = (list(observations[agent_id]["low_dim_states"]))
+                observations[agent_id]["low_dim_states"].append(100)
+                print((observations[agent_id]["low_dim_states"]))
+
+            print("############################")   
+            
         distance = {}
-        for i in range(len(ego_pos)):
-            for j in range(len(ego_pos)):
-                check = []
-                if i!=j:
-                    temp = np.sqrt((ego_pos[i][0]-ego_pos[j][0])**2+(ego_pos[i][1]-ego_pos[j][1])**2)
-                    check.append(temp)
-                    distance.update({"distance between "+str(i)+" and "+str(j) : check})
+        # for i in range(len(ego_pos)):
+        #     for j in range(len(ego_pos)):
+        #         check = []
+        #         if i!=j:
+        #             temp = np.sqrt((ego_pos[i][0]-ego_pos[j][0])**2+(ego_pos[i][1]-ego_pos[j][1])**2)
+        #             check.append(temp)
+        #             distance.update({"distance between "+str(i)+" and "+str(j) : check})
+        
+        # np.concatenate(observations[agent_id]['low_dim_states'], distance)
+        # print("*****************")
+        # print(observations)
+        # print("*****************")
 
         return observations, rewards, agent_dones, infos, distance
 

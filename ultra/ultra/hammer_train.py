@@ -160,13 +160,13 @@ def train(
             }
             next_observations, rewards, dones, infos, distance = env.step(actions)
             
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!")
-            print(distance)
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!")
-            print(agent_ids)
-            print("********************************************")
-            print(next_observations['002']['low_dim_states'])
-            print("********************************************")
+            # print("!!!!!!!!!!!!!!!!!!!!!!!!!")
+            # print(distance)
+            # print("!!!!!!!!!!!!!!!!!!!!!!!!!")
+            # print(agent_ids)
+            # print("********************************************")
+            # print(next_observations['002']['low_dim_states'])
+            # print("********************************************")
 
             # Active agents are those that receive observations in this step and the next
             # step. Step each active agent (obtaining their network loss if applicable).
