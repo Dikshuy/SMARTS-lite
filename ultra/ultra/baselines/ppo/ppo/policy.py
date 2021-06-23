@@ -141,7 +141,6 @@ class PPOPolicy(Agent):
 
         # adding the previous action
         size += self.action_size
-        print(size)
         return size
 
     def act(self, state, explore=True):
