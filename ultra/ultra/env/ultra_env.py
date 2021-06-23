@@ -192,10 +192,9 @@ class UltraEnv(HiWayEnv):
                 observations[agent_id]["low_dim_states"] = (list(observations[agent_id]["low_dim_states"]))
                 observations[agent_id]["low_dim_states"].append(100)
                 print((observations[agent_id]["low_dim_states"]))
-
             print("############################")   
             
-        distance = {}
+        # distance = {}
         # for i in range(len(ego_pos)):
         #     for j in range(len(ego_pos)):
         #         check = []
@@ -209,7 +208,8 @@ class UltraEnv(HiWayEnv):
         # print(observations)
         # print("*****************")
 
-        return observations, rewards, agent_dones, infos, distance
+        # return observations, rewards, agent_dones, infos, distance
+        return observations, rewards, agent_dones, infos
 
     def get_task(self, task_id, task_level):
         base_dir = os.path.join(os.path.dirname(__file__), "../")
