@@ -188,10 +188,13 @@ class UltraEnv(HiWayEnv):
         if len(ego_pos) > 1:
             print("############################")   
             for agent_id in observations:
-                # print(agent_id)
-                observations[agent_id]["low_dim_states"] = (list(observations[agent_id]["low_dim_states"]))
-                observations[agent_id]["low_dim_states"].append(100)
-                print((observations[agent_id]["low_dim_states"]))
+                for pos in ego_pos:
+                    if agent_id != pos:
+                        temp = list(observations[agent_id]["low_dim_states"])
+                        temp.append(ego_pos[pos][0]) #append x
+                        temp.append(ego_pos[pos][1]) #append y
+                        observations[agent_id]["low_dim_states"] = temp
+            print((observations[agent_id]["low_dim_states"]))
             print("############################")   
             
         # distance = {}
