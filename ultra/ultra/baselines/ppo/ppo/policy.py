@@ -141,6 +141,7 @@ class PPOPolicy(Agent):
 
         # adding the previous action
         size += self.action_size
+        print(size)
         return size
 
     def act(self, state, explore=True):
@@ -153,7 +154,6 @@ class PPOPolicy(Agent):
         state["low_dim_states"] = (
             torch.from_numpy(state["low_dim_states"]).unsqueeze(0).to(self.device)
         )
-
         with torch.no_grad():
             dist, value = self.ppo_net(x=state)
         if explore:  # training mode

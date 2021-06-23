@@ -122,9 +122,6 @@ class UltraEnv(HiWayEnv):
             t_c_social=1.0,
             ignore_vehicle_behind=True,
         )
-        print("///////////////////////////")
-        print(ego_state.position)
-        print("///////////////////////////")
 
         info = dict(
             position=ego_state.position,
@@ -194,7 +191,7 @@ class UltraEnv(HiWayEnv):
                         temp.append(ego_pos[pos][0]) #append x
                         temp.append(ego_pos[pos][1]) #append y
                         observations[agent_id]["low_dim_states"] = temp
-            print((observations[agent_id]["low_dim_states"]))
+            print(list(observations[agent_id]["low_dim_states"]))
             print("############################")   
             
         # distance = {}
