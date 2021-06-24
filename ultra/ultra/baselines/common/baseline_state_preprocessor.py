@@ -95,7 +95,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         )
         state["waypoints_lookahead"] = np.hstack(lookahead_waypoints)
 
-        state["position"] = np.array(([100000, 100000, 100000, 1000000]))
+        state["position"] = np.array(([100000, 100000, 100000, 100000]))
 
         # print(state)
 

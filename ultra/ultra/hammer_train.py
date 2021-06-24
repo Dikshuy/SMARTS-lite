@@ -159,6 +159,9 @@ def train(
                 for agent_id, observation in observations.items()
             }
             next_observations, rewards, dones, infos = env.step(actions)
+            # print("*************************")
+            # print(next_observations)
+            # print("*************************")
 
             # Active agents are those that receive observations in this step and the next
             # step. Step each active agent (obtaining their network loss if applicable).
