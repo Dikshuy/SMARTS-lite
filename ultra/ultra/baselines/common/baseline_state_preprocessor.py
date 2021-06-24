@@ -39,6 +39,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         # "action": 1.0,  # 2
         "waypoints_lookahead": 10.0,
         "road_speed": 30.0,
+        "position": 100.0,
     }
 
     def __init__(
@@ -65,6 +66,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
                 # "action": int(action_size),  # 2
                 "waypoints_lookahead": 2 * int(observation_waypoints_lookahead),
                 "road_speed": 1,
+                "position": 4,   # added parameter for position of 2 other ego agents
             },
             "social_vehicles": int(social_vehicle_config["num_social_features"])
             if int(social_vehicle_config["social_capacity"]) > 0
