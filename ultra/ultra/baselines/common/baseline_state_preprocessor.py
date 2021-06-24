@@ -39,7 +39,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         # "action": 1.0,  # 2
         "waypoints_lookahead": 10.0,
         "road_speed": 30.0,
-        "position": 100.0,
+        "position": 100.0,   # normalizing the position values by this factor
     }
 
     def __init__(
@@ -51,7 +51,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         self._state_description = self.get_state_description(
             social_vehicle_config, observation_waypoints_lookahead, action_size
         )
-
+    
     @staticmethod
     def get_state_description(
         social_vehicle_config, observation_waypoints_lookahead, action_size
@@ -95,11 +95,19 @@ class BaselineStatePreprocessor(StatePreprocessor):
         )
         state["waypoints_lookahead"] = np.hstack(lookahead_waypoints)
 
+        state["position"] = np.array(([100000, 100000]))
+
+        # print(state)
+
         # Normalize states and concatenate.
+        # for key in self._state_description["low_dim_states"]:
+        #     print(state[key])
+        # error: state[position] is absent
         normalized = [
             self._normalize(key, state[key])
             for key in self._state_description["low_dim_states"]
         ]
+        
         low_dim_states = [
             value
             if isinstance(value, collections.abc.Iterable)
@@ -195,6 +203,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         return basic_state
 
     def _normalize(self, key, value):
+        # print(key)
         if key not in self._NORMALIZATION_VALUES:
             return value
         return value / self._NORMALIZATION_VALUES[key]
