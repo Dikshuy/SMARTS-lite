@@ -95,7 +95,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         )
         state["waypoints_lookahead"] = np.hstack(lookahead_waypoints)
 
-        state["position"] = np.array(([100000, 100000]))
+        state["position"] = np.array(([100000, 100000, 100000, 1000000]))
 
         # print(state)
 
@@ -144,6 +144,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
             "low_dim_states": low_dim_states.numpy(),
             "social_vehicles": social_vehicles.numpy(),
         }
+        # print(out)
         return out
 
     def _adapt_observation_for_baseline(self, state):

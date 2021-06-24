@@ -132,7 +132,10 @@ class PPOPolicy(Agent):
     def state_size(self):
         # Adjusting state_size based on number of features s(ego+social)
         size = sum(self.state_description["low_dim_states"].values())
+        # print("*********************")
         # print(size)
+        # print("*********************")
+
         if self.social_feature_encoder_class:
             size += self.social_feature_encoder_class(
                 **self.social_feature_encoder_params

@@ -180,24 +180,28 @@ class UltraEnv(HiWayEnv):
 
         agent_dones["__all__"] = self._dones_registered == len(self._agent_specs)
 
-        print(ego_pos)
+        # print(ego_pos)
         
         if len(ego_pos) > 1:
-            print("############################")   
+            # print("############################")   
             for agent_id in observations:
+                i = 0 
                 for pos in ego_pos:
                     if agent_id != pos:
                         temp = list(observations[agent_id]["low_dim_states"])
-                        temp.append(ego_pos[pos][0]) #append x
-                        temp.append(ego_pos[pos][1]) #append y
+                        temp[len(temp)-2*len(ego_pos)+i] = (ego_pos[pos][0]) #append x
+                        temp[len(temp)-2*len(ego_pos)+i+1] = (ego_pos[pos][1]) #append y
+                        i+=2
                         observations[agent_id]["low_dim_states"] = temp
-            print(list(observations[agent_id]["low_dim_states"]))
-            print("############################")  
-        else:
-            for agent_id in observations:
-                temp = list(observations[agent_id]["low_dim_states"]) 
-                temp.extend([10000000, 10000000, 10000000, 10000000])
-                observations[agent_id]["low_dim_states"] = temp
+            # print(list(observations[agent_id]["low_dim_states"]))
+            # print("############################")  
+        # else:
+        #     for agent_id in observations:
+        #         temp = list(observations[agent_id]["low_dim_states"]) 
+        #         temp.extend([10000000, 10000000, 10000000, 10000000])
+        #         observations[agent_id]["low_dim_states"] = temp
+
+        # ****************
         # distance = {}
         # for i in range(len(ego_pos)):
         #     for j in range(len(ego_pos)):
@@ -208,9 +212,9 @@ class UltraEnv(HiWayEnv):
         #             distance.update({"distance between "+str(i)+" and "+str(j) : check})
         
         # np.concatenate(observations[agent_id]['low_dim_states'], distance)
-        # print("*****************")
-        # print(observations)
-        # print("*****************")
+        print("*****************")
+        print(observations)
+        print("*****************")
 
         # return observations, rewards, agent_dones, infos, distance
         return observations, rewards, agent_dones, infos
