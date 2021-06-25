@@ -189,8 +189,9 @@ class UltraEnv(HiWayEnv):
                 for pos in ego_pos:
                     if agent_id != pos:
                         temp = list(observations[agent_id]["low_dim_states"])
-                        temp[len(temp)-2*len(ego_pos)+i] = ego_pos[pos][0]        # overwriting x
-                        temp[len(temp)-2*len(ego_pos)+i+1] = ego_pos[pos][1]      # overwriting y
+                        print("index: ", len(temp)-2*len(ego_pos)+i)
+                        temp[len(temp)-2*len(ego_pos)+i+2] = ego_pos[pos][0]        # overwriting x
+                        temp[len(temp)-2*len(ego_pos)+i+3] = ego_pos[pos][1]      # overwriting y
                         print("agent_id: ", agent_id)
                         print("update: ", i)
                         i+=2
