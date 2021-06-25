@@ -167,7 +167,7 @@ class UltraEnv(HiWayEnv):
             print("agent_id:", agent_id)
             pos = list(observation.ego_vehicle_state.position) 
             ego_pos.update({agent_id: pos})
-            print("############################")
+            # print("############################")
             
             rewards[agent_id] = agent_spec.reward_adapter(observation, reward)
             observations[agent_id] = agent_spec.observation_adapter(observation)
@@ -181,7 +181,7 @@ class UltraEnv(HiWayEnv):
         agent_dones["__all__"] = self._dones_registered == len(self._agent_specs)
 
         # print(ego_pos)
-        
+
         if len(ego_pos) > 1:
             # print("############################")   
             for agent_id in observations:
@@ -191,9 +191,11 @@ class UltraEnv(HiWayEnv):
                         temp = list(observations[agent_id]["low_dim_states"])
                         temp[len(temp)-2*len(ego_pos)+i] = ego_pos[pos][0]        # overwriting x
                         temp[len(temp)-2*len(ego_pos)+i+1] = ego_pos[pos][1]      # overwriting y
+                        print("agent_id: ", agent_id)
+                        print("update: ", i)
                         i+=2
                         observations[agent_id]["low_dim_states"] = temp
-            # print(list(observations[agent_id]["low_dim_states"]))
+            print(list(observations[agent_id]["low_dim_states"]))
             # print("############################")  
         # else:
         #     for agent_id in observations:
@@ -213,7 +215,7 @@ class UltraEnv(HiWayEnv):
         
         # np.concatenate(observations[agent_id]['low_dim_states'], distance)
         # print("*****************")
-        print(observations)
+        # print(observations)
         # print("*****************")
 
         # return observations, rewards, agent_dones, infos, distance

@@ -113,7 +113,9 @@ def train(
 
         # Reset the environment and retrieve the initial observations.
         observations = env.reset()
-        
+        # print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+        # print(observations)
+        # print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         dones = {"__all__": False}
         infos = None
         episode.reset()
