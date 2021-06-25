@@ -163,8 +163,8 @@ class UltraEnv(HiWayEnv):
             reward = rewards[agent_id]
             info = infos[agent_id]
 
-            print("############################")
-            print("agent_id:", agent_id)
+            # print("############################")
+            # print("agent_id:", agent_id)
             pos = list(observation.ego_vehicle_state.position) 
             ego_pos.update({agent_id: pos})
             # print("############################")
@@ -189,14 +189,14 @@ class UltraEnv(HiWayEnv):
                 for pos in ego_pos:
                     if agent_id != pos:
                         temp = list(observations[agent_id]["low_dim_states"])
-                        print("index: ", len(temp)-2*len(ego_pos)+i)
+                        # print("index: ", len(temp)-2*len(ego_pos)+i)
                         temp[len(temp)-2*len(ego_pos)+i+2] = ego_pos[pos][0]        # overwriting x
                         temp[len(temp)-2*len(ego_pos)+i+3] = ego_pos[pos][1]      # overwriting y
-                        print("agent_id: ", agent_id)
-                        print("update: ", i)
+                        # print("agent_id: ", agent_id)
+                        # print("update: ", i)
                         i+=2
                         observations[agent_id]["low_dim_states"] = temp
-            print(list(observations[agent_id]["low_dim_states"]))
+            # print(list(observations[agent_id]["low_dim_states"]))
             # print("############################")  
         # else:
         #     for agent_id in observations:
