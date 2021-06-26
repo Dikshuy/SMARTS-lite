@@ -67,7 +67,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
                 # "action": int(action_size),  # 2
                 "waypoints_lookahead": 2 * int(observation_waypoints_lookahead),
                 "road_speed": 1,
-                "position": 4,   # added parameter for position of 2 other ego agents
+                "position": 2*(agents-1),   # added parameter for position of other ego agents(*2 b'coz x and y position)
             },
             "social_vehicles": int(social_vehicle_config["num_social_features"])
             if int(social_vehicle_config["social_capacity"]) > 0
@@ -95,12 +95,13 @@ class BaselineStatePreprocessor(StatePreprocessor):
             num_lookahead=observation_num_lookahead,
         )
         state["waypoints_lookahead"] = np.hstack(lookahead_waypoints)
-
-        state["position"] = []
-        for i in range(self.agents-1):
-            state["position"].append(100000)
+    
+        # automate this position key directly by reading from .yaml file
+        # state["position"] = []
+        # for i in range(agents-1):
+        #     state["position"].append(100000)
         # state["position"] = np.array(([]))
-        # state["position"] = np.array(([100000, 100000, 100000, 100000]))
+        state["position"] = np.array(([100000, 100000, 100000, 100000]))
 
         # print(state)
 
