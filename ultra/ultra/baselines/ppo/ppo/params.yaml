@@ -13,6 +13,7 @@ hidden_units: 512
 seed: 2
 logging_freq: 2
 observation_num_lookahead: 20
+agents: 
 social_vehicles:
     encoder_key: no_encoder
     social_policy_hidden_units: 128

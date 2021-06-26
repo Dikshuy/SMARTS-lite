@@ -55,6 +55,7 @@ def train(
     headless,
     seed,
     log_dir,
+    # agents,
     policy_ids=None,
 ):
     torch.set_num_threads(1)
@@ -267,6 +268,12 @@ if __name__ == "__main__":
         default=None,
         type=str,
     )
+    # think if sth is possible in this manner
+    # parser.add_argument(
+    #     "--agents",
+    #     help="number of ego agents",
+    #     type=int,
+    # )
 
     base_dir = os.path.dirname(__file__)
     pool_path = os.path.join(base_dir, "agent_pool.json")
@@ -304,4 +311,5 @@ if __name__ == "__main__":
         seed=args.seed,
         log_dir=args.log_dir,
         policy_ids=policy_ids,
+        # agents=agents,
     )

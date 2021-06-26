@@ -47,14 +47,15 @@ class BaselineStatePreprocessor(StatePreprocessor):
         social_vehicle_config,
         observation_waypoints_lookahead,
         action_size,
+        agents,
     ):
         self._state_description = self.get_state_description(
-            social_vehicle_config, observation_waypoints_lookahead, action_size
+            social_vehicle_config, observation_waypoints_lookahead, action_size, agents
         )
     
     @staticmethod
     def get_state_description(
-        social_vehicle_config, observation_waypoints_lookahead, action_size
+        social_vehicle_config, observation_waypoints_lookahead, action_size, agents
     ):
         return {
             "low_dim_states": {
@@ -95,7 +96,11 @@ class BaselineStatePreprocessor(StatePreprocessor):
         )
         state["waypoints_lookahead"] = np.hstack(lookahead_waypoints)
 
-        state["position"] = np.array(([100000, 100000, 100000, 100000]))
+        state["position"] = []
+        for i in range(self.agents-1):
+            state["position"].append(100000)
+        # state["position"] = np.array(([]))
+        # state["position"] = np.array(([100000, 100000, 100000, 100000]))
 
         # print(state)
 
