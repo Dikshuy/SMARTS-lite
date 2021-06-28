@@ -163,11 +163,9 @@ class UltraEnv(HiWayEnv):
             reward = rewards[agent_id]
             info = infos[agent_id]
 
-            # print("############################")
             # print("agent_id:", agent_id)
             pos = list(observation.ego_vehicle_state.position) 
             ego_pos.update({agent_id: pos})
-            # print("############################")
             
             rewards[agent_id] = agent_spec.reward_adapter(observation, reward)
             observations[agent_id] = agent_spec.observation_adapter(observation)
@@ -182,44 +180,30 @@ class UltraEnv(HiWayEnv):
 
         # print(ego_pos)
 
-        if len(ego_pos) > 1:
-            # print("############################")   
+        if len(ego_pos) > 1:   
             for agent_id in observations:
                 i = 0 
                 for pos in ego_pos:
                     if agent_id != pos:
                         temp = list(observations[agent_id]["low_dim_states"])
                         # print("index: ", len(temp)-2*len(ego_pos)+i)
-                        temp[len(temp)-2*len(ego_pos)+i+2] = ego_pos[pos][0]        # overwriting x
-                        temp[len(temp)-2*len(ego_pos)+i+3] = ego_pos[pos][1]      # overwriting y
+                        temp[len(temp)-2*len(ego_pos)+i] = ego_pos[pos][0]        # overwriting x
+                        temp[len(temp)-2*len(ego_pos)+i+1] = ego_pos[pos][1]      # overwriting y
                         # print("agent_id: ", agent_id)
                         # print("update: ", i)
                         i+=2
                         observations[agent_id]["low_dim_states"] = temp
-            # print(list(observations[agent_id]["low_dim_states"]))
-            # print("############################")  
-        # else:
-        #     for agent_id in observations:
-        #         temp = list(observations[agent_id]["low_dim_states"]) 
-        #         temp.extend([10000000, 10000000, 10000000, 10000000])
-        #         observations[agent_id]["low_dim_states"] = temp
 
-        # ****************
-        # distance = {}
-        # for i in range(len(ego_pos)):
-        #     for j in range(len(ego_pos)):
-        #         check = []
-        #         if i!=j:
-        #             temp = np.sqrt((ego_pos[i][0]-ego_pos[j][0])**2+(ego_pos[i][1]-ego_pos[j][1])**2)
-        #             check.append(temp)
-        #             distance.update({"distance between "+str(i)+" and "+str(j) : check})
-        
-        # np.concatenate(observations[agent_id]['low_dim_states'], distance)
-        # print("*****************")
-        # print(observations)
-        # print("*****************")
-
-        # return observations, rewards, agent_dones, infos, distance
+            for id1 in ego_pos:
+                j = 0
+                for id2 in ego_pos:
+                    if id1 != id2:
+                        temp = list(observations[agent_id]["low_dim_states"])
+                        dist = np.sqrt((ego_pos[id1][0]-ego_pos[id2][0])**2+(ego_pos[id1][1]-ego_pos[id2][1])**2)
+                        temp[len(temp)-j-1] = dist
+                        j+=1
+                        observations[agent_id]["low_dim_states"] = temp
+             
         return observations, rewards, agent_dones, infos
 
     def get_task(self, task_id, task_level):
