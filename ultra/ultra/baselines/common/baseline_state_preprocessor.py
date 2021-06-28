@@ -101,10 +101,10 @@ class BaselineStatePreprocessor(StatePreprocessor):
     
         # automate this position key directly by reading from .yaml file -> done!
         state["position"] = np.empty(2*(agents-1))
-        state["position"].fill(100000)
+        state["position"].fill(0)
 
         state["distance"] = np.empty(agents-1)
-        state["distance"].fill(100000)
+        state["distance"].fill(0)
 
         # print(state)
 
