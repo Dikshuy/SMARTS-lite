@@ -84,6 +84,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         observation_num_lookahead,
         social_capacity,
         social_vehicle_config,
+        agents,
     ):
         state = self._adapt_observation_for_baseline(state)
 
@@ -96,12 +97,9 @@ class BaselineStatePreprocessor(StatePreprocessor):
         )
         state["waypoints_lookahead"] = np.hstack(lookahead_waypoints)
     
-        # automate this position key directly by reading from .yaml file
-        # state["position"] = []
-        # for i in range(agents-1):
-        #     state["position"].append(100000)
-        # state["position"] = np.array(([]))
-        state["position"] = np.array(([100000, 100000, 100000, 100000]))
+        # automate this position key directly by reading from .yaml file -> done!
+        state["position"] = np.empty(2*(agents-1))
+        state["position"].fill(100000)
 
         # print(state)
 

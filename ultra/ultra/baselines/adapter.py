@@ -138,6 +138,7 @@ class BaselineAdapter:
             observation_num_lookahead=self.observation_num_lookahead,
             social_capacity=self.social_capacity,
             social_vehicle_config=self.social_vehicle_config,
+            agents= self.policy_params["agents"]
             # prev_action=self.prev_action
         )
 
