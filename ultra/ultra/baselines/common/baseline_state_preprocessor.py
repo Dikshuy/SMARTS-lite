@@ -39,7 +39,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         # "action": 1.0,  # 2
         "waypoints_lookahead": 10.0,
         "road_speed": 30.0,
-        "position": 100.0,   # normalizing the position values by this factor
+        "position": 100.0,   
         "distance": 100.0,
     }
 
@@ -106,14 +106,16 @@ class BaselineStatePreprocessor(StatePreprocessor):
         state["distance"] = np.empty(agents-1)
         state["distance"].fill(0)
 
-        # print(state)
+        # print(state.keys())
 
         # Normalize states and concatenate.
-        
+
         normalized = [
             self._normalize(key, state[key])
             for key in self._state_description["low_dim_states"]
         ]
+        print("*******************")
+        print(normalized)
         
         low_dim_states = [
             value
@@ -211,7 +213,6 @@ class BaselineStatePreprocessor(StatePreprocessor):
         return basic_state
 
     def _normalize(self, key, value):
-        # print(key)
         if key not in self._NORMALIZATION_VALUES:
             return value
         return value / self._NORMALIZATION_VALUES[key]

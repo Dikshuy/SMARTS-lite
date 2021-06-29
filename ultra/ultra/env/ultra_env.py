@@ -181,20 +181,19 @@ class UltraEnv(HiWayEnv):
         # print(ego_pos)
 
         if len(ego_pos) > 1:
-            print("******************************************")
-            print("overwriting....  ") 
-            print("#agents = ", len(ego_pos))  
+            # print("overwriting....  ") 
+            # print("#agents = ", len(ego_pos))  
             for agent_id in observations:
                 i = 0 
                 for pos in ego_pos:
                     if agent_id != pos:
                         temp = list(observations[agent_id]["low_dim_states"])
-                        print("length of vector: ", len(temp))
-                        print("index: ", len(temp)-2*len(ego_pos)+i)
+                        # print("length of vector: ", len(temp))
+                        # print("index: ", len(temp)-2*len(ego_pos)+i)
                         temp[len(temp)-2*len(ego_pos)+i] = ego_pos[pos][0]        # overwriting x
                         temp[len(temp)-2*len(ego_pos)+i+1] = ego_pos[pos][1]      # overwriting y
-                        print("agent id: ", agent_id)
-                        print("update: ", i)
+                        # print("agent id: ", agent_id)
+                        # print("update: ", i)
                         i+=2
                         observations[agent_id]["low_dim_states"] = temp
 
@@ -204,11 +203,11 @@ class UltraEnv(HiWayEnv):
                     if id1 != id2:
                         temp = list(observations[id1]["low_dim_states"])
                         dist = np.sqrt((ego_pos[id1][0]-ego_pos[id2][0])**2+(ego_pos[id1][1]-ego_pos[id2][1])**2)
-                        print("distance between ", id1, " and ", id2, " is ", dist)
+                        # print("distance between ", id1, " and ", id2, " is ", dist)
                         temp[len(temp)-j-1] = dist
                         j+=1
                         observations[id1]["low_dim_states"] = temp
-            print(observations)     
+            # print(observations)     
         return observations, rewards, agent_dones, infos
 
     def get_task(self, task_id, task_level):
