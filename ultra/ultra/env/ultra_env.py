@@ -204,10 +204,11 @@ class UltraEnv(HiWayEnv):
                     if id1 != id2:
                         temp = list(observations[agent_id]["low_dim_states"])
                         dist = np.sqrt((ego_pos[id1][0]-ego_pos[id2][0])**2+(ego_pos[id1][1]-ego_pos[id2][1])**2)
+                        print("distance between ", id1, " and ", id2, " is ", dist)
                         temp[len(temp)-j-1] = dist
                         j+=1
                         observations[agent_id]["low_dim_states"] = temp
-             
+            print(observations)     
         return observations, rewards, agent_dones, infos
 
     def get_task(self, task_id, task_level):
