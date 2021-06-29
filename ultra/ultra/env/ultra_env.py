@@ -180,17 +180,21 @@ class UltraEnv(HiWayEnv):
 
         # print(ego_pos)
 
-        if len(ego_pos) > 1:   
+        if len(ego_pos) > 1:
+            print("******************************************")
+            print("overwriting....  ") 
+            print("#agents = ", len(ego_pos))  
             for agent_id in observations:
                 i = 0 
                 for pos in ego_pos:
                     if agent_id != pos:
                         temp = list(observations[agent_id]["low_dim_states"])
-                        # print("index: ", len(temp)-2*len(ego_pos)+i)
+                        print("length of vector: ", len(temp))
+                        print("index: ", len(temp)-2*len(ego_pos)+i)
                         temp[len(temp)-2*len(ego_pos)+i] = ego_pos[pos][0]        # overwriting x
                         temp[len(temp)-2*len(ego_pos)+i+1] = ego_pos[pos][1]      # overwriting y
-                        # print("agent_id: ", agent_id)
-                        # print("update: ", i)
+                        print("agent_id: ", agent_id)
+                        print("update: ", i)
                         i+=2
                         observations[agent_id]["low_dim_states"] = temp
 
