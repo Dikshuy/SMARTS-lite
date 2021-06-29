@@ -198,16 +198,16 @@ class UltraEnv(HiWayEnv):
                         i+=2
                         observations[agent_id]["low_dim_states"] = temp
 
-            for id1 in ego_pos:
-                j = 0
-                for id2 in ego_pos:
-                    if id1 != id2:
-                        temp = list(observations[agent_id]["low_dim_states"])
-                        dist = np.sqrt((ego_pos[id1][0]-ego_pos[id2][0])**2+(ego_pos[id1][1]-ego_pos[id2][1])**2)
-                        print("distance between ", id1, " and ", id2, " is ", dist)
-                        temp[len(temp)-j-1] = dist
-                        j+=1
-                        observations[agent_id]["low_dim_states"] = temp
+                for id1 in ego_pos:
+                    j = 0
+                    for id2 in ego_pos:
+                        if id1 != id2:
+                            temp = list(observations[agent_id]["low_dim_states"])
+                            dist = np.sqrt((ego_pos[id1][0]-ego_pos[id2][0])**2+(ego_pos[id1][1]-ego_pos[id2][1])**2)
+                            print("distance between ", id1, " and ", id2, " is ", dist)
+                            temp[len(temp)-j-1] = dist
+                            j+=1
+                            observations[agent_id]["low_dim_states"] = temp
             print(observations)     
         return observations, rewards, agent_dones, infos
 
