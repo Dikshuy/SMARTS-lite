@@ -284,6 +284,58 @@ end of command: > sample.txt &
 
 tail -f sample.txt
 ```
+
+### Setting up SMARTS/ULTRA on Compute Canada
+
+#### Running SMARTS on Compute Canada
+```bash
+# Login to Compute Canada with Trusted X11 Forwarding and the forwarded port for Envision.
+$ ssh <user-name>@<cluster-name>.computecanada.ca -Y -L localhost:8081:localhost:8081
+
+# On your Compute Canada login node, obtain the Docker image for SMARTS and compress it (taken from
+# https://docs.computecanada.ca/wiki/Singularity#Creating_an_image_using_Docker_Hub_and_Dockerfile).
+$ cd ~/scratch
+$ wget https://raw.githubusercontent.com/moby/moby/master/contrib/download-frozen-image-v2.sh
+$ sh download-frozen-image-v2.sh smarts-0416_docker huaweinoah/smarts:v0.4.16
+$ cd smarts-0416_docker && tar cf ../smarts-0416_docker.tar * && cd ..
+
+# Start an interactive job and build the Singularity container.
+$ cd ~/scratch
+$ salloc --mem-per-cpu=2000 --cpus-per-task=4 --time=2:0:0
+$ module load singularity
+$ singularity build smarts-0416_singularity.sif docker-archive://smarts-0416_docker.tar
+$ exit  # Exit out of the interactive job once the Singularity container is built.
+
+# Move the Singularity container back to your projects directory and clone SMARTS.
+$ cd ~/scratch
+$ mv smarts-0416_singularity.sif ~/projects/<sponsor-name>/<user-name>/
+$ cd ~/projects/<sponsor-name>/<user-name>/
+$ git clone https://github.com/huawei-noah/SMARTS.git
+
+# Execute the Singularity container and bind your SMARTS directory to the /SMARTS directory in the container.
+# After, go to your the SMARTS directory in the container, modify the PYTHONPATH, and run an example!
+$ cd ~/projects/<sponsor-name>/<user-name>/
+$ singularity shell --bind SMARTS/:/SMARTS --env DISPLAY=$DISPLAY smarts-0416_singularity.sif
+Singularity> cd /SMARTS
+Singularity> export PYTHONPATH=/SMARTS:$PYTHONPATH
+Singularity> supervisord
+```
+
+#### Running ULTRA on Compute Canada
+
+Follow the steps above to obtain `smarts-0416_singularity.sif` and `SMARTS/`.
+```bash
+# Start an interactive job to run an ULTRA experiment.
+$ salloc --time=1:0:0 --mem=16G --cpus-per-task=8 --ntasks=1
+$ module load singularity
+$ singularity shell --bind SMARTS/:/SMARTS smarts-0416_singularity.sif
+Singularity> cd /SMARTS/ultra
+Singularity> export PYTHONPATH=/SMARTS/ultra:$PYTHONPATH
+
+# Follow instructions in https://github.com/huawei-noah/SMARTS/blob/master/ultra/docs/getting_started.md to
+# run the experiment.
+```
+
 ### Note
 You can shut down this Envision process by running `pkill -f -9 ultra` (notice that `ps -ef | grep ultra` will output the Envision process that you started with the command `./ultra/env/envision_base.sh`). But if you kill this Envision process, you will have to rerun `./ultra/env/envision_base.sh` if you want to be able to visualize the training through Envision again.
 
