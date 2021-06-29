@@ -114,8 +114,6 @@ class BaselineStatePreprocessor(StatePreprocessor):
             self._normalize(key, state[key])
             for key in self._state_description["low_dim_states"]
         ]
-        print("*******************")
-        print(normalized)
         
         low_dim_states = [
             value
