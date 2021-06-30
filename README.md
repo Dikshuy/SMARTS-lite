@@ -288,6 +288,7 @@ tail -f sample.txt
 ### Setting up SMARTS/ULTRA on Compute Canada
 
 #### Running SMARTS on Compute Canada
+
 ```bash
 # Login to Compute Canada with Trusted X11 Forwarding and the forwarded port for Envision.
 $ ssh <user-name>@<cluster-name>.computecanada.ca -Y -L localhost:8081:localhost:8081
@@ -324,6 +325,7 @@ Singularity> supervisord
 #### Running ULTRA on Compute Canada
 
 Follow the steps above to obtain `smarts-0416_singularity.sif` and `SMARTS/`.
+
 ```bash
 # Start an interactive job to run an ULTRA experiment.
 $ salloc --time=1:0:0 --mem=16G --cpus-per-task=8 --ntasks=1
