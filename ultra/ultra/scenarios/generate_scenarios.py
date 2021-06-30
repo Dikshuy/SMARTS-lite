@@ -166,7 +166,7 @@ def generate_left_turn_missions(
     intersection_name,
     traffic_density,
 ):
-    # dont worry about these seeds, theyre used by sumo
+    # dont worry about these seeds, they're used by sumo
     sumo_seed = random.choice([0, 1, 2, 3, 4])
     stopwatcher_info = None
     stopwatcher_added = False
@@ -502,9 +502,9 @@ def build_scenarios(
         # Obtain the ego missions specified for this mode and ensure
         # that test scenarios only have one ego mission.
         ego_missions = level_config[mode]["ego_missions"]
-        assert not (
-            mode == "test" and (len(ego_missions) != 1)
-        ), "Test scenarios must have one ego mission."
+        # assert not (
+        #     mode == "test" # and (len(ego_missions) != 1)
+        # ), "Test scenarios must have one ego mission."
 
         prev_split = 0
         main_seed_count = 0
