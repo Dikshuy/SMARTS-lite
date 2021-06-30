@@ -24,7 +24,7 @@ levels:
           specs: [[50kmh,low-density,0.34],[70kmh,low-density,0.33],[100kmh,low-density,0.33]]
   easy:
     train:
-      total: 10000
+      total: 100
       ego_missions:
       - start: south-SN  # Turn left going from South to West.
         end:   west-EW
@@ -52,11 +52,15 @@ levels:
         #            [50kmh,no-traffic,0.01],[70kmh,no-traffic,0.01],[100kmh,no-traffic,0.01], #3%
         #            [50kmh,high-density,0.01],[70kmh,high-density,0.01],[100kmh,high-density,0.01]] # 3%
     test:
-      total: 200
+      total: 20
       ego_missions:
         # left turn from south to west
       - start: south-SN
         end:   west-EW
+      - start: west-WE   
+        end:   north-SN
+      - start: north-NS  
+        end:   east-WE
         # start_offset: [77, 83]
         # end_offset:   [40, 40]
       intersection_types:
