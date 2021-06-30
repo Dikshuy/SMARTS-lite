@@ -311,28 +311,28 @@ $ exit  # Exit out of the interactive job once the Singularity container is buil
 $ cd ~/scratch
 $ mv smarts-0416_singularity.sif ~/projects/<sponsor-name>/<user-name>/
 $ cd ~/projects/<sponsor-name>/<user-name>/
-$ git clone https://github.com/huawei-noah/SMARTS.git
+$ git clone https://github.com/Dikshuy/SMARTS-lite.git
 
 # Execute the Singularity container and bind your SMARTS directory to the /SMARTS directory in the container.
 # After, go to your the SMARTS directory in the container, modify the PYTHONPATH, and run an example!
 $ cd ~/projects/<sponsor-name>/<user-name>/
-$ singularity shell --bind SMARTS/:/SMARTS --env DISPLAY=$DISPLAY smarts-0416_singularity.sif
-Singularity> cd /SMARTS
-Singularity> export PYTHONPATH=/SMARTS:$PYTHONPATH
+$ singularity shell --bind SMARTS-lite/:/SMARTS-lite --env DISPLAY=$DISPLAY smarts-0416_singularity.sif
+Singularity> cd /SMARTS-lite
+Singularity> export PYTHONPATH=/SMARTS-lite:$PYTHONPATH
 Singularity> supervisord
 ```
 
 #### Running ULTRA on Compute Canada
 
-Follow the steps above to obtain `smarts-0416_singularity.sif` and `SMARTS/`.
+Follow the steps above to obtain `smarts-0416_singularity.sif` and `SMARTS-lite/`.
 
 ```bash
 # Start an interactive job to run an ULTRA experiment.
 $ salloc --time=1:0:0 --mem=16G --cpus-per-task=8 --ntasks=1
 $ module load singularity
-$ singularity shell --bind SMARTS/:/SMARTS smarts-0416_singularity.sif
-Singularity> cd /SMARTS/ultra
-Singularity> export PYTHONPATH=/SMARTS/ultra:$PYTHONPATH
+$ singularity shell --bind SMARTS-lite/:/SMARTS-lite --env DISPLAY=$DISPLAY smarts-0416_singularity.sif
+Singularity> cd /SMARTS-lite/ultra
+Singularity> export PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite/:$PYTHONPATH
 
 # Follow instructions in https://github.com/huawei-noah/SMARTS/blob/master/ultra/docs/getting_started.md to
 # run the experiment.
