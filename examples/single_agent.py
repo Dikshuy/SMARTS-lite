@@ -1,15 +1,12 @@
 import logging
-from smarts.core.controllers import ActionSpaceType
 
 import gym
 
 from examples import default_argument_parser
 from smarts.core.agent import Agent, AgentSpec
-from smarts.core.agent_interface import AgentInterface, AgentType, NeighborhoodVehicles, Waypoints
+from smarts.core.agent_interface import AgentInterface, AgentType
 from smarts.core.sensors import Observation
 from smarts.core.utils.episodes import episodes
-from ultra.baselines.adapter import BaselineAdapter
-from ultra.baselines.ppo.ppo.policy import PPOPolicy
 
 logging.basicConfig(level=logging.INFO)
 
@@ -35,25 +32,11 @@ class ChaseViaPointsAgent(Agent):
 
 
 def main(scenarios, sim_name, headless, num_episodes, seed, max_episode_steps=None):
-    # agent_spec = AgentSpec(
-    #     interface=AgentInterface.from_type(
-    #         AgentType.LanerWithSpeed, max_episode_steps=max_episode_steps
-    #     ),
-    #     agent_builder=ChaseViaPointsAgent,
-    # )
-
-    adapter = BaselineAdapter("ppo")
     agent_spec = AgentSpec(
-        interface=AgentInterface(
-            waypoints=Waypoints(lookahead=20),
-            neighborhood_vehicles=NeighborhoodVehicles(radius=200),
-            action=ActionSpaceType.Continuous,
-            max_episode_steps=max_episode_steps,
+        interface=AgentInterface.from_type(
+            AgentType.LanerWithSpeed, max_episode_steps=max_episode_steps
         ),
-        agent_builder=PPOPolicy,
-        agent_params={"policy_params": adapter.policy_params},
-        observation_adapter=adapter.observation_adapter,
-        reward_adapter=adapter.reward_adapter,
+        agent_builder=ChaseViaPointsAgent,
     )
 
     env = gym.make(
@@ -70,33 +53,17 @@ def main(scenarios, sim_name, headless, num_episodes, seed, max_episode_steps=No
         # envision_record_data_replay_path="./data_replay",
     )
 
-    agent = agent_spec.build_agent()
-
     for episode in episodes(n=num_episodes):
+        agent = agent_spec.build_agent()
         observations = env.reset()
-        print(observations)
         episode.record_scenario(env.scenario_log)
 
         dones = {"__all__": False}
         while not dones["__all__"]:
             agent_obs = observations[AGENT_ID]
-
             agent_action = agent.act(agent_obs)
-            next_observations, rewards, dones, infos = env.step({AGENT_ID: agent_action})
-            # print(infos)
-            reached_max_episode_steps = infos[AGENT_ID]["env_obs"].events.reached_max_episode_steps
-            if reached_max_episode_steps:
-                dones[AGENT_ID] = False
-            agent.step(
-                state = observations[AGENT_ID],
-                action = agent_action,
-                reward = rewards[AGENT_ID],
-                next_state = next_observations[AGENT_ID],
-                done=dones[AGENT_ID],
-                info = infos[AGENT_ID],
-            )
+            observations, rewards, dones, infos = env.step({AGENT_ID: agent_action})
             episode.record_step(observations, rewards, dones, infos)
-            observations = next_observations
 
     env.close()
 
