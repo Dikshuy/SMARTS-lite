@@ -94,7 +94,7 @@ class PPOPolicy(Agent):
             policy_params["social_vehicles"],
             policy_params["observation_num_lookahead"],
             self.action_size,
-            # policy_params["agents"],
+            policy_params["agents"],
         )
         # self.state_preprocessor = StatePreprocessor(
         #     preprocess_state, to_2d_action, self.state_description
