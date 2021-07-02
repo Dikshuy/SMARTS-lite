@@ -457,9 +457,9 @@ def scenario_worker(
             traffic_density=traffic_density,
             intersection_name=intersection_type,
         )
-    # print(
-    #     f"{mode} {intersection_type} {speed} {traffic_density}, counts:{len(seeds)}, generated:{len(seeds)/len(total_seeds)}, real:{percent}"
-    # )
+    print(
+        f"{mode} {intersection_type} {speed} {traffic_density}, counts:{len(seeds)}, generated:{len(seeds)/len(total_seeds)}, real:{percent}"
+    )
 
 
 def build_scenarios(
@@ -503,9 +503,9 @@ def build_scenarios(
         # that test scenarios only have one ego mission.
         ego_missions = level_config[mode]["ego_missions"]
 
-        assert not (
-            mode == "test" and (len(ego_missions) != 1)
-        ), "Test scenarios must have one ego mission."
+        # assert not (
+        #     mode == "test" and (len(ego_missions) != 1)
+        # ), "Test scenarios must have one ego mission."
 
         prev_split = 0
         main_seed_count = 0
