@@ -457,9 +457,9 @@ def scenario_worker(
             traffic_density=traffic_density,
             intersection_name=intersection_type,
         )
-    print(
-        f"{mode} {intersection_type} {speed} {traffic_density}, counts:{len(seeds)}, generated:{len(seeds)/len(total_seeds)}, real:{percent}"
-    )
+    # print(
+    #     f"{mode} {intersection_type} {speed} {traffic_density}, counts:{len(seeds)}, generated:{len(seeds)/len(total_seeds)}, real:{percent}"
+    # )
 
 
 def build_scenarios(
