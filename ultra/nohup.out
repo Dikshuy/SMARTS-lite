@@ -65,3 +65,4 @@ KeyError: '2021062418013441'
 WARNING:tornado.access:404 GET /favicon.ico (127.0.0.1) 0.75ms
 WARNING:tornado.access:404 GET /favicon.ico (::1) 4.55ms
 WARNING:tornado.access:404 GET /favicon.ico (::1) 2.03ms
+WARNING:tornado.access:404 GET /favicon.ico (127.0.0.1) 0.52ms

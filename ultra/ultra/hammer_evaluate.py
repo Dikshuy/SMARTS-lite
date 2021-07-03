@@ -21,6 +21,7 @@
 # THE SOFTWARE.
 import os
 import pickle
+import json
 
 # Set environment to better support Ray
 os.environ["MKL_NUM_THREADS"] = "1"
@@ -249,6 +250,12 @@ if __name__ == "__main__":
         default="easy",
     )
     parser.add_argument(
+        "--policy",
+        help="Policies available : [ppo, sac, td3, dqn, bdqn]",
+        type=str,
+        default="sac",
+    )
+    parser.add_argument(
         "--models",
         nargs="+",
         help="The models in the models/ directory of the experiment to evaluate",
@@ -287,6 +294,8 @@ if __name__ == "__main__":
         default=None,
         type=str,
     )
+    base_dir = os.path.dirname(__file__)
+    pool_path = os.path.join(base_dir, "agent_pool.json")
     args = parser.parse_args()
 
     if not os.path.exists(args.log_dir):
@@ -314,6 +323,21 @@ if __name__ == "__main__":
         for agent_id in agent_metadata["agent_ids"]
         if agent_id in agent_ids_from_models
     ]
+
+    # Obtain the policy class strings for each specified policy.
+    policy_classes = []
+    with open(pool_path, "r") as f:
+        data = json.load(f)
+        for policy in args.policy.split(","):
+            if policy in data["agents"].keys():
+                policy_classes.append(
+                    data["agents"][policy]["path"]
+                    + ":"
+                    + data["agents"][policy]["locator"]
+                )
+            else:
+                raise ImportError("Invalid policy name. Please try again")
+
     policy_classes = {
         agent_id: agent_metadata["agent_classes"][agent_id] for agent_id in agent_ids
     }

@@ -1,0 +1,2 @@
+Step south-west threshold: 	[100, 200, 500, 1000]
+Threshold south-west percentage: 	[0.5, 0.5, 0.0, 0.0]
