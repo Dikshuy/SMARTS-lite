@@ -1,0 +1,51 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 43150 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-8/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-8244950901942147493---5907300214998735174--101-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 49.20
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 2.96s
+ TraCI-Duration: 2.93s
+ Real time factor: 16.6497
+ UPS: 798.646362
+Vehicles: 
+ Inserted: 16 (Loaded: 34)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-60/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6524062307227733823--8113207300022278988--0-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 18.30
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 0.94s
+ TraCI-Duration: 0.92s
+ Real time factor: 19.5304
+ UPS: 141.942369
+Vehicles: 
+ Inserted: 3 (Loaded: 33)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-53/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 62.40
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 4.14s
+ TraCI-Duration: 3.87s
+ Real time factor: 15.087
+ UPS: 380.319149
+Vehicles: 
+ Inserted: 13 (Loaded: 27)
+ Running: 8
+ Waiting: 0
+

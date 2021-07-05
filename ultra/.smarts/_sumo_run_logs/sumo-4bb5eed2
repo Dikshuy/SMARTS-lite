@@ -1,0 +1,21 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 59536 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_c_100kmh_low-density-flow-49/map.net.xml' ... done (3ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-5bc999eb' performs emergency braking with decel=-10.13 wished=6.00 severity=1.38, time=66.30.
+Warning: Vehicle '002-5bc999eb' performs emergency braking with decel=-9.93 wished=6.00 severity=1.31, time=70.60.
+Warning: Vehicle '002-5bc999eb' performs emergency braking with decel=-9.29 wished=6.00 severity=1.10, time=70.90.
+Warning: Vehicle '002-5bc999eb' performs emergency braking with decel=-9.44 wished=6.00 severity=1.15, time=71.30.
+Simulation ended at time: 85.90
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 8.01s
+ TraCI-Duration: 7.51s
+ Real time factor: 10.7308
+ UPS: 34.478451
+Vehicles: 
+ Inserted: 3
+ Running: 1
+ Waiting: 0
+

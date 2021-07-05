@@ -1,0 +1,53 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 60617 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_mid-density-flow-118/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-8388ff22' was removed though being controlled by TraCI
+Simulation ended at time: 60.20
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 2.47s
+ TraCI-Duration: 2.42s
+ Real time factor: 24.3429
+ UPS: 1794.985847
+Vehicles: 
+ Inserted: 23 (Loaded: 68)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_mid-density-flow-10152/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-e26d6325' was removed though being controlled by TraCI
+Simulation ended at time: 49.20
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.32s
+ TraCI-Duration: 1.30s
+ Real time factor: 37.3293
+ UPS: 1110.015175
+Vehicles: 
+ Inserted: 11 (Loaded: 50)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_mid-density-flow-119/map.net.xml' ... done (3ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-05a550c8' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-3.31, offset=0.14), time=64.30.
+Simulation ended at time: 65.80
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 23.35s
+ TraCI-Duration: 22.76s
+ Real time factor: 2.81763
+ UPS: 313.621376
+Vehicles: 
+ Inserted: 31 (Loaded: 58)
+ Running: 18
+ Waiting: 0
+Emergency Stops: 1
+

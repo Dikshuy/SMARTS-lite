@@ -1,0 +1,38 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 52233 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-56/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '001-db252b9e' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-13.59, offset=0.93), time=29.60.
+Warning: Vehicle '001-db252b9e' was removed though being controlled by TraCI
+Simulation ended at time: 36.70
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 4.49s
+ TraCI-Duration: 4.47s
+ Real time factor: 8.17918
+ UPS: 179.630042
+Vehicles: 
+ Inserted: 7 (Loaded: 22)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-57/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-11.85, offset=1.13), time=33.60.
+Simulation ended at time: 42.30
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 6.92s
+ TraCI-Duration: 6.69s
+ Real time factor: 6.1136
+ UPS: 223.587224
+Vehicles: 
+ Inserted: 11 (Loaded: 26)
+ Running: 7
+ Waiting: 0
+Emergency Stops: 1
+

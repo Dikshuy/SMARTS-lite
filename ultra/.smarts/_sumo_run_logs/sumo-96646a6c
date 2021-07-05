@@ -1,0 +1,55 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 59273 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_low-density-flow-107/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-north-NS_0_base-edge-east-WE_0_max--5393976763219917831--8113207300022278988--2300-0.0' performs emergency stop at the end of lane 'edge-north-NS_0' for unknown reasons (decel=-13.74, offset=0.24), time=62.40.
+Warning: Vehicle 'default-flow-route-edge-north-NS_0_base-edge-east-WE_0_max--5393976763219917831--8113207300022278988--2300-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 68.10
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 5.10s
+ TraCI-Duration: 5.08s
+ Real time factor: 13.3503
+ UPS: 274.848069
+Vehicles: 
+ Inserted: 11 (Loaded: 33)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_low-density-flow-106/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-9c8e744c' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-6.32, offset=0.48), time=50.20.
+Warning: Vehicle '000-9c8e744c' was removed though being controlled by TraCI
+Simulation ended at time: 56.00
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 13.10s
+ TraCI-Duration: 13.07s
+ Real time factor: 4.27546
+ UPS: 167.506490
+Vehicles: 
+ Inserted: 14 (Loaded: 35)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_mid-density-flow-10152/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 49.10
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 1.30s
+ TraCI-Duration: 1.09s
+ Real time factor: 37.6823
+ UPS: 1123.561013
+Vehicles: 
+ Inserted: 10 (Loaded: 49)
+ Running: 7
+ Waiting: 0
+

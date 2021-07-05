@@ -1,0 +1,19 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 43284 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_c_100kmh_low-density-flow-47/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6409505801511773193--8611841271810001168--0-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-16.62, offset=0.18), time=60.30.
+Simulation ended at time: 76.40
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 13.68s
+ TraCI-Duration: 13.47s
+ Real time factor: 5.58316
+ UPS: 253.434668
+Vehicles: 
+ Inserted: 19 (Loaded: 39)
+ Running: 10
+ Waiting: 0
+Emergency Stops: 1
+

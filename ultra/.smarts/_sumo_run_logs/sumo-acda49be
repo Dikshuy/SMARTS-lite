@@ -1,0 +1,52 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 57422 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-25/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '001-aa5ce169' was removed though being controlled by TraCI
+Simulation ended at time: 61.40
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.31s
+ TraCI-Duration: 1.29s
+ Real time factor: 46.9778
+ UPS: 362.662586
+Vehicles: 
+ Inserted: 3 (Loaded: 25)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-23/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6524062307227733823--8113207300022278988--0-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 44.00
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.71s
+ TraCI-Duration: 1.69s
+ Real time factor: 25.716
+ UPS: 772.063121
+Vehicles: 
+ Inserted: 9 (Loaded: 28)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-40/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-east-EW_0_base-edge-south-NS_0_max-1560204932034221334--8113207300022278988--2300-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=44.20.
+Simulation ended at time: 60.10
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 1.58s
+ TraCI-Duration: 1.40s
+ Real time factor: 38.1587
+ UPS: 839.365079
+Vehicles: 
+ Inserted: 9 (Loaded: 36)
+ Running: 6
+ Waiting: 0
+

@@ -1,0 +1,40 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_100kmh_low-density-flow-112/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-51cd7f0e' performs emergency stop at the end of lane 'edge-north-NS_0' for unknown reasons (decel=-29.84, offset=0.11), time=26.90.
+Warning: Vehicle '002-51cd7f0e' performs emergency braking with decel=-9.74 wished=6.00 severity=1.25, time=27.40.
+Warning: Vehicle '002-51cd7f0e' performs emergency braking with decel=-9.17 wished=6.00 severity=1.06, time=27.70.
+Warning: Vehicle '002-51cd7f0e' performs emergency braking with decel=-16.79 wished=6.00 severity=3.60, time=27.90.
+Warning: Vehicle '002-51cd7f0e' was removed though being controlled by TraCI
+Simulation ended at time: 28.10
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.64s
+ TraCI-Duration: 1.62s
+ Real time factor: 17.1655
+ UPS: 291.997557
+Vehicles: 
+ Inserted: 6 (Loaded: 31)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_100kmh_low-density-flow-110/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-0929d4b4' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-20.95, offset=0.88), time=36.60.
+Simulation ended at time: 37.90
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 3.72s
+ TraCI-Duration: 3.50s
+ Real time factor: 10.2019
+ UPS: 261.911171
+Vehicles: 
+ Inserted: 8 (Loaded: 31)
+ Running: 6
+ Waiting: 0
+Emergency Stops: 1
+

@@ -1,0 +1,29 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-38/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-e54466f9' performs emergency braking with decel=-9.05 wished=6.00 severity=1.02, time=21.50.
+Warning: Vehicle '002-2a693066' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-10.93, offset=1.08), time=22.00.
+Warning: Vehicle '002-2a693066' performs emergency braking with decel=-10.70 wished=6.00 severity=1.57, time=22.30.
+Warning: Vehicle '002-2a693066' performs emergency braking with decel=-11.32 wished=6.00 severity=1.77, time=22.40.
+Warning: Vehicle '002-2a693066' performs emergency braking with decel=-9.54 wished=6.00 severity=1.18, time=22.60.
+Warning: Vehicle '000-e54466f9' performs emergency braking with decel=-9.04 wished=6.00 severity=1.01, time=25.60.
+Warning: Vehicle '000-e54466f9' performs emergency braking with decel=-9.50 wished=6.00 severity=1.17, time=27.90.
+Warning: Vehicle '001-9193f969' performs emergency braking with decel=-9.08 wished=6.00 severity=1.03, time=28.20.
+Warning: Vehicle '000-e54466f9' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-10.11, offset=0.63), time=30.60.
+Warning: Vehicle '000-e54466f9' performs emergency braking with decel=-10.63 wished=6.00 severity=1.54, time=31.20.
+Warning: Vehicle '001-9193f969' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-9.87, offset=0.46), time=34.80.
+Warning: Vehicle '001-9193f969' performs emergency braking with decel=-9.31 wished=6.00 severity=1.10, time=35.10.
+Simulation ended at time: 41.00
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 25.32s
+ TraCI-Duration: 24.15s
+ Real time factor: 1.61927
+ UPS: 39.731438
+Vehicles: 
+ Inserted: 7 (Loaded: 27)
+ Running: 5
+ Waiting: 0
+Emergency Stops: 3
+

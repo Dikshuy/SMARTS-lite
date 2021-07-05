@@ -1,0 +1,52 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 45830 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_50kmh_low-density-flow-100/map.net.xml' ... done (4ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '001-dbbf7142' was removed though being controlled by TraCI
+Simulation ended at time: 45.40
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 8.14s
+ TraCI-Duration: 8.11s
+ Real time factor: 5.57466
+ UPS: 156.065815
+Vehicles: 
+ Inserted: 9 (Loaded: 29)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_50kmh_low-density-flow-102/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-north-NS_0_base-edge-west-EW_0_max-5199537231888597674--8113207300022278988--2202-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=49.40.
+Warning: Vehicle '001-8ae75d3f' was removed though being controlled by TraCI
+Simulation ended at time: 49.90
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 5.87s
+ TraCI-Duration: 5.85s
+ Real time factor: 8.5081
+ UPS: 171.184996
+Vehicles: 
+ Inserted: 8 (Loaded: 28)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_50kmh_low-density-flow-10/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 53.60
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 14.59s
+ TraCI-Duration: 14.35s
+ Real time factor: 3.67501
+ UPS: 243.126500
+Vehicles: 
+ Inserted: 17 (Loaded: 37)
+ Running: 12
+ Waiting: 0
+

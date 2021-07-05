@@ -1,0 +1,28 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 34581 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-53/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency braking with decel=-9.98 wished=6.00 severity=1.33, time=65.70.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-0.43, offset=0.62), time=66.60.
+Warning: Vehicle '000-2a39399c' performs emergency braking with decel=-9.02 wished=6.00 severity=1.01, time=67.30.
+Warning: Vehicle '002-641944d6' performs emergency braking with decel=-10.34 wished=6.00 severity=1.45, time=67.40.
+Warning: Vehicle '002-641944d6' performs emergency braking with decel=-9.32 wished=6.00 severity=1.11, time=69.30.
+Warning: Vehicle '000-2a39399c' performs emergency braking with decel=-9.27 wished=6.00 severity=1.09, time=70.30.
+Warning: Vehicle '000-2a39399c' performs emergency braking with decel=-9.36 wished=6.00 severity=1.12, time=72.10.
+Warning: Vehicle '000-2a39399c' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-9.19, offset=0.72), time=72.30.
+Warning: Vehicle '000-2a39399c' performs emergency braking with decel=-9.51 wished=6.00 severity=1.17, time=72.90.
+Warning: Vehicle '000-2a39399c' performs emergency braking with decel=-9.69 wished=6.00 severity=1.23, time=73.10.
+Simulation ended at time: 74.40
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 20.15s
+ TraCI-Duration: 19.11s
+ Real time factor: 3.69249
+ UPS: 133.157973
+Vehicles: 
+ Inserted: 20 (Loaded: 32)
+ Running: 11
+ Waiting: 0
+Emergency Stops: 2
+

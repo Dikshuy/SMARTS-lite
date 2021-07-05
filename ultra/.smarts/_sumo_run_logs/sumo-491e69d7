@@ -1,0 +1,39 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 36664 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_50kmh_mid-density-flow-10129/map.net.xml' ... done (3ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'aggressive-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--314852567372383587---7212977298555901718--0-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-13.29, offset=0.61), time=62.30.
+Warning: Vehicle 'default-flow-route-edge-north-NS_0_base-edge-west-EW_0_max-6448799959470337576--6126508375485715604--2300-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=63.90.
+Warning: Vehicle 'aggressive-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--314852567372383587---7212977298555901718--0-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 64.40
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 8.30s
+ TraCI-Duration: 8.25s
+ Real time factor: 7.75904
+ UPS: 600.000000
+Vehicles: 
+ Inserted: 19 (Loaded: 53)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_50kmh_mid-density-flow-10128/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--314852567372383587--6126508375485715604--0-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-2.99, offset=0.69), time=60.30.
+Simulation ended at time: 69.10
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 17.23s
+ TraCI-Duration: 16.76s
+ Real time factor: 4.01138
+ UPS: 266.922095
+Vehicles: 
+ Inserted: 20 (Loaded: 48)
+ Running: 14
+ Waiting: 0
+Emergency Stops: 1
+

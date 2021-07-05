@@ -1,0 +1,43 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 35451 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_low-density-flow-1/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-395713b8' performs emergency braking with decel=-9.03 wished=6.00 severity=1.01, time=22.60.
+Warning: Vehicle '001-149f002a' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-2.32, offset=0.84), time=24.10.
+Warning: Vehicle '000-be5b52bf' performs emergency braking with decel=-9.11 wished=6.00 severity=1.04, time=24.50.
+Warning: Vehicle '002-395713b8' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-4.09, offset=0.30), time=33.90.
+Warning: Vehicle '000-be5b52bf' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-3.04, offset=0.39), time=38.90.
+Warning: Vehicle '001-149f002a' was removed though being controlled by TraCI
+Simulation ended at time: 42.10
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 30.55s
+ TraCI-Duration: 30.52s
+ Real time factor: 1.37829
+ UPS: 34.342773
+Vehicles: 
+ Inserted: 7 (Loaded: 35)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 3
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_low-density-flow-18/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-13.13, offset=0.15), time=33.60.
+Warning: Vehicle '002-04b0e171' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-14.53, offset=0.91), time=34.20.
+Simulation ended at time: 48.00
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 8.34s
+ TraCI-Duration: 7.82s
+ Real time factor: 5.75333
+ UPS: 128.490950
+Vehicles: 
+ Inserted: 10 (Loaded: 29)
+ Running: 5
+ Waiting: 0
+Emergency Stops: 2
+

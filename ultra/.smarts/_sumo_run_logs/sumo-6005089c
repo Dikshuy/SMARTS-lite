@@ -1,0 +1,33 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_mid-density-flow-119/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-d4062cce' was removed though being controlled by TraCI
+Simulation ended at time: 54.40
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 4.41s
+ TraCI-Duration: 4.38s
+ Real time factor: 12.33
+ UPS: 1133.272892
+Vehicles: 
+ Inserted: 25 (Loaded: 54)
+ Running: 1
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_low-density-flow-107/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 58.10
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 1.39s
+ TraCI-Duration: 1.19s
+ Real time factor: 41.9495
+ UPS: 629.602888
+Vehicles: 
+ Inserted: 8 (Loaded: 31)
+ Running: 5
+ Waiting: 0
+

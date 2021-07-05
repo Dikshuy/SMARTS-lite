@@ -1,0 +1,57 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_mid-density-flow-119/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-2a248e03' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-8.17, offset=0.80), time=63.20.
+Warning: Vehicle 'default-flow-route-edge-north-NS_0_base-edge-west-EW_0_max-5199537231888597674--8113207300022278988--2300-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=64.90.
+Warning: Vehicle '002-2a248e03' was removed though being controlled by TraCI
+Simulation ended at time: 65.40
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 22.37s
+ TraCI-Duration: 22.32s
+ Real time factor: 2.92408
+ UPS: 324.555128
+Vehicles: 
+ Inserted: 29 (Loaded: 56)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_low-density-flow-106/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-8d7e7dd0' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-2.10, offset=0.30), time=50.90.
+Warning: Vehicle '002-8d7e7dd0' was removed though being controlled by TraCI
+Simulation ended at time: 56.00
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 14.36s
+ TraCI-Duration: 14.33s
+ Real time factor: 3.89918
+ UPS: 154.922713
+Vehicles: 
+ Inserted: 13 (Loaded: 34)
+ Running: 1
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_70kmh_low-density-flow-108/map.net.xml' ... done (3ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-north-NS_0_base-edge-west-EW_0_max-5199537231888597674--8113207300022278988--2200-0.0' performs emergency stop at the end of lane 'edge-north-NS_0' for unknown reasons (decel=-16.96, offset=1.68), time=18.40.
+Simulation ended at time: 19.60
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 0.91s
+ TraCI-Duration: 0.74s
+ Real time factor: 21.5859
+ UPS: 93.612335
+Vehicles: 
+ Inserted: 2 (Loaded: 29)
+ Running: 1
+ Waiting: 0
+Emergency Stops: 1
+

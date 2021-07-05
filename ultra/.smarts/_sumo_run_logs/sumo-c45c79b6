@@ -1,0 +1,93 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 57155 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_mid-density-flow-77/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-e206172f' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-2.71, offset=0.38), time=61.60.
+Warning: Vehicle '000-e206172f' was removed though being controlled by TraCI
+Simulation ended at time: 72.00
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 21.39s
+ TraCI-Duration: 21.35s
+ Real time factor: 3.36637
+ UPS: 242.565925
+Vehicles: 
+ Inserted: 30 (Loaded: 67)
+ Running: 1
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_mid-density-flow-85/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-0f3980a2' was removed though being controlled by TraCI
+Simulation ended at time: 29.30
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 0.64s
+ TraCI-Duration: 0.62s
+ Real time factor: 45.9969
+ UPS: 577.708006
+Vehicles: 
+ Inserted: 4 (Loaded: 56)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-41/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-13.53, offset=0.59), time=18.10.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 19.30
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.15s
+ TraCI-Duration: 1.13s
+ Real time factor: 16.8265
+ UPS: 150.828248
+Vehicles: 
+ Inserted: 3 (Loaded: 25)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-40/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-90a032c1' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-12.54, offset=0.54), time=64.60.
+Warning: Vehicle '000-90a032c1' was removed though being controlled by TraCI
+Simulation ended at time: 67.20
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 4.13s
+ TraCI-Duration: 4.11s
+ Real time factor: 16.2554
+ UPS: 420.899855
+Vehicles: 
+ Inserted: 11 (Loaded: 38)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_mid-density-flow-82/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-13.25, offset=0.66), time=18.20.
+Simulation ended at time: 19.30
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 2.45s
+ TraCI-Duration: 2.24s
+ Real time factor: 7.88721
+ UPS: 215.365754
+Vehicles: 
+ Inserted: 7 (Loaded: 59)
+ Running: 6
+ Waiting: 0
+Emergency Stops: 1
+

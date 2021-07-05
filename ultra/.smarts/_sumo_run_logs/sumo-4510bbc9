@@ -1,0 +1,26 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 43840 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_mid-density-flow-81/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.24 wished=6.00 severity=1.08, time=19.70.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.69 wished=6.00 severity=1.23, time=19.80.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.35 wished=6.00 severity=1.12, time=29.40.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-9.85, offset=0.57), time=29.80.
+Warning: Vehicle '001-27b99f1c' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-4.53, offset=0.61), time=32.50.
+Warning: Vehicle '001-27b99f1c' performs emergency braking with decel=-9.07 wished=6.00 severity=1.02, time=33.10.
+Warning: Vehicle '002-3c8a497c' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-1.87, offset=0.18), time=37.90.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-south-NS_0_max-8901875131909061246--8113207300022278988--2301-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=39.00.
+Simulation ended at time: 39.60
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 28.46s
+ TraCI-Duration: 27.52s
+ Real time factor: 1.39123
+ UPS: 75.850197
+Vehicles: 
+ Inserted: 16 (Loaded: 58)
+ Running: 8
+ Waiting: 0
+Emergency Stops: 3
+

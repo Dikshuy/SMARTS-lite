@@ -1,0 +1,42 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 55535 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_mid-density-flow-70/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-7d52a9c1' performs emergency braking with decel=-9.83 wished=6.00 severity=1.28, time=38.40.
+Warning: Vehicle '000-7d52a9c1' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-16.69, offset=0.76), time=38.50.
+Warning: Vehicle '000-7d52a9c1' performs emergency braking with decel=-9.87 wished=6.00 severity=1.29, time=38.80.
+Warning: Vehicle '000-7d52a9c1' performs emergency braking with decel=-9.29 wished=6.00 severity=1.10, time=39.00.
+Warning: Vehicle '000-7d52a9c1' performs emergency braking with decel=-9.71 wished=6.00 severity=1.24, time=39.10.
+Warning: Vehicle '000-7d52a9c1' was removed though being controlled by TraCI
+Simulation ended at time: 49.10
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 10.15s
+ TraCI-Duration: 10.12s
+ Real time factor: 4.83696
+ UPS: 157.225889
+Vehicles: 
+ Inserted: 9 (Loaded: 53)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_mid-density-flow-65/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-14.25, offset=0.69), time=54.40.
+Simulation ended at time: 66.30
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 22.35s
+ TraCI-Duration: 21.89s
+ Real time factor: 2.96697
+ UPS: 249.127361
+Vehicles: 
+ Inserted: 30 (Loaded: 59)
+ Running: 18
+ Waiting: 1
+Emergency Stops: 1
+

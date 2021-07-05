@@ -1,0 +1,26 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 39769 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_c_70kmh_low-density-flow-3/map.net.xml' ... done (4ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'cautious-flow-route-edge-south-SN_0_base-edge-north-SN_0_max-6325137364526997108--3548332860045977428--201-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-1.86, offset=0.41), time=38.00.
+Warning: Vehicle 'cautious-flow-route-edge-south-SN_0_base-edge-north-SN_0_max-6325137364526997108--3548332860045977428--201-0.0' performs emergency braking with decel=-9.17 wished=6.00 severity=1.06, time=40.10.
+Warning: Vehicle '001-8aaac34c' performs emergency braking with decel=-9.51 wished=6.00 severity=1.17, time=41.40.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-north-SN_0_max-6325137364526997108--7749680955625902074--200-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=42.30.
+Warning: Vehicle 'cautious-flow-route-edge-south-SN_0_base-edge-north-SN_0_max-6325137364526997108--3548332860045977428--201-0.0' performs emergency braking with decel=-9.47 wished=6.00 severity=1.16, time=45.60.
+Warning: Vehicle '001-8aaac34c' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-3.46, offset=0.61), time=47.40.
+Warning: Vehicle '001-8aaac34c' performs emergency braking with decel=-9.10 wished=6.00 severity=1.03, time=48.30.
+Warning: Vehicle 'cautious-flow-route-edge-south-SN_0_base-edge-north-SN_0_max-6325137364526997108--3548332860045977428--201-0.0' performs emergency braking with decel=-9.26 wished=6.00 severity=1.09, time=48.70.
+Simulation ended at time: 56.90
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 29.55s
+ TraCI-Duration: 28.61s
+ Real time factor: 1.92535
+ UPS: 77.352553
+Vehicles: 
+ Inserted: 16 (Loaded: 32)
+ Running: 8
+ Waiting: 0
+Emergency Stops: 2
+

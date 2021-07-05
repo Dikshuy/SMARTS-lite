@@ -1,0 +1,51 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_mid-density-flow-76/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--102-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 53.60
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 3.61s
+ TraCI-Duration: 3.57s
+ Real time factor: 14.86
+ UPS: 897.144441
+Vehicles: 
+ Inserted: 22 (Loaded: 69)
+ Running: 1
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-35/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '002-9d1f33f5' was removed though being controlled by TraCI
+Simulation ended at time: 37.80
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.85s
+ TraCI-Duration: 1.83s
+ Real time factor: 20.4878
+ UPS: 88.346883
+Vehicles: 
+ Inserted: 2 (Loaded: 28)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-24/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-south-NS_0_max-8901875131909061246--8113207300022278988--1200-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=58.00.
+Simulation ended at time: 58.10
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 4.08s
+ TraCI-Duration: 3.81s
+ Real time factor: 14.2472
+ UPS: 886.218735
+Vehicles: 
+ Inserted: 20 (Loaded: 46)
+ Running: 12
+ Waiting: 0
+

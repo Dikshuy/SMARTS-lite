@@ -1,0 +1,31 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 46245 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-37/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.00 wished=6.00 severity=1.00, time=36.20.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.53 wished=6.00 severity=1.18, time=40.80.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-21.00, offset=0.35), time=40.80.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.31 wished=6.00 severity=1.10, time=41.10.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.66 wished=6.00 severity=1.22, time=41.40.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6524062307227733823--8113207300022278988--0-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=44.20.
+Warning: Vehicle '002-9df630a6' performs emergency braking with decel=-9.04 wished=6.00 severity=1.01, time=45.20.
+Warning: Vehicle '002-9df630a6' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-13.14, offset=0.67), time=45.40.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-9.71 wished=6.00 severity=1.24, time=46.20.
+Warning: Vehicle '001-0562aa0e' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-9.44, offset=0.81), time=46.30.
+Warning: Vehicle '001-0562aa0e' performs emergency braking with decel=-10.04 wished=6.00 severity=1.35, time=47.10.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-10.27 wished=6.00 severity=1.42, time=50.50.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency braking with decel=-10.13 wished=6.00 severity=1.38, time=52.80.
+Simulation ended at time: 60.30
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 21.88s
+ TraCI-Duration: 20.88s
+ Real time factor: 2.75657
+ UPS: 107.337143
+Vehicles: 
+ Inserted: 14 (Loaded: 35)
+ Running: 7
+ Waiting: 0
+Emergency Stops: 3
+

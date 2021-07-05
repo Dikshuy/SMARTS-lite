@@ -1,0 +1,41 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 49601 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_low-density-flow-1/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '000-bf8b206b' performs emergency braking with decel=-9.73 wished=6.00 severity=1.24, time=23.00.
+Warning: Vehicle '001-227b5a92' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-12.21, offset=0.33), time=23.90.
+Warning: Vehicle '002-06843dce' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-5.70, offset=0.79), time=32.10.
+Warning: Vehicle '002-06843dce' performs emergency braking with decel=-9.09 wished=6.00 severity=1.03, time=39.50.
+Warning: Vehicle '002-06843dce' was removed though being controlled by TraCI
+Simulation ended at time: 42.10
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 12.33s
+ TraCI-Duration: 12.30s
+ Real time factor: 3.41527
+ UPS: 67.250750
+Vehicles: 
+ Inserted: 7 (Loaded: 35)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 2
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_low-density-flow-18/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'cautious-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--871936714686613427--201-0.0' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-11.97, offset=0.61), time=46.10.
+Simulation ended at time: 50.30
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 8.96s
+ TraCI-Duration: 8.01s
+ Real time factor: 5.61697
+ UPS: 130.541597
+Vehicles: 
+ Inserted: 11 (Loaded: 29)
+ Running: 6
+ Waiting: 0
+Emergency Stops: 1
+

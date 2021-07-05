@@ -1,0 +1,58 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 39334 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_100kmh_low-density-flow-110/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '001-84323fc4' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-14.48, offset=0.36), time=36.80.
+Warning: Vehicle '001-84323fc4' was removed though being controlled by TraCI
+Simulation ended at time: 38.40
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 4.21s
+ TraCI-Duration: 4.19s
+ Real time factor: 9.12548
+ UPS: 236.929658
+Vehicles: 
+ Inserted: 8 (Loaded: 31)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_100kmh_mid-density-flow-10177/map.net.xml' ... done (4ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '001-c8027966' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-18.51, offset=1.48), time=18.70.
+Warning: Vehicle '001-c8027966' was removed though being controlled by TraCI
+Simulation ended at time: 19.90
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.17s
+ TraCI-Duration: 1.17s
+ Real time factor: 16.9506
+ UPS: 47.700170
+Vehicles: 
+ Inserted: 1
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/test_easy_2lane_c_100kmh_low-density-flow-112/map.net.xml' ... done (3ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '001-9e19d844' performs emergency stop at the end of lane 'edge-north-NS_0' for unknown reasons (decel=-26.36, offset=0.61), time=26.90.
+Warning: Vehicle '001-9e19d844' performs emergency braking with decel=-13.52 wished=6.00 severity=2.51, time=27.60.
+Simulation ended at time: 27.90
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 1.54s
+ TraCI-Duration: 1.33s
+ Real time factor: 18.1169
+ UPS: 306.493506
+Vehicles: 
+ Inserted: 6 (Loaded: 31)
+ Running: 6
+ Waiting: 0
+Emergency Stops: 1
+

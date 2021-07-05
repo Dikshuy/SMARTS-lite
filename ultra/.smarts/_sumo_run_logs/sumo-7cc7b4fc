@@ -1,0 +1,28 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 39996 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_c_100kmh_mid-density-flow-91/map.net.xml' ... done (3ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max-240579318865569840--8319739264146496229--0-0.0' performs emergency braking with decel=-9.88 wished=6.00 severity=1.29, time=51.90.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max-240579318865569840--8319739264146496229--0-0.0' performs emergency braking with decel=-9.41 wished=6.00 severity=1.14, time=55.80.
+Warning: Vehicle 'default-flow-route-edge-north-NS_0_base-edge-west-EW_0_max--3503760558010447603--8319739264146496229--2300-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=57.20.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max-240579318865569840--8319739264146496229--0-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-10.92, offset=0.32), time=57.40.
+Warning: Vehicle '000-8ef29db5' performs emergency braking with decel=-9.40 wished=6.00 severity=1.13, time=58.40.
+Warning: Vehicle '000-8ef29db5' performs emergency stop at the end of lane 'edge-north-NS_0' for unknown reasons (decel=-30.48, offset=2.32), time=58.40.
+Warning: Vehicle '000-8ef29db5' performs emergency braking with decel=-9.07 wished=6.00 severity=1.02, time=58.60.
+Warning: Vehicle '000-8ef29db5' performs emergency braking with decel=-9.03 wished=6.00 severity=1.01, time=58.70.
+Warning: Vehicle '000-8ef29db5' performs emergency braking with decel=-9.83 wished=6.00 severity=1.28, time=58.90.
+Warning: Vehicle '000-8ef29db5' performs emergency braking with decel=-9.83 wished=6.00 severity=1.28, time=59.10.
+Simulation ended at time: 62.20
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 23.47s
+ TraCI-Duration: 22.41s
+ Real time factor: 2.64974
+ UPS: 133.126012
+Vehicles: 
+ Inserted: 20 (Loaded: 49)
+ Running: 10
+ Waiting: 0
+Emergency Stops: 2
+

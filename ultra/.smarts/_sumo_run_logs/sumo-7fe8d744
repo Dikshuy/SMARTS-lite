@@ -1,0 +1,39 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_mid-density-flow-64/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--200-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=23.30.
+Warning: Vehicle '000-7c81e952' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-7.41, offset=0.91), time=31.10.
+Warning: Vehicle '000-7c81e952' was removed though being controlled by TraCI
+Simulation ended at time: 33.20
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 11.12s
+ TraCI-Duration: 11.09s
+ Real time factor: 2.98695
+ UPS: 235.447593
+Vehicles: 
+ Inserted: 20 (Loaded: 52)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_mid-density-flow-65/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-east-WE_0_max-1506014434652610818--8113207300022278988--100-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-10.30, offset=0.96), time=55.20.
+Warning: Vehicle 'default-flow-route-edge-east-EW_0_base-edge-south-NS_0_max-1560204932034221334--8113207300022278988--2201-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=55.90.
+Simulation ended at time: 56.30
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 10.82s
+ TraCI-Duration: 10.48s
+ Real time factor: 5.20429
+ UPS: 366.056572
+Vehicles: 
+ Inserted: 24 (Loaded: 56)
+ Running: 15
+ Waiting: 0
+Emergency Stops: 1
+

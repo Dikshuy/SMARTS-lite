@@ -1,0 +1,41 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 43866 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_mid-density-flow-67/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6524062307227733823--8113207300022278988--0-0.0' performs emergency stop at the end of lane 'edge-south-SN_0' for unknown reasons (decel=-15.01, offset=0.76), time=58.00.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6524062307227733823--8113207300022278988--0-0.0' performs emergency braking with decel=-9.32 wished=6.00 severity=1.11, time=58.30.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6524062307227733823--8113207300022278988--0-0.0' performs emergency braking with decel=-9.69 wished=6.00 severity=1.23, time=58.50.
+Warning: Vehicle 'default-flow-route-edge-south-SN_0_base-edge-west-EW_0_max--6524062307227733823--8113207300022278988--0-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 67.80
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 12.29s
+ TraCI-Duration: 12.24s
+ Real time factor: 5.51848
+ UPS: 269.412339
+Vehicles: 
+ Inserted: 20 (Loaded: 57)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_50kmh_low-density-flow-16/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--200-0.0' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-15.59, offset=1.01), time=19.70.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--200-0.0' performs emergency braking with decel=-10.16 wished=6.00 severity=1.39, time=20.00.
+Simulation ended at time: 31.00
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 8.67s
+ TraCI-Duration: 8.52s
+ Real time factor: 3.57555
+ UPS: 114.994233
+Vehicles: 
+ Inserted: 7 (Loaded: 36)
+ Running: 4
+ Waiting: 0
+Emergency Stops: 1
+

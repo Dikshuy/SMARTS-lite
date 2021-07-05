@@ -1,0 +1,34 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 51324 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_c_50kmh_mid-density-flow-65/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'blocker-flow-route-edge-south-SN_0_base-edge-north-SN_0_max--4172243012465730030---9047730541425379480--200-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 74.80
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 21.78s
+ TraCI-Duration: 21.73s
+ Real time factor: 3.43371
+ UPS: 325.514139
+Vehicles: 
+ Inserted: 33 (Loaded: 61)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_c_50kmh_mid-density-flow-64/map.net.xml' ... done (2ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 55.90
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 7.08s
+ TraCI-Duration: 6.77s
+ Real time factor: 7.8966
+ UPS: 943.918633
+Vehicles: 
+ Inserted: 32 (Loaded: 59)
+ Running: 20
+ Waiting: 0
+

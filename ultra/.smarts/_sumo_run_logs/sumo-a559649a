@@ -1,0 +1,53 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 51328 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_mid-density-flow-81/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' performs emergency stop at the end of lane 'edge-west-WE_0' for unknown reasons (decel=-9.29, offset=0.61), time=28.30.
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-east-WE_0_max--62961806906654379--8113207300022278988--201-0.0' was removed though being controlled by TraCI
+Simulation ended at time: 30.70
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 7.48s
+ TraCI-Duration: 7.46s
+ Real time factor: 4.10483
+ UPS: 170.611044
+Vehicles: 
+ Inserted: 12 (Loaded: 54)
+ Running: 0
+ Waiting: 0
+Emergency Stops: 1
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_low-density-flow-35/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle '001-ff0c03e9' was removed though being controlled by TraCI
+Simulation ended at time: 38.00
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 1.81s
+ TraCI-Duration: 1.80s
+ Real time factor: 20.9829
+ UPS: 92.214246
+Vehicles: 
+ Inserted: 2 (Loaded: 28)
+ Running: 0
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_70kmh_mid-density-flow-80/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 71.20
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 8.56s
+ TraCI-Duration: 8.05s
+ Real time factor: 8.3197
+ UPS: 723.066137
+Vehicles: 
+ Inserted: 23 (Loaded: 56)
+ Running: 17
+ Waiting: 0
+
