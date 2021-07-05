@@ -1,7 +1,0 @@
-#!/bin/bash
-#SBATCH --time=00:20:00
-#SBATCH --output=slurm-%j.out
-#SBATCH --account=def-mtaylor3
-
-singularity exec -B ../SMARTS-lite:/SMARTS-lite --env DISPLAY=$DISPLAY,PYTHONPATHSMARTS-lite/:/src --home /SMARTS-lite/ultra /home/dikshant/projects/def-mtaylor3/smarts-0416_singularity.sif python ultra/hammer_train.py --task 0-3agents --level easy --episodes 10 --eval-episodes 2 --eval-rate 5 --policy ppo,ppo,ppo --headless
-
