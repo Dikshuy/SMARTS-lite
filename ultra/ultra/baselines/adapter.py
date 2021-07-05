@@ -153,7 +153,7 @@ class BaselineAdapter:
         return state  # ego=ego, env_observation=env_observation)
 
     @staticmethod
-    def reward_adapter(observation, reward):
+    def reward_adapter(observation, reward):   # team reward check
         env_reward = reward
         ego_events = observation.events
         ego_observation = observation.ego_vehicle_state
