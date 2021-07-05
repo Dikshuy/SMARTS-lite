@@ -1,0 +1,35 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 42369 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-6/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Warning: Vehicle 'default-flow-route-edge-west-WE_0_base-edge-south-NS_0_max-6665828535265219897---5907300214998735174--1200-0.0' performs emergency braking with decel=-9.00 wished=7.50 severity=1.00, time=45.20.
+Warning: Vehicle '001-4111329a' was removed though being controlled by TraCI
+Simulation ended at time: 46.00
+Reason: TraCI issued load command.
+Performance: 
+ Duration: 5.87s
+ TraCI-Duration: 5.84s
+ Real time factor: 7.8418
+ UPS: 299.863621
+Vehicles: 
+ Inserted: 15 (Loaded: 43)
+ Running: 1
+ Waiting: 0
+
+Integration method was set to 'ballistic', since a default action step length was specified.
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_mid-density-flow-98/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 54.50
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 13.09s
+ TraCI-Duration: 12.16s
+ Real time factor: 4.16444
+ UPS: 321.998930
+Vehicles: 
+ Inserted: 33 (Loaded: 73)
+ Running: 20
+ Waiting: 2
+

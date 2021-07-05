@@ -1,0 +1,17 @@
+Integration method was set to 'ballistic', since a default action step length was specified.
+***Starting server on port 45297 ***
+Loading net-file from '/SMARTS-lite/ultra/ultra/env/../scenarios/task0-3agents/train_easy_2lane_t_100kmh_low-density-flow-60/map.net.xml' ... done (1ms).
+Loading done.
+Simulation version 1.9.1 started with time: 0.00
+Simulation ended at time: 27.40
+Reason: TraCI requested termination.
+Performance: 
+ Duration: 4.70s
+ TraCI-Duration: 4.00s
+ Real time factor: 5.82607
+ UPS: 70.167978
+Vehicles: 
+ Inserted: 3 (Loaded: 33)
+ Running: 3
+ Waiting: 0
+
