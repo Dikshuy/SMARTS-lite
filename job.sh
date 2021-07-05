@@ -1,13 +1,9 @@
 #!/bin/bash
-#SBATCH --time=00:20:00
-#SBATCH --job-name=test
-#SBATCH --output=%x-%j.out
-# cd ~/projects/def-mtaylor3/dikshant/
-# singularity shell --bind SMARTS-lite/:/SMARTS-lite --env DISPLAY=$DISPLAY smarts-0416_singularity.sif
-# cd /SMARTS-lite/ultra/
-# export PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite/:$PYTHONPATH
-# python ultra/hammer_train.py --task 0-3agents --level easy --episodes 10 --eval-episodes 2 --eval-rate 5 --policy ppo,ppo,ppo --headless
+#SBATCH --time=24:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --account=def-mtaylor3
+#SBATCH --mem=128G
+#SBATCH --cpus-per-task=16
 
-cd ~/projects/def-mtaylor3/dikshant/
 module load singularity
-singularity exec -B /SMARTS-lite:/SMARTS-lite --env DISPLAY=$DISPLAY,PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite/:/src --home /SMARTS-lite/ultra smarts-0416_singularity.sif python ultra/hammer_train.py --task 0-3agents --level easy --episodes 10 --eval-episodes 2 --eval-rate 5 --policy ppo,ppo,ppo --headless
+singularity exec -B ../SMARTS-lite:/SMARTS-lite --env DISPLAY=$DISPLAY,PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite:$PYTHONPATH --home /SMARTS-lite/ultra ../smarts-0416_singularity.sif python ultra/hammer_train.py --task 0-3agents --level easy --policy ppo,ppo,ppo --headless

@@ -1,0 +1,392 @@
+WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2021-07-05 04:19:16,536	INFO services.py:1092 -- View the Ray dashboard at [1m[32mhttp://127.0.0.1:8265[39m[22m
+╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+│            Episode │           Sim/Wall │        Total Steps │          Steps/Sec │              Score │
+├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+[2m[36m(pid=23200)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23200)[0m Instructions for updating:
+[2m[36m(pid=23200)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23263)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23263)[0m Instructions for updating:
+[2m[36m(pid=23263)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23256)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23256)[0m Instructions for updating:
+[2m[36m(pid=23256)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23272)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23272)[0m Instructions for updating:
+[2m[36m(pid=23272)[0m non-resource variables are not supported in the long term
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+ Retrying in 0.05 seconds
+Could not connect to TraCI server at localhost:54275 [Errno 111] Connection refused
+ Retrying in 0.05 seconds
+Could not connect to TraCI server at localhost:54275 [Errno 111] Connection refused
+ Retrying in 0.05 seconds
+Could not connect to TraCI server at localhost:54275 [Errno 111] Connection refused
+ Retrying in 0.05 seconds
+Could not connect to TraCI server at localhost:54275 [Errno 111] Connection refused
+ Retrying in 0.05 seconds
+Could not connect to TraCI server at localhost:54275 [Errno 111] Connection refused
+ Retrying in 0.05 seconds
+[2m[36m(pid=23200)[0m Loading spec for 002 from logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/agent_metadata.pkl
+[2m[36m(pid=23263)[0m Loading spec for 001 from logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/agent_metadata.pkl
+[2m[36m(pid=23272)[0m Loading spec for 000 from logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/agent_metadata.pkl
+│          1/1000000 │               1.38 │                 90 │              13.80 │ 002: -0.6266, 001: -1.8607, 000: -0.6294 │
+[2m[36m(pid=23218)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23218)[0m Instructions for updating:
+[2m[36m(pid=23218)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23204)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23204)[0m Instructions for updating:
+[2m[36m(pid=23204)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23202)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23202)[0m Instructions for updating:
+[2m[36m(pid=23202)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23201)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23201)[0m Instructions for updating:
+[2m[36m(pid=23201)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23214)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23214)[0m Instructions for updating:
+[2m[36m(pid=23214)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23271)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23271)[0m Instructions for updating:
+[2m[36m(pid=23271)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23215)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23215)[0m Instructions for updating:
+[2m[36m(pid=23215)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23207)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23207)[0m Instructions for updating:
+[2m[36m(pid=23207)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23209)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23209)[0m Instructions for updating:
+[2m[36m(pid=23209)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23216)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23216)[0m Instructions for updating:
+[2m[36m(pid=23216)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23220)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23220)[0m Instructions for updating:
+[2m[36m(pid=23220)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23211)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23211)[0m Instructions for updating:
+[2m[36m(pid=23211)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23219)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23219)[0m Instructions for updating:
+[2m[36m(pid=23219)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23203)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23203)[0m Instructions for updating:
+[2m[36m(pid=23203)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23205)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23205)[0m Instructions for updating:
+[2m[36m(pid=23205)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23208)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23208)[0m Instructions for updating:
+[2m[36m(pid=23208)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23206)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23206)[0m Instructions for updating:
+[2m[36m(pid=23206)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23210)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23210)[0m Instructions for updating:
+[2m[36m(pid=23210)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23231)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23231)[0m Instructions for updating:
+[2m[36m(pid=23231)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23251)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23251)[0m Instructions for updating:
+[2m[36m(pid=23251)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23253)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23253)[0m Instructions for updating:
+[2m[36m(pid=23253)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23213)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23213)[0m Instructions for updating:
+[2m[36m(pid=23213)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23212)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23212)[0m Instructions for updating:
+[2m[36m(pid=23212)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23217)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23217)[0m Instructions for updating:
+[2m[36m(pid=23217)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23270)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23270)[0m Instructions for updating:
+[2m[36m(pid=23270)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23266)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23266)[0m Instructions for updating:
+[2m[36m(pid=23266)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23221)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23221)[0m Instructions for updating:
+[2m[36m(pid=23221)[0m non-resource variables are not supported in the long term
+[2m[36m(pid=23274)[0m WARNING:tensorflow:From /usr/local/lib/python3.7/dist-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+[2m[36m(pid=23274)[0m Instructions for updating:
+[2m[36m(pid=23274)[0m non-resource variables are not supported in the long term
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23219)[0m Loading spec for 002 from logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/agent_metadata.pkl
+[2m[36m(pid=23221)[0m Loading spec for 000 from logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/agent_metadata.pkl
+[2m[36m(pid=23274)[0m Loading spec for 001 from logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/agent_metadata.pkl
+[2m[36m(pid=23200)[0m model loaded: logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/models/002/0
+[2m[36m(pid=23200)[0m ╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+[2m[36m(pid=23200)[0m │            Episode │           Sim/Wall │        Total Steps │          Steps/Sec │              Score │
+[2m[36m(pid=23200)[0m ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+[2m[36m(pid=23263)[0m model loaded: logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/models/001/0
+[2m[36m(pid=23263)[0m ╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+[2m[36m(pid=23263)[0m │            Episode │           Sim/Wall │        Total Steps │          Steps/Sec │              Score │
+[2m[36m(pid=23263)[0m ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+[2m[36m(pid=23274)[0m model loaded: logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/models/001/0
+[2m[36m(pid=23274)[0m ╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+[2m[36m(pid=23274)[0m │            Episode │           Sim/Wall │        Total Steps │          Steps/Sec │              Score │
+[2m[36m(pid=23274)[0m ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+[2m[36m(pid=23272)[0m model loaded: logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/models/000/0
+[2m[36m(pid=23272)[0m ╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+[2m[36m(pid=23272)[0m │            Episode │           Sim/Wall │        Total Steps │          Steps/Sec │              Score │
+[2m[36m(pid=23272)[0m ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+[2m[36m(pid=23221)[0m model loaded: logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/models/000/0
+[2m[36m(pid=23221)[0m ╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+[2m[36m(pid=23221)[0m │            Episode │           Sim/Wall │        Total Steps │          Steps/Sec │              Score │
+[2m[36m(pid=23221)[0m ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+[2m[36m(pid=23219)[0m model loaded: logs/experiment-2021.7.5-4:19:33-ppo-v0:ppo-v0:ppo-v0/models/002/0
+[2m[36m(pid=23219)[0m ╭────────────────────┬────────────────────┬────────────────────┬────────────────────┬────────────────────╮
+[2m[36m(pid=23219)[0m │            Episode │           Sim/Wall │        Total Steps │          Steps/Sec │              Score │
+[2m[36m(pid=23219)[0m ├────────────────────┼────────────────────┼────────────────────┼────────────────────┼────────────────────┤
+[2m[36m(pid=23221)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23200)[0m │              1/200 │               6.02 │                 10 │              60.23 │       002: -0.9428 │
+[2m[36m(pid=23272)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23274)[0m │              1/200 │               1.76 │                 16 │              17.63 │       001: -0.6319 │
+[2m[36m(pid=23200)[0m │              2/200 │               1.75 │                 10 │              17.53 │       002: -0.9424 │
+│          2/1000000 │               1.62 │                 70 │              16.19 │ 001: -0.5854, 002: -0.7665, 000: -0.6283 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+[2m[36m(pid=23219)[0m │              1/200 │               1.47 │                 15 │              14.71 │       002: -2.0215 │
+[2m[36m(pid=23221)[0m │              1/200 │               1.39 │                 11 │              13.89 │       000: -1.6743 │
+[2m[36m(pid=23272)[0m │              1/200 │               1.28 │                 12 │              12.83 │       000: -1.7152 │
+[2m[36m(pid=23263)[0m │              1/200 │               1.09 │                 14 │              10.85 │       001: -0.6872 │
+[2m[36m(pid=23272)[0m │              2/200 │               4.15 │                 10 │              41.52 │       000: -0.9421 │
+[2m[36m(pid=23200)[0m │              3/200 │               1.39 │                 23 │              13.86 │       002: -0.7728 │
+[2m[36m(pid=23263)[0m │              2/200 │               1.89 │                 11 │              18.85 │       001: -1.1899 │
+│          3/1000000 │               5.51 │                132 │              55.05 │ 000: -1.1184, 002: -1.0638, 001: -1.2227 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+[2m[36m(pid=23263)[0m │              3/200 │               6.69 │                 11 │              66.92 │       001: -1.1883 │
+[2m[36m(pid=23219)[0m │              2/200 │               1.35 │                 19 │              13.50 │       002: -0.8337 │
+[2m[36m(pid=23274)[0m │              2/200 │               0.64 │                 11 │               6.40 │       001: -0.7595 │
+[2m[36m(pid=23200)[0m │              4/200 │               1.85 │                 13 │              18.48 │       002: -1.3931 │
+[2m[36m(pid=23219)[0m │              3/200 │               3.04 │                 15 │              30.41 │       002: -2.0209 │
+[2m[36m(pid=23263)[0m │              4/200 │               3.50 │                 11 │              34.96 │       001: -0.7578 │
+[2m[36m(pid=23274)[0m │              3/200 │               1.99 │                 13 │              19.94 │       001: -0.6645 │
+[2m[36m(pid=23200)[0m │              5/200 │               3.94 │                 14 │              39.40 │       002: -1.2657 │
+[2m[36m(pid=23221)[0m │              2/200 │               2.98 │                 14 │              29.84 │       000: -1.7562 │
+[2m[36m(pid=23272)[0m │              3/200 │               0.77 │                 15 │               7.71 │       000: -0.6818 │
+[2m[36m(pid=23274)[0m │              4/200 │               4.24 │                 10 │              42.37 │       001: -0.6598 │
+[2m[36m(pid=23263)[0m │              5/200 │               1.94 │                 11 │              19.45 │       001: -1.2886 │
+[2m[36m(pid=23219)[0m │              4/200 │               1.98 │                 11 │              19.79 │       002: -0.7335 │
+[2m[36m(pid=23274)[0m │              5/200 │               2.36 │                 11 │              23.59 │       001: -0.7267 │
+[2m[36m(pid=23221)[0m │              3/200 │               1.97 │                 10 │              19.67 │       000: -0.7020 │
+[2m[36m(pid=23219)[0m │              5/200 │               1.99 │                 14 │              19.95 │       002: -0.6760 │
+[2m[36m(pid=23272)[0m │              4/200 │               6.23 │                 11 │              62.28 │       000: -1.4850 │
+[2m[36m(pid=23219)[0m │              6/200 │               6.29 │                 14 │              62.90 │       002: -1.2654 │
+[2m[36m(pid=23219)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23274)[0m │              6/200 │               1.58 │                 11 │              15.77 │       001: -0.7133 │
+│          4/1000000 │               2.05 │                107 │              20.50 │ 000: -0.3749, 002: -0.5096, 001: -1.0899 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23200)[0m │              6/200 │               0.72 │                 14 │               7.21 │       002: -1.2660 │
+[2m[36m(pid=23221)[0m │              4/200 │               0.87 │                 11 │               8.73 │       000: -1.4327 │
+[2m[36m(pid=23219)[0m │              7/200 │               1.68 │                 13 │              16.80 │       002: -1.3897 │
+[2m[36m(pid=23274)[0m │              7/200 │               1.86 │                 11 │              18.59 │       001: -0.7351 │
+[2m[36m(pid=23200)[0m │              7/200 │               1.53 │                 13 │              15.35 │       002: -1.8809 │
+[2m[36m(pid=23272)[0m │              5/200 │               1.03 │                 13 │              10.33 │       000: -1.8854 │
+[2m[36m(pid=23263)[0m │              6/200 │               0.93 │                 34 │               9.30 │       001: -0.9134 │
+[2m[36m(pid=23221)[0m │              5/200 │               2.92 │                 14 │              29.22 │       000: -1.3660 │
+[2m[36m(pid=23274)[0m │              8/200 │               3.98 │                 14 │              39.79 │       001: -1.2691 │
+[2m[36m(pid=23200)[0m │              8/200 │               3.90 │                 14 │              38.98 │       002: -1.8575 │
+[2m[36m(pid=23263)[0m │              7/200 │               4.10 │                 14 │              41.00 │       001: -1.9563 │
+[2m[36m(pid=23219)[0m │              8/200 │               1.33 │                 15 │              13.34 │       002: -1.4327 │
+[2m[36m(pid=23200)[0m │              9/200 │               3.04 │                 14 │              30.39 │       002: -1.3638 │
+│          5/1000000 │               3.43 │                106 │              34.28 │ 000: -0.4782, 001: -1.0421, 002: -0.9892 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+[2m[36m(pid=23200)[0m │             10/200 │               6.51 │                 11 │              65.13 │       002: -1.1883 │
+[2m[36m(pid=23219)[0m │              9/200 │               1.88 │                 15 │              18.82 │       002: -2.0604 │
+[2m[36m(pid=23274)[0m │              9/200 │               1.69 │                 14 │              16.85 │       001: -0.6872 │
+[2m[36m(pid=23219)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23219)[0m Could not connect to TraCI server at localhost:49342 [Errno 111] Connection refused
+[2m[36m(pid=23219)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23219)[0m Could not connect to TraCI server at localhost:49342 [Errno 111] Connection refused
+[2m[36m(pid=23219)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23219)[0m Could not connect to TraCI server at localhost:49342 [Errno 111] Connection refused
+[2m[36m(pid=23219)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23274)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23219)[0m Could not connect to TraCI server at localhost:49342 [Errno 111] Connection refused
+[2m[36m(pid=23219)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23221)[0m │              6/200 │               1.16 │                 13 │              11.61 │       000: -1.4908 │
+[2m[36m(pid=23274)[0m Could not connect to TraCI server at localhost:36443 [Errno 111] Connection refused
+[2m[36m(pid=23274)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23219)[0m Could not connect to TraCI server at localhost:49342 [Errno 111] Connection refused
+[2m[36m(pid=23219)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23274)[0m Could not connect to TraCI server at localhost:36443 [Errno 111] Connection refused
+[2m[36m(pid=23274)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23274)[0m Could not connect to TraCI server at localhost:36443 [Errno 111] Connection refused
+[2m[36m(pid=23274)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23263)[0m │              8/200 │               1.48 │                 13 │              14.83 │       001: -1.2909 │
+│          6/1000000 │               1.30 │                 13 │              13.02 │ 001: -0.9374, 002: -1.0080, 000: -1.8833 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23263)[0m │              9/200 │               6.18 │                 12 │              61.83 │       001: -0.6816 │
+[2m[36m(pid=23200)[0m │             11/200 │               2.38 │                 14 │              23.82 │       002: -0.9707 │
+[2m[36m(pid=23272)[0m │              6/200 │               1.21 │                 25 │              12.07 │       000: -0.9099 │
+[2m[36m(pid=23221)[0m │              7/200 │               1.88 │                 13 │              18.82 │       000: -1.6851 │
+[2m[36m(pid=23200)[0m │             12/200 │               6.73 │                 11 │              67.25 │       002: -1.6811 │
+[2m[36m(pid=23219)[0m │             10/200 │               2.13 │                 16 │              21.33 │       002: -1.5247 │
+[2m[36m(pid=23272)[0m │              7/200 │               1.85 │                 10 │              18.50 │       000: -1.5999 │
+[2m[36m(pid=23219)[0m │             11/200 │               5.63 │                 14 │              56.26 │       002: -1.2691 │
+[2m[36m(pid=23221)[0m │              8/200 │               2.25 │                 11 │              22.53 │       000: -1.1883 │
+[2m[36m(pid=23274)[0m │             10/200 │               0.83 │                 11 │               8.28 │       001: -0.7825 │
+[2m[36m(pid=23221)[0m │              9/200 │               4.11 │                 12 │              41.12 │       000: -1.1547 │
+[2m[36m(pid=23263)[0m │             10/200 │               1.10 │                 21 │              10.97 │       001: -0.8672 │
+[2m[36m(pid=23272)[0m │              8/200 │               1.77 │                 10 │              17.66 │       000: -0.9424 │
+[2m[36m(pid=23221)[0m │             10/200 │               3.33 │                 14 │              33.27 │       000: -1.3643 │
+[2m[36m(pid=23274)[0m │             11/200 │               1.58 │                 11 │              15.81 │       001: -0.7696 │
+│          7/1000000 │               2.45 │                100 │              24.52 │ 001: -0.8928, 002: -1.0378, 000: -0.8532 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+[2m[36m(pid=23274)[0m │             12/200 │               3.99 │                 14 │              39.89 │       001: -1.3658 │
+[2m[36m(pid=23263)[0m │             11/200 │               2.45 │                 16 │              24.52 │       001: -0.8403 │
+[2m[36m(pid=23200)[0m │             13/200 │               2.35 │                 11 │              23.53 │       002: -1.1894 │
+[2m[36m(pid=23272)[0m │              9/200 │               2.16 │                 17 │              21.65 │       000: -0.8544 │
+[2m[36m(pid=23274)[0m │             13/200 │               2.56 │                  2 │              25.60 │       001: -1.0711 │
+[2m[36m(pid=23272)[0m │             10/200 │               3.18 │                 11 │              31.76 │       000: -0.7562 │
+[2m[36m(pid=23263)[0m │             12/200 │               2.78 │                 14 │              27.77 │       001: -1.9550 │
+[2m[36m(pid=23221)[0m │             11/200 │               1.14 │                 22 │              11.44 │       000: -1.6679 │
+[2m[36m(pid=23263)[0m │             13/200 │               2.04 │                 13 │              20.41 │       001: -1.4902 │
+│          8/1000000 │               2.45 │                108 │              24.46 │ 002: -0.9797, 001: -1.3272, 000: -0.9021 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+[2m[36m(pid=23272)[0m │             11/200 │               1.42 │                 14 │              14.17 │       000: -1.2666 │
+[2m[36m(pid=23274)[0m │             14/200 │               2.21 │                  2 │              22.15 │       001: -1.0711 │
+[2m[36m(pid=23263)[0m │             14/200 │               2.50 │                 11 │              24.97 │       001: -1.1895 │
+[2m[36m(pid=23272)[0m │             12/200 │               6.70 │                 10 │              67.04 │       000: -0.9428 │
+[2m[36m(pid=23274)[0m │             15/200 │               5.77 │                 15 │              57.71 │       001: -1.4317 │
+[2m[36m(pid=23200)[0m │             14/200 │               0.75 │                 14 │               7.49 │       002: -1.2692 │
+[2m[36m(pid=23274)[0m │             16/200 │               3.76 │                 15 │              37.62 │       001: -1.4315 │
+[2m[36m(pid=23200)[0m │             15/200 │               3.09 │                  2 │              30.89 │       002: -1.0656 │
+[2m[36m(pid=23221)[0m │             12/200 │               0.85 │                 14 │               8.45 │       000: -1.2682 │
+[2m[36m(pid=23274)[0m │             17/200 │               3.57 │                 14 │              35.74 │       001: -1.9559 │
+[2m[36m(pid=23272)[0m │             13/200 │               1.99 │                 15 │              19.86 │       000: -0.6919 │
+[2m[36m(pid=23263)[0m │             15/200 │               1.12 │                 13 │              11.19 │       001: -1.8833 │
+│          9/1000000 │               2.76 │                 95 │              27.58 │ 000: -0.7292, 001: -0.9871, 002: -0.8760 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23272)[0m │             14/200 │               2.46 │                 14 │              24.65 │       000: -1.4627 │
+[2m[36m(pid=23219)[0m │             12/200 │               1.73 │                200 │              17.33 │       002: -2.5886 │
+[2m[36m(pid=23200)[0m │             16/200 │               1.94 │                  2 │              19.42 │       002: -1.0656 │
+[2m[36m(pid=23221)[0m │             13/200 │               1.09 │                 14 │              10.88 │       000: -1.2697 │
+[2m[36m(pid=23221)[0m │             14/200 │               5.38 │                 15 │              53.82 │       000: -1.8279 │
+[2m[36m(pid=23263)[0m │             16/200 │               1.41 │                 25 │              14.09 │       001: -0.8004 │
+[2m[36m(pid=23272)[0m │             15/200 │               1.84 │                 13 │              18.35 │       000: -1.3908 │
+[2m[36m(pid=23200)[0m │             17/200 │               1.48 │                 14 │              14.78 │       002: -1.2666 │
+[2m[36m(pid=23219)[0m │             13/200 │               1.72 │                 16 │              17.24 │       002: -1.4069 │
+[2m[36m(pid=23272)[0m │             16/200 │               3.74 │                 13 │              37.35 │       000: -1.8744 │
+[2m[36m(pid=23274)[0m │             18/200 │               0.70 │                 13 │               6.99 │       001: -1.3915 │
+[2m[36m(pid=23200)[0m │             18/200 │               4.18 │                 10 │              41.85 │       002: -0.9421 │
+│         10/1000000 │               0.71 │                 17 │               7.08 │ 001: -1.1772, 002: -1.6751, 000: -0.9156 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23219)[0m │             14/200 │               2.52 │                 10 │              25.23 │       002: -0.8436 │
+[2m[36m(pid=23221)[0m │             15/200 │               1.73 │                 12 │              17.34 │       000: -1.2539 │
+[2m[36m(pid=23274)[0m │             19/200 │               4.05 │                 10 │              40.50 │       001: -0.9414 │
+[2m[36m(pid=23200)[0m │             19/200 │               3.33 │                 11 │              33.33 │       002: -0.7633 │
+[2m[36m(pid=23272)[0m │             17/200 │               1.31 │                 12 │              13.13 │       000: -1.8013 │
+[2m[36m(pid=23219)[0m │             15/200 │               3.73 │                 14 │              37.34 │       002: -1.3650 │
+[2m[36m(pid=23221)[0m │             16/200 │               2.95 │                 15 │              29.51 │       000: -1.0389 │
+[2m[36m(pid=23263)[0m │             17/200 │               0.92 │                 14 │               9.21 │       001: -1.2702 │
+[2m[36m(pid=23274)[0m │             20/200 │               1.82 │                 10 │              18.19 │       001: -0.6465 │
+[2m[36m(pid=23219)[0m │             16/200 │               4.12 │                 12 │              41.17 │       002: -1.2547 │
+[2m[36m(pid=23272)[0m │             18/200 │               2.39 │                 13 │              23.94 │       000: -1.3919 │
+│         11/1000000 │               1.19 │                 21 │              11.91 │ 001: -1.9906, 002: -0.9043, 000: -0.8857 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+[2m[36m(pid=23200)[0m │             20/200 │               2.14 │                 17 │              21.43 │       002: -0.8525 │
+[2m[36m(pid=23219)[0m │             17/200 │               2.76 │                 14 │              27.60 │       002: -1.3637 │
+[2m[36m(pid=23274)[0m │             21/200 │               2.09 │                 13 │              20.95 │       001: -1.8709 │
+[2m[36m(pid=23219)[0m │             18/200 │               4.14 │                 14 │              41.41 │       002: -1.2691 │
+[2m[36m(pid=23221)[0m │             17/200 │               0.91 │                 13 │               9.07 │       000: -1.3922 │
+[2m[36m(pid=23200)[0m │             21/200 │               1.29 │                 13 │              12.88 │       002: -0.9004 │
+[2m[36m(pid=23272)[0m │             19/200 │               0.94 │                 14 │               9.40 │       000: -1.2689 │
+[2m[36m(pid=23219)[0m │             19/200 │               1.36 │                 15 │              13.61 │       002: -2.0258 │
+[2m[36m(pid=23221)[0m │             18/200 │               1.53 │                  7 │              15.31 │       000: -0.8259 │
+[2m[36m(pid=23200)[0m │             22/200 │               3.08 │                  7 │              30.84 │       002: -0.8107 │
+[2m[36m(pid=23274)[0m │             22/200 │               3.49 │                 14 │              34.87 │       001: -1.3642 │
+[2m[36m(pid=23272)[0m │             20/200 │               1.97 │                 11 │              19.65 │       000: -1.1896 │
+[2m[36m(pid=23219)[0m │             20/200 │               1.79 │                 15 │              17.87 │       002: -0.6889 │
+[2m[36m(pid=23221)[0m │             19/200 │               1.96 │                 15 │              19.60 │       000: -1.5294 │
+[2m[36m(pid=23274)[0m │             23/200 │               3.90 │                 14 │              39.04 │       001: -1.3617 │
+[2m[36m(pid=23219)[0m │             21/200 │               2.66 │                 15 │              26.59 │       002: -1.4326 │
+[2m[36m(pid=23200)[0m │             23/200 │               1.07 │                 14 │              10.75 │       002: -0.6978 │
+[2m[36m(pid=23221)[0m │             20/200 │               2.28 │                 11 │              22.76 │       000: -1.0935 │
+[2m[36m(pid=23272)[0m │             21/200 │               1.31 │                 14 │              13.15 │       000: -1.2692 │
+[2m[36m(pid=23274)[0m │             24/200 │               2.23 │                 14 │              22.35 │       001: -1.9507 │
+[2m[36m(pid=23221)[0m │             21/200 │               3.57 │                 14 │              35.69 │       000: -1.3647 │
+[2m[36m(pid=23272)[0m │             22/200 │               2.85 │                 14 │              28.46 │       000: -1.3643 │
+[2m[36m(pid=23272)[0m │             23/200 │               6.49 │                 11 │              64.90 │       000: -1.1883 │
+[2m[36m(pid=23274)[0m │             25/200 │               2.81 │                 12 │              28.05 │       001: -1.3540 │
+[2m[36m(pid=23221)[0m │             22/200 │               1.97 │                 15 │              19.70 │       000: -2.0299 │
+[2m[36m(pid=23200)[0m │             24/200 │               1.23 │                 11 │              12.28 │       002: -0.7479 │
+[2m[36m(pid=23274)[0m │             26/200 │               1.96 │                 14 │              19.63 │       001: -1.9554 │
+[2m[36m(pid=23221)[0m │             23/200 │               1.67 │                 11 │              16.67 │       000: -0.7692 │
+│         12/1000000 │               1.56 │                188 │              15.65 │ 000: -2.4705, 001: -0.8769, 002: -0.7246 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+[2m[36m(pid=23274)[0m │             27/200 │               1.71 │                 14 │              17.10 │       001: -1.3672 │
+[2m[36m(pid=23200)[0m │             25/200 │               1.36 │                 13 │              13.58 │       002: -1.4914 │
+[2m[36m(pid=23274)[0m │             28/200 │               2.21 │                 13 │              22.06 │       001: -1.3903 │
+[2m[36m(pid=23272)[0m │             24/200 │               0.76 │                 14 │               7.62 │       000: -1.2662 │
+[2m[36m(pid=23200)[0m │             26/200 │               1.77 │                 10 │              17.72 │       002: -0.9425 │
+[2m[36m(pid=23221)[0m │             24/200 │               1.91 │                 44 │              19.15 │       000: -1.0144 │
+[2m[36m(pid=23272)[0m │             25/200 │               2.99 │                  9 │              29.94 │       000: -0.7525 │
+[2m[36m(pid=23274)[0m │             29/200 │               3.80 │                 16 │              38.05 │       001: -1.4073 │
+[2m[36m(pid=23200)[0m │             27/200 │               1.96 │                 11 │              19.60 │       002: -0.6980 │
+[2m[36m(pid=23221)[0m │             25/200 │               1.23 │                 10 │              12.28 │       000: -1.9404 │
+[2m[36m(pid=23200)[0m │             28/200 │               1.95 │                 13 │              19.51 │       002: -1.3903 │
+[2m[36m(pid=23274)[0m │             30/200 │               1.06 │                 13 │              10.58 │       001: -0.9971 │
+[2m[36m(pid=23272)[0m │             26/200 │               1.30 │                 32 │              13.03 │       000: -0.8312 │
+[2m[36m(pid=23221)[0m │             26/200 │               2.81 │                 15 │              28.10 │       000: -1.3326 │
+│         13/1000000 │               0.98 │                 64 │               9.80 │ 002: -0.2688, 001: -0.7127, 000: -0.3295 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23221)[0m │             27/200 │               2.91 │                 17 │              29.10 │       000: -0.6267 │
+[2m[36m(pid=23274)[0m │             31/200 │               1.69 │                 14 │              16.94 │       001: -1.2691 │
+[2m[36m(pid=23272)[0m │             27/200 │               1.81 │                 11 │              18.13 │       000: -1.1886 │
+[2m[36m(pid=23221)[0m │             28/200 │               2.86 │                 16 │              28.64 │       000: -1.0147 │
+│         14/1000000 │               3.83 │                 68 │              38.28 │ 002: -0.6970, 000: -0.7342, 001: -1.1054 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23274)[0m │             32/200 │               2.59 │                 14 │              25.89 │       001: -1.3667 │
+[2m[36m(pid=23272)[0m │             28/200 │               1.75 │                 10 │              17.51 │       000: -0.9424 │
+[2m[36m(pid=23221)[0m │             29/200 │               2.32 │                 15 │              23.15 │       000: -1.4336 │
+[2m[36m(pid=23274)[0m │             33/200 │               2.80 │                 10 │              28.01 │       001: -0.6813 │
+│         15/1000000 │               5.13 │                 93 │              51.31 │ 001: -0.5905, 002: -0.4796, 000: -0.7826 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+[2m[36m(pid=23274)[0m │             34/200 │               3.04 │                 14 │              30.37 │       001: -1.2681 │
+[2m[36m(pid=23263)[0m │             18/200 │               0.82 │                200 │               8.19 │       001: -2.5065 │
+│         16/1000000 │               3.91 │                 42 │              39.09 │ 001: -1.1473, 002: -0.8138, 000: -1.1911 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+[2m[36m(pid=23274)[0m │             35/200 │               2.34 │                 12 │              23.39 │       001: -1.1555 │
+[2m[36m(pid=23221)[0m │             30/200 │               1.11 │                 27 │              11.12 │       000: -0.9077 │
+[2m[36m(pid=23263)[0m │             19/200 │               2.88 │                 11 │              28.77 │       001: -0.7214 │
+[2m[36m(pid=23221)[0m │             31/200 │               6.32 │                 14 │              63.21 │       000: -1.2666 │
+[2m[36m(pid=23263)[0m │             20/200 │               3.90 │                 14 │              38.99 │       001: -1.3624 │
+[2m[36m(pid=23274)[0m │             36/200 │               1.57 │                 16 │              15.67 │       001: -1.4046 │
+│         17/1000000 │               2.60 │                 61 │              26.03 │ 002: -0.8953, 001: -0.8360, 000: -0.5201 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 000 
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 001 
+[2m[36m(pid=23272)[0m │             29/200 │               0.90 │                 40 │               8.97 │       000: -0.9407 │
+[2m[36m(pid=23221)[0m │             32/200 │               2.31 │                 15 │              23.12 │       000: -0.6723 │
+[2m[36m(pid=23274)[0m │             37/200 │               3.47 │                 14 │              34.69 │       001: -1.2666 │
+[2m[36m(pid=23263)[0m │             21/200 │               1.61 │                 14 │              16.10 │       001: -0.6914 │
+[2m[36m(pid=23272)[0m │             30/200 │               1.87 │                 11 │              18.73 │       000: -1.1531 │
+[2m[36m(pid=23272)[0m  Retrying in 0.05 seconds
+[2m[36m(pid=23263)[0m │             22/200 │               6.99 │                 10 │              69.92 │       001: -0.9428 │
+[2m[36m(pid=23221)[0m │             33/200 │               4.28 │                 10 │              42.80 │       000: -0.6473 │
+[2m[36m(pid=23274)[0m │             38/200 │               2.87 │                 15 │              28.73 │       001: -0.9467 │
+│         18/1000000 │               0.97 │                 17 │               9.69 │ 001: -1.7051, 002: -1.0280, 000: -1.1965 │
+WARNING:SMARTS:Attempted to perform actions on non-existing agent, 002 
