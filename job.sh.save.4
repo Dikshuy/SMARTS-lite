@@ -1,6 +1,0 @@
-#!/bin/bash
-#SBATCH --time=00:20:00
-#SBATCH --output=slurm-%j.out
-#SBATCH --account=def-mtaylor3
-
-singularity exec -B ../SMARTS:/SMARTS --env DISPLAY=$DISPLAY,PYTHONPATH=/SMARTS:/src --home /SMARTS ../smarts.sif supervisord
