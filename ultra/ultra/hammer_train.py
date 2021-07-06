@@ -39,7 +39,7 @@ import torch
 import numpy as np
 
 from smarts.zoo.registry import make
-from ultra.hammer_evaluate import evaluation_check, collect_evaluations
+from ultra.evaluate import evaluation_check, collect_evaluations
 from ultra.utils.episode import episodes
 
 num_gpus = 1 if torch.cuda.is_available() else 0
