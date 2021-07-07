@@ -74,7 +74,7 @@ class BaselineAdapter:
             social_vehicle_config=self.social_vehicle_config,
             observation_waypoints_lookahead=self.observation_num_lookahead,
             action_size=2,
-            agents = self.policy_params["agents"]
+            # agents = self.policy_params["agents"]
         )
 
         self.social_feature_encoder_class = self.social_vehicle_encoder[
@@ -138,7 +138,7 @@ class BaselineAdapter:
             observation_num_lookahead=self.observation_num_lookahead,
             social_capacity=self.social_capacity,
             social_vehicle_config=self.social_vehicle_config,
-            agents= self.policy_params["agents"]
+            # agents= self.policy_params["agents"]
             # prev_action=self.prev_action
         )
 
@@ -153,7 +153,7 @@ class BaselineAdapter:
         return state  # ego=ego, env_observation=env_observation)
 
     @staticmethod
-    def reward_adapter(observation, reward):   # team reward check
+    def reward_adapter(observation, reward):
         env_reward = reward
         ego_events = observation.events
         ego_observation = observation.ego_vehicle_state
