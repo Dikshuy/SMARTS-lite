@@ -338,6 +338,21 @@ Singularity> export PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite/:$PYTHONPATH
 # run the experiment.
 ```
 
+### Running jobs on CC using `sbatch`
+
+```bash
+#!/bin/bash
+#SBATCH --time=1-12:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --account=def-mtaylor3
+#SBATCH --mem=32000M
+#SBATCH --gres=gpu:2
+#SBATCH --cpus-per-task=2
+
+module load singularity
+singularity exec -B ../SMARTS-lite:/SMARTS-lite --env DISPLAY=$DISPLAY,PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite:$PYTHONPATH --home /SMARTS-lite/ultra ../smarts-0416_singularity.sif python ultra/hammer_train.py --task 0-3agents --level easy --policy ppo,ppo,ppo --headless
+```
+
 ## Note
 You can shut down this Envision process by running `pkill -f -9 ultra` (notice that `ps -ef | grep ultra` will output the Envision process that you started with the command `./ultra/env/envision_base.sh`). But if you kill this Envision process, you will have to rerun `./ultra/env/envision_base.sh` if you want to be able to visualize the training through Envision again.
 
