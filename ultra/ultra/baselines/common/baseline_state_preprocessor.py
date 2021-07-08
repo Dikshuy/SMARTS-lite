@@ -39,8 +39,8 @@ class BaselineStatePreprocessor(StatePreprocessor):
         # "action": 1.0,  # 2
         "waypoints_lookahead": 10.0,
         "road_speed": 30.0,
-        # "position": 100.0,   
-        # "distance": 100.0,
+        "position": 100.0,   
+        "distance": 100.0,
     }
 
     def __init__(
@@ -48,15 +48,15 @@ class BaselineStatePreprocessor(StatePreprocessor):
         social_vehicle_config,
         observation_waypoints_lookahead,
         action_size,
-        # agents,
+        agents,
     ):
         self._state_description = self.get_state_description(
-            social_vehicle_config, observation_waypoints_lookahead, action_size, #agents
+            social_vehicle_config, observation_waypoints_lookahead, action_size, agents
         )
     
     @staticmethod
     def get_state_description(
-        social_vehicle_config, observation_waypoints_lookahead, action_size,# agents
+        social_vehicle_config, observation_waypoints_lookahead, action_size, agents
     ):
         return {
             "low_dim_states": {
@@ -68,8 +68,8 @@ class BaselineStatePreprocessor(StatePreprocessor):
                 # "action": int(action_size),  # 2
                 "waypoints_lookahead": 2 * int(observation_waypoints_lookahead),
                 "road_speed": 1,
-                # "position": 2*(agents-1),   # added parameter for position of other ego agents(*2 b'coz x and y position)
-                # "distance": agents-1
+                "position": 2*(agents-1),   # added parameter for position of other ego agents(*2 b'coz x and y position)
+                "distance": agents-1
             },
             "social_vehicles": int(social_vehicle_config["num_social_features"])
             if int(social_vehicle_config["social_capacity"]) > 0
@@ -86,7 +86,7 @@ class BaselineStatePreprocessor(StatePreprocessor):
         observation_num_lookahead,
         social_capacity,
         social_vehicle_config,
-        # agents,
+        agents,
     ):
         state = self._adapt_observation_for_baseline(state)
 
@@ -100,11 +100,11 @@ class BaselineStatePreprocessor(StatePreprocessor):
         state["waypoints_lookahead"] = np.hstack(lookahead_waypoints)
     
         # automate this position key directly by reading from .yaml file -> done!
-        # state["position"] = np.empty(2*(agents-1))
-        # state["position"].fill(0)
+        state["position"] = np.empty(2*(agents-1))
+        state["position"].fill(0)
 
-        # state["distance"] = np.empty(agents-1)
-        # state["distance"].fill(0)
+        state["distance"] = np.empty(agents-1)
+        state["distance"].fill(0)
 
         # print(state.keys())
 

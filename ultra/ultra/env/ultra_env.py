@@ -155,7 +155,7 @@ class UltraEnv(HiWayEnv):
             for agent_id, value in extras["scores"].items()
         }
         
-        # ego_pos = {}
+        ego_pos = {}
 
         for agent_id in observations:
             agent_spec = self._agent_specs[agent_id]
@@ -164,8 +164,8 @@ class UltraEnv(HiWayEnv):
             info = infos[agent_id]
 
             # print("agent_id:", agent_id)
-            # pos = list(observation.ego_vehicle_state.position) 
-            # ego_pos.update({agent_id: pos})
+            pos = list(observation.ego_vehicle_state.position) 
+            ego_pos.update({agent_id: pos})
             
             rewards[agent_id] = agent_spec.reward_adapter(observation, reward)
             observations[agent_id] = agent_spec.observation_adapter(observation)
@@ -180,30 +180,29 @@ class UltraEnv(HiWayEnv):
 
         # print(ego_pos)
 
-        # if len(ego_pos) > 1:  
-        #     for agent_id in observations:
-        #         i = 0 
-        #         for pos in ego_pos:
-        #             if agent_id != pos:
-        #                 temp = list(observations[agent_id]["low_dim_states"])
-        #                 temp[len(temp)-2*len(ego_pos)+i] = ego_pos[pos][0]/100   # overwriting x & dividing by 100 for normalization
-        #                 temp[len(temp)-2*len(ego_pos)+i+1] = ego_pos[pos][1]/100 # overwriting y & dividing by 100 for normalization
+        if len(ego_pos) > 1:  
+            for agent_id in observations:
+                i = 0 
+                for pos in ego_pos:
+                    if agent_id != pos:
+                        temp = list(observations[agent_id]["low_dim_states"])
+                        temp[len(temp)-2*len(ego_pos)+i] = ego_pos[pos][0]/100   # overwriting x & dividing by 100 for normalization
+                        temp[len(temp)-2*len(ego_pos)+i+1] = ego_pos[pos][1]/100 # overwriting y & dividing by 100 for normalization
                         
-        #                 i+=2
-        #                 observations[agent_id]["low_dim_states"] = temp
+                        i+=2
+                        observations[agent_id]["low_dim_states"] = temp
 
-        #     for id1 in ego_pos:
-        #         j = 0
-        #         for id2 in ego_pos:
-        #             if id1 != id2:
-        #                 temp = list(observations[id1]["low_dim_states"])
-        #                 dist = np.sqrt((ego_pos[id1][0]-ego_pos[id2][0])**2+(ego_pos[id1][1]-ego_pos[id2][1])**2)
-        #                 # print("distance between ", id1, " and ", id2, " is ", dist)
-        #                 temp[len(temp)-j-1] = dist/100 # dividing by 100 for normalization
-        #                 j+=1
-        #                 observations[id1]["low_dim_states"] = temp
-            # print(observations)  
-        print(observations)   
+            for id1 in ego_pos:
+                j = 0
+                for id2 in ego_pos:
+                    if id1 != id2:
+                        temp = list(observations[id1]["low_dim_states"])
+                        dist = np.sqrt((ego_pos[id1][0]-ego_pos[id2][0])**2+(ego_pos[id1][1]-ego_pos[id2][1])**2)
+                        # print("distance between ", id1, " and ", id2, " is ", dist)
+                        temp[len(temp)-j-1] = dist/100 # dividing by 100 for normalization
+                        j+=1
+                        observations[id1]["low_dim_states"] = temp
+            # print(observations)     
         return observations, rewards, agent_dones, infos
 
     def get_task(self, task_id, task_level):

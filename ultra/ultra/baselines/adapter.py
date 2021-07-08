@@ -74,7 +74,7 @@ class BaselineAdapter:
             social_vehicle_config=self.social_vehicle_config,
             observation_waypoints_lookahead=self.observation_num_lookahead,
             action_size=2,
-            # agents = self.policy_params["agents"]
+            agents = self.policy_params["agents"]
         )
 
         self.social_feature_encoder_class = self.social_vehicle_encoder[
@@ -138,7 +138,7 @@ class BaselineAdapter:
             observation_num_lookahead=self.observation_num_lookahead,
             social_capacity=self.social_capacity,
             social_vehicle_config=self.social_vehicle_config,
-            # agents= self.policy_params["agents"]
+            agents= self.policy_params["agents"]
             # prev_action=self.prev_action
         )
 
