@@ -139,7 +139,7 @@ Subcommands of envision:
 Subcommands of zoo:
 * zoo: Build an agent, used for submitting to the agent-zoo
 
-### Examples:
+## Examples:
 
 ```
 # Start envision, serve scenario assets out of ./scenarios
@@ -167,7 +167,7 @@ Please read [Contributing](CONTRIBUTING.md)
 
 Please read [how to create a bug report](https://github.com/huawei-noah/SMARTS/wiki/How-To-Make-a-Bug-Report) and then open an issue [here](https://github.com/huawei-noah/SMARTS/issues).
 
-### Building Docs Locally
+## Building Docs Locally
 
 Assuming you have run `pip install .[dev]`.
 
@@ -180,7 +180,7 @@ python -m http.server -d docs/_build/html
 
 ## Extras
 
-### Visualizing Agent Observations
+## Visualizing Agent Observations
 If you want to easily visualize observations you can use our [Visdom](https://github.com/facebookresearch/visdom) integration. Start the visdom server before running your scenario,
 
 ```bash
@@ -199,7 +199,7 @@ env = gym.make(
 )
 ```
 
-### Interfacing w/ PyMARL and malib
+## Interfacing w/ PyMARL and malib
 
 [PyMARL](https://github.com/oxwhirl/pymarl) and [malib](https://github.com/ying-wen/malib) have been open-sourced. You can run them via,
 
@@ -233,7 +233,7 @@ pip install -r requirements.txt
 python examples/run_smarts.py --algo SAC --scenario ./scenarios/loop --n_agents 5
 ```
 
-### Using Docker
+## Using Docker
 
 If you're comfortable using docker or are on a platform without suitable support to easily run SMARTS (e.g. an older version of Ubuntu) you can run the following,
 
@@ -271,7 +271,7 @@ docker tag smarts:$VERSION huaweinoah/smarts:$VERSION
 docker push huaweinoah/smarts:$VERSION
 ```
 
-### Troubleshooting
+## Troubleshooting
 
 ```bash
 ps -ef | grep ray && ps -ef | grep smarts && ps -ef | grep ultra
@@ -285,9 +285,9 @@ end of command: > sample.txt &
 tail -f sample.txt
 ```
 
-### Setting up SMARTS/ULTRA on Compute Canada
+## Setting up SMARTS/ULTRA on Compute Canada
 
-#### Running SMARTS on Compute Canada
+### Running SMARTS on Compute Canada
 
 ```bash
 # Login to Compute Canada with Trusted X11 Forwarding and the forwarded port for Envision.
@@ -322,7 +322,7 @@ Singularity> export PYTHONPATH=/SMARTS-lite:$PYTHONPATH
 Singularity> supervisord
 ```
 
-#### Running ULTRA on Compute Canada
+### Running ULTRA on Compute Canada
 
 Follow the steps above to obtain `smarts-0416_singularity.sif` and `SMARTS-lite/`.
 
@@ -338,7 +338,22 @@ Singularity> export PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite/:$PYTHONPATH
 # run the experiment.
 ```
 
-### Note
+### Running jobs on CC using `sbatch`
+
+```bash
+#!/bin/bash
+#SBATCH --time=1-12:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --account=def-mtaylor3
+#SBATCH --mem=32000M
+#SBATCH --gres=gpu:2
+#SBATCH --cpus-per-task=2
+
+module load singularity
+singularity exec -B ../SMARTS-lite:/SMARTS-lite --env DISPLAY=$DISPLAY,PYTHONPATH=/SMARTS-lite/ultra:/SMARTS-lite:$PYTHONPATH --home /SMARTS-lite/ultra ../smarts-0416_singularity.sif python ultra/hammer_train.py --task 0-3agents --level easy --policy ppo,ppo,ppo --headless
+```
+
+## Note
 You can shut down this Envision process by running `pkill -f -9 ultra` (notice that `ps -ef | grep ultra` will output the Envision process that you started with the command `./ultra/env/envision_base.sh`). But if you kill this Envision process, you will have to rerun `./ultra/env/envision_base.sh` if you want to be able to visualize the training through Envision again.
 
 ## Adapters
@@ -347,13 +362,13 @@ An adapter is a function that receives a environment observation, environment re
 and/or action from an agent, and then manipulates them (often by extracting or adding
 relevant information) so that they can be processed by the agent or the environment.
 
-## Action Adapters
+### Action Adapters
 
 An action adapter takes an action from an agent and adapts it so that it conforms to the
 SMARTS simulator's action format. ULTRA has two default action adapters, one for
 continuous action, and another for discrete action.
 
-### [ultra.adapters.default_action_continuous_adapter](../ultra/adapters/default_action_continuous_adapter.py)
+#### [ultra.adapters.default_action_continuous_adapter](../ultra/adapters/default_action_continuous_adapter.py)
 
 The default continuous action adapter requires the agent has a "continuous" action space
 as defined by SMARTS. Therefore, when using this adapter, the [`AgentInterface`](../../smarts/core/agent_interface.py)
@@ -373,7 +388,7 @@ without adapting it any further. It expects that the action outputted by the age
 already conforms to this NumPy array of shape (3,). The behaviour of this adapter is
 fully defined in this module's `adapt` function.
 
-### [ultra.adapters.default_action_discrete_adapter](../ultra/adapters/default_action_discrete_adapter.py)
+#### [ultra.adapters.default_action_discrete_adapter](../ultra/adapters/default_action_discrete_adapter.py)
 
 The default discrete action adapter requires the agent has a "lane" action space as
 defined by SMARTS. Therefore, when using this adapter, the [`AgentInterface`](../../smarts/core/agent_interface.py)
@@ -392,7 +407,7 @@ without adapting it any further. It expects that the action outputted by the age
 already is one of the four available strings. The behaviour of this adapter is fully
 defined in this module's `adapt` function.
 
-## Info Adapters
+### Info Adapters
 
 An info adapter takes an [observation](https://smarts.readthedocs.io/en/latest/sim/observations.html#id1), reward, and info dictionary from the environment and adapts them to include
 more relevant information about the agent at each step. By default, the ULTRA
@@ -409,7 +424,7 @@ ULTRA has a default info adapter that is used to include more data about the
 agent that can be used to track the agent's learning progress and monitor the agent
 during training and evaluation.
 
-### [ultra.adapters.default_info_adapter](../ultra/adapters/default_info_adapter.py)
+#### [ultra.adapters.default_info_adapter](../ultra/adapters/default_info_adapter.py)
 
 The default info adapter requires that the SMARTS environment include the next 20
 waypoints in front of the ego vehicle, and all neighborhood (social) vehicles within a
@@ -450,7 +465,7 @@ This information contained in logs can ultimately be used by ULTRA's [Episode](.
 object that is used to record this data to Tensorboard and also save this data to a
 serializable object.
 
-## Observation Adapters
+### Observation Adapters
 
 An observation adapter takes an [observation](https://smarts.readthedocs.io/en/latest/sim/observations.html#id1)
 from the environment and adapts it so that it can be processed by the agent. ULTRA has
@@ -458,7 +473,7 @@ two default observation adapters, one that adapts the observation containing a t
 RGB image into a gray-scale version of the same image, and another that adapts the
 observation into a dictionary of vectors.
 
-### [ultra.adapters.default_observation_image_adapter](../ultra/adapters/default_observation_image_adapter.py)
+#### [ultra.adapters.default_observation_image_adapter](../ultra/adapters/default_observation_image_adapter.py)
 
 The default image observation adapter requires that the SMARTS environment include the
 top-down RGB image in the agent's observation. Specifically, the image should be of
@@ -483,7 +498,7 @@ dividing the array by `255.0`. The output is a NumPy array of type `float32` and
 shape `(4, 64, 64)`. The most recent frame is at the highest index of this array. The
 behaviour of this adapter is fully defined in this module's `adapt` function.
 
-### [ultra.adapters.default_observation_vector_adapter](../ultra/adapters/default_observation_vector_adapter.py)
+#### [ultra.adapters.default_observation_vector_adapter](../ultra/adapters/default_observation_vector_adapter.py)
 
 The default vector observation adapter requires that the SMARTS environment include the
 next 20 waypoints in front of the ego vehicle, and all neighborhood (social) vehicles
@@ -591,7 +606,7 @@ environment, the social vehicle adaptation would be a `(10, 4)` NumPy array with
 If there are more than 10 social vehicles, this adapter will truncate the social vehicle
 adaptation to only include 10 rows - the features of the 10 nearest social vehicles.
 
-## Reward Adapters
+### Reward Adapters
 
 A reward adapter takes an [observation](https://smarts.readthedocs.io/en/latest/sim/observations.html#id1)
 and the [environment reward](https://smarts.readthedocs.io/en/latest/sim/observations.html#rewards)
@@ -599,7 +614,7 @@ as arguments from the environment and adapts them, acting as a custom reward fun
 ULTRA has one default reward adapter that uses elements from the agent's observation, as
 well as the environment reward, to develop a custom reward.
 
-### [ultra.adapters.default_reward_adapter](../ultra/adapters/default_reward_adapter.py)
+#### [ultra.adapters.default_reward_adapter](../ultra/adapters/default_reward_adapter.py)
 
 The default reward adapter requires that the SMARTS environment include the next 20
 waypoints in front of the ego vehicle in the ego vehicle's observation. Therefore, when
@@ -651,10 +666,10 @@ of the closest waypoint's lane and the ego vehicle's position, divided by half o
 lane's width; and `the_environment_reward` is the raw reward received from the SMARTS
 simulator.
 
-#### General
+### General
 In many cases additinal run logs are located at '~/.smarts'. These can sometimes be helpful.
 
-#### SUMO
+### SUMO
 SUMO can have some problems in setup. Please look through the following for support for SUMO:
 * If you are having issues see: **[SETUP](docs/setup.rst)** and **[SUMO TROUBLESHOOTING](docs/SUMO_TROUBLESHOOTING.md)**
 * If you wish to find binaries: **[SUMO Download Page](https://sumo.dlr.de/docs/Downloads.php)**
@@ -662,7 +677,7 @@ SUMO can have some problems in setup. Please look through the following for supp
     * **Please note that building SUMO may not install other vital dependencies that SUMO requires to run.**
     * If you build from the git repository we recommend you use: **[SUMO version 1.7.0](https://github.com/eclipse/sumo/commits/v1_7_0)** or higher
 
-### Citing SMARTS
+## Citing SMARTS
 
 If you use SMARTS in your research, please cite the [paper](https://arxiv.org/abs/2010.09776). In BibTeX format:
 
