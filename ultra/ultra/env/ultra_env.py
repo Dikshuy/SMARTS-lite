@@ -202,8 +202,7 @@ class UltraEnv(HiWayEnv):
         #                 temp[len(temp)-j-1] = dist/100 # dividing by 100 for normalization
         #                 j+=1
         #                 observations[id1]["low_dim_states"] = temp
-            # print(observations)  
-        print(observations)   
+        #         print(observations)
         return observations, rewards, agent_dones, infos
 
     def get_task(self, task_id, task_level):
