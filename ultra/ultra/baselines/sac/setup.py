@@ -27,5 +27,5 @@ setup(
     version="0.1.1",
     packages=["sac"],
     include_package_data=True,
-    install_requires=["tensorflow==1.15", "smarts"],
+    install_requires=["tensorflow==2.5.1", "smarts"],
 )
