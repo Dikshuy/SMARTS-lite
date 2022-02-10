@@ -27,5 +27,5 @@ setup(
     version="0.1.1",
     packages=["td3"],
     include_package_data=True,
-    install_requires=["tensorflow==2.4.2", "smarts"],
+    install_requires=["tensorflow==2.5.3", "smarts"],
 )
